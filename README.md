@@ -5,7 +5,7 @@
 2. In your terminal, locate the **XAMPP** folder and the **htdocs** subdirectory
 3. Inside **htdocs** run the command `git clone https://github.com/bradymadden97/cs4753-project.git`
 4. `cd` into **cs4753-project** subdirectory.
-5. Set remote upstream to GitHub with the command `git remote add origin https://github.com/bradymadden97/cs4753-project.git`
+5. Set remote upstream to GitHub with the command `git remote set-url origin https://github.com/bradymadden97/cs4753-project.git`
 
 ## Run Locally
 1. Open **XAMPP** control panel
