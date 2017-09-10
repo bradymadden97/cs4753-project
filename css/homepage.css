@@ -1,0 +1,55 @@
+.nav-link{
+	color: #ffffff !important;
+}
+
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{
+	color: #f05f40 !important;	
+}
+
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span:focus{
+	color: #ffffff !important;	
+}
+
+.btn-outline{
+	border: 1px solid #ffffff;
+	border-radius: 10px;
+}
+
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline:focus{
+	border: 1px solid #f05f40;	
+}
+
+.btn-solid-color>span{
+	background: #f05f40;
+	border-radius: 10px;
+	border: 1px solid #f05f40;
+	color: #ffffff !important;
+}
+
+.nav-margin-10px{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.btn-padding-20{
+	padding-right: 20px !important;
+	padding-left: 20px !important;
+}
+
+.btn-lookalike{
+	padding-bottom: 7.5px;
+	padding-top: 7.5px;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus{
+	font-size: 16px;
+}
+
+.navbar-brand{
+	font-size: 24px;
+}
+
+.btn-xxl{
+	padding: 20px 35px;
+	font-size: 18px;
+}
