@@ -19,3 +19,6 @@
 3. Test using XAMPP control panel and localhost
 4. `git add .` and `git commit -m "commit message"` to commit changes
 5. `git push` to push changes to GitHub
+
+## View Current Build
+Current build of `master` branch located at https://cs4753-project.herokuapp.com/
