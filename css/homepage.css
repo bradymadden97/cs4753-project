@@ -1,7 +1,10 @@
 
 /* Navbar link colors when scrolled down */
-#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link{
 	color: #f05f40 !important;	
+}
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{
+	color: #eb3812 !important;	
 }
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span:focus{
 	color: #ffffff !important;	
@@ -15,6 +18,7 @@
 #mainNav .navbar-nav>li.nav-item>a.nav-link>span, #mainNav .navbar-nav>li.nav-item>a.nav-link>span:focus{
 	padding-left: 20px;
 }
+
 
 .navbar-toggler-icon{
 	cursor: pointer;
@@ -30,6 +34,10 @@
 	border-radius: 10px;
 	border: 1px solid #f05f40;
 	color: #ffffff !important;
+}
+.btn-solid-color>span:hover{
+	background: #eb3812;
+	border: 1px solid #eb3812;
 }
 
 .nav-margin-10px{
