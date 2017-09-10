@@ -1,22 +1,28 @@
-.nav-link{
-	color: #ffffff !important;
-}
 
+/* Navbar link colors when scrolled down */
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{
 	color: #f05f40 !important;	
 }
-
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-solid-color>span:focus{
 	color: #ffffff !important;	
 }
-
-.btn-outline{
-	border: 1px solid #ffffff;
+/* Color of Signup button */
+#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline>span, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline>span:focus{
+	border: 1px solid #f05f40;
 	border-radius: 10px;
 }
+/*Padding on nav buttons */
+#mainNav .navbar-nav>li.nav-item>a.nav-link>span, #mainNav .navbar-nav>li.nav-item>a.nav-link>span:focus{
+	padding-left: 20px;
+}
 
-#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline, #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.btn-outline:focus{
-	border: 1px solid #f05f40;	
+.navbar-toggler-icon{
+	cursor: pointer;
+}
+
+.btn-outline>span{
+	border: 1px solid #ffffff;
+	border-radius: 10px;
 }
 
 .btn-solid-color>span{

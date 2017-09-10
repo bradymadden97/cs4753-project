@@ -38,16 +38,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./about">About</a>
+              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./about"><span>About</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./shop">Shop</a>
+              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./shop"><span>Shop</span></a>
             </li>
             <li class="nav-item">
-              <a class="btn-solid-color nav-link js-scroll-trigger" id="signup-btn" href="./register"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Sign up</span></a>
+              <a class="btn-solid-color nav-link js-scroll-trigger" href="./register"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Sign up</span></a>
             </li>
             <li class="nav-item">
-              <a class="btn-outline nav-link js-scroll-trigger nav-margin-10px btn-padding-20 btn-lookalike" href="./login">Login</a>
+              <a class="btn-outline nav-link js-scroll-trigger" href="./login"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Login</span></a>
             </li>			
           </ul>
         </div>
