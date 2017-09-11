@@ -32,9 +32,9 @@
 
   <body id="page-top">
 
-  <?php
-	include(dirname(__FILE__).'/nav.php');
-  ?>
+	<?php
+		include(dirname(__FILE__).'/nav.php');
+	?>
 
     <header class="masthead">
       <div class="header-content">

@@ -1,3 +1,6 @@
+html { 
+  overflow-y: scroll; 
+}
 /* Navbar link colors when scrolled down */
 #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link{
 	color: #f05f40 !important;	
