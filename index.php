@@ -1,11 +1,15 @@
 <html lang="en">
+<?php
+  $Company_Name = "CANNED AIR";
+  $Slogan = "Slogan";
+?>
 
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Company Name - Slogan</title>
+    <title><?php echo $Company_Name . " - " . $Slogan ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +35,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Company Name</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo $Company_Name ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,7 +63,7 @@
         <div class="header-content-inner">
           <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
           <hr>
-		  <p>Here we might put our company slogan? Or what we do/ sell.</p><br><br>
+		  <p>"This product is... good" - Verified Sources</p><br><br>
 		  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="./shop">Shop Now</a>
         </div>
       </div>
