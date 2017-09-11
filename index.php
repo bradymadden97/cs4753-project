@@ -23,40 +23,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
 	
 	<!--Our own css -->
-	<link href="./css/homepage.css" rel="stylesheet">
+	<link href="css/homepage.css" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo $Company_Name ?></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./about"><span>About</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger nav-margin-10px" href="./shop"><span>Shop</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="btn-solid-color nav-link js-scroll-trigger" href="./register"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Sign up</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="btn-outline nav-link js-scroll-trigger" href="./login"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Login</span></a>
-            </li>			
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <?php
+	include(dirname(__FILE__).'/nav.php');
+  ?>
 
     <header class="masthead">
       <div class="header-content">
@@ -64,7 +42,7 @@
           <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
           <hr>
 		  <p>"This product is... good" - Verified Sources</p><br><br>
-		  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="./shop">Shop Now</a>
+		  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
         </div>
       </div>
     </header>
