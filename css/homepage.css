@@ -14,6 +14,35 @@
 	border: 1px solid #f05f40;
 	border-radius: 10px;
 }
+@media (max-width: 991px){
+	#mainNav.navbar-expand-lg .navbar-nav>li.nav-item>a.btn-outline>span{
+		border: 1px solid #ffffff;
+		border-radius: 10px;
+		color: #000000;	
+	}
+}
+@media (max-width: 991px){
+	#mainNav.navbar-expand-lg .navbar-nav>li.nav-item>a.btn-outline>span:hover{
+		color: #f05f40;	
+	}
+}
+@media (max-width: 991px){
+	#mainNav.navbar-expand-lg .navbar-nav>li.nav-item>a.btn-outline>span:focus{
+		border: 1px solid #ffffff;
+		border-radius: 10px;
+	}
+}
+/*Color of other nav links on reactive/scroll*/
+@media (max-width: 991px){
+	#mainNav.navbar-expand-lg .navbar-nav>li.nav-item>a>span{
+		color: #000000;	
+	}
+}
+@media (max-width: 991px){
+	#mainNav.navbar-expand-lg .navbar-nav>li.nav-item>a>span:hover{
+		color: #f05f40;		
+	}
+}
 /*Padding on nav buttons */
 #mainNav .navbar-nav>li.nav-item>a.nav-link>span, #mainNav .navbar-nav>li.nav-item>a.nav-link>span:focus{
 	padding-left: 20px;
@@ -58,11 +87,12 @@
 #mainNav .navbar-nav>li.nav-item>a.nav-link, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus{
 	font-size: 16px;
 }
-
+#mainNav.navbar-shrink>div.container>a.navbar-brand{
+	font-size: 24px;
+}
 .navbar-brand{
 	font-size: 24px;
 }
-
 .btn-xxl{
 	padding: 20px 35px;
 	font-size: 18px;
