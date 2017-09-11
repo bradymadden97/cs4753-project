@@ -18,9 +18,6 @@
 
 	<!--Creative css -->
 	<link href="../css/creative.min.css" rel="stylesheet">
-	
-    <!-- Custom styles for this template -->
-    <link href="login.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,6 +26,9 @@
 	?>
 	<!--Override Navbar CSS -->
 	<link href="../css/nav-dark.css" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+    <link href="login.css" rel="stylesheet">
 
     <div class="container">
 
@@ -45,6 +45,11 @@
         </div>
         <button class="btn btn-lg btn-brand-color btn-block" type="submit">Log in</button>
       </form>
+	  
+	  
+	  <div id="tosignupdiv">
+	  Don't have an account? <a href="/register" id="tosignup">Sign up</a>
+	  </div>
 
     </div>
 
