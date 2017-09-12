@@ -37,6 +37,33 @@
 	?>
 
     <header class="masthead">
+      <div id="myCarousel" class="carousel slide" data-ride = "carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+              <div class="item active">
+                <img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" alt="Forest" style="width:100%; display: inline; float: left;">
+              </div>
+              <div class="item">
+                <img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" alt="Fall" style="width: 100%; display: inline; float: left;"">
+              </div>
+              <div class="item">
+                <img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" alt="Sun" style="width: 100%; display: inline; float: left;">
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
       <div class="header-content">
         <div class="header-content-inner">
           <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
