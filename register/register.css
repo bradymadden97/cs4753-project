@@ -1,0 +1,79 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  border-color: #f05f40;
+  z-index: 2;
+}
+.btn{
+	cursor: pointer;
+	border-radius: 10px;
+}
+.btn-brand-color{
+	color: #ffffff;
+	border-color: #f05f40;
+	background-color: #f05f40;
+}
+.btn-brand-color:hover{
+	border-color: #eb3812;
+	background-color: #eb3812;
+}
+.btn-brand-color:disabled{
+	color: #ffffff;
+	border-color: #f05f40;
+	background-color: #f05f40;
+	cursor: auto;
+}
+.form-signin input{
+	border-radius: 0px;
+	margin-bottom: -1px;
+}
+#inputPasswordCheck {
+  margin-bottom: 50px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+#inputFirstName{
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+#inputLastName{
+	margin-bottom: 20px;
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+#inputEmail{
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+#tologindiv{
+	margin-top:30px;
+	text-align: center;
+}
+#tologin{
+	text-decoration: none;
+}
