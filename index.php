@@ -37,32 +37,25 @@
 	?>
 
     <header class="masthead">
-      <div id="myCarousel" class="carousel slide" data-ride = "carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+      <div class="mySlides">
+        <img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="width:100%; height: 100%">
+      </div>
 
-          <div class="carousel-inner">
-              <div class="item active">
-                <img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" alt="Forest" style="width:100%; display: inline; float: left;">
-              </div>
-              <div class="item">
-                <img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" alt="Fall" style="width: 100%; display: inline; float: left;"">
-              </div>
-              <div class="item">
-                <img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" alt="Sun" style="width: 100%; display: inline; float: left;">
-              </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
+      <div class="mySlides">
+        <img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" style="width:100%; height: 100%;">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" style="width:100%; height: 100%;">
+      </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
       </div>
       <div class="header-content">
         <div class="header-content-inner">
@@ -257,6 +250,29 @@
         </div>
       </div>
     </section>
+
+    <!-- Script controlling the carousel actions -->
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    </script>
 
     <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
