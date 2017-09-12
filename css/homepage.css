@@ -28,6 +28,7 @@
 
 /* The dots/bullets/indicators */
 .dot {
+  cursor: pointer;
   height: 13px;
   width: 13px;
   margin: 0 2px;
