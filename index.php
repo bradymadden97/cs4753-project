@@ -37,25 +37,30 @@
 	?>
 
     <header class="masthead">
-      <div class="mySlides">
-        <img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="width:100%; height: 100%">
-      </div>
 
-      <div class="mySlides">
-        <img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" style="width:100%; height: 100%;">
-      </div>
+    	<div class="mySlides">
+    		<img src="../img/header.jpg" style="width: 100%; height: 100%;"">
+    	</div>
 
-      <div class="mySlides">
-        <img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" style="width:100%; height: 100%;">
-      </div>
+      	<div class="mySlides">
+        	<img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="width:100%; height: 100%">
+      	</div>
 
-      </div>
+      	<div class="mySlides">
+       		<img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" style="width:100%; height: 100%;">
+     	</div>
+
+	   	<div class="mySlides">
+	    	<img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" style="width:100%; height: 100%;">
+	    </div>
+
       <br>
 
       <div style="text-align:center">
         <span class="dot"></span> 
         <span class="dot"></span> 
         <span class="dot"></span> 
+        <span class="dot"></span>
       </div>
       <div class="header-content">
         <div class="header-content-inner">
