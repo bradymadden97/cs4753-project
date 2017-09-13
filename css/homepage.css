@@ -19,14 +19,10 @@
 }
 
 .mySlides {
-<<<<<<< HEAD
   display:none
   height: 100%;
   position: relative;
   text-anchor: center;
-=======
-	display:none
->>>>>>> 80722561d362e0fe39b273038f9c68063cf9c054
 }
 .fade {
    -webkit-animation-name: fade;
