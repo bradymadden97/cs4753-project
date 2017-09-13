@@ -240,7 +240,7 @@
 
     <div class="call-to-action bg-brand">
       <div class="container text-center">
-        <h2>Check out all our locations around the world!</h2>
+        <h2>Check out our products from around the world!</h2>
         <a class="btn btn-default btn-xl sr-button" href="/shop">Shop Now</a>
       </div>
     </div>
