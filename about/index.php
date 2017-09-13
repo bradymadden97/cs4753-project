@@ -29,7 +29,8 @@
 	
 	<!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
-    <h1>About Us</h1>
 
+
+    <h4 style="text-align:left;margin-top:30px;margin-bottom:30px;margin-left: 10px;" class="form-signin-heading">Log into Canned Air</h4>
   </body>
 </html>
