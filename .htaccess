@@ -1,5 +1,18 @@
 RewriteEngine On
+
+#Remove trailing index.php
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteCond %{REQUEST_URI} ^(.*/)index\.php$ [NC]
+RewriteRule ^ %1 [L,R=301,NE]
+
+#Remove trailing 'index.php/' to avoid weird errors
+RewriteCond %{THE_REQUEST} /index\.php/ [NC]
+RewriteCond %{REQUEST_URI} ^(.*/)index\.php/$ [NC]
+RewriteRule ^ %1 [L,R=301,NE]
+
+#Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTP_HOST} !=localhost
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
