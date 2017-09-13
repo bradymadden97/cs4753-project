@@ -257,12 +257,14 @@
         <div class="row">
           <div class="col-lg-4 ml-auto text-center">
             <i class="fa fa-phone fa-2x sr-contact"></i>
-            <p class="iconspace" >434-321-4321</p>
+            <p class="iconspace" >
+		<a href="tel:+4343214321">434-321-4321</a>
+	    </p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-2x sr-contact"></i>
             <p class="iconspace" >
-              <a href="mailto:your-email@your-domain.com">contactus@cannedair.com</a>
+              <a href="mailto:contactus@cannedair.com">contactus@cannedair.com</a>
             </p>
           </div>
         </div>
