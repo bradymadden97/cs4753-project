@@ -2,8 +2,25 @@
 	padding: 20px 35px;
 	font-size: 18px;
 }
+.bg-brand{
+	color: #ffffff;
+	background-color: #f05f40;
+}
+.iconspace{
+	margin-top: 10px;
+}
+#contact{
+	padding-top: 60px !important;
+	padding-bottom: 35px !important;
+}
+.call-to-action{
+	padding-top: 90px !important;
+	padding-bottom: 90px !important;
+}
 
-.mySlides {display:none}
+.mySlides {
+	display:none
+}
 .fade {
    -webkit-animation-name: fade;
    -webkit-animation-duration: 1.5s;
