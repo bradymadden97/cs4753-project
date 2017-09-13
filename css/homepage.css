@@ -39,3 +39,7 @@
   position: relative;
   bottom: 100px;
 }
+
+.active, .dot:hover {
+  background-color: #717171;
+}
