@@ -42,18 +42,47 @@
 
     	<div class="mySlides">
     		<img src="../img/header.jpg" style="width: 100%; height: 100%;"">
+    		<div class="header-content">
+		        <div class="header-content-inner">
+		          <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
+		          <hr>
+				  <p>"This product is... good" - Verified Sources</p><br><br>
+				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
+		        </div>
+      		</div>
     	</div>
 
       	<div class="mySlides">
         	<img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="width:100%; height: 100%">
+        	<div class="header-content">
+		        <div class="header-content-inner">
+		          <h1 id="homeHeading">Brady Madden</h1>
+		          <hr>
+				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
+		        </div>
+      		</div>
       	</div>
 
       	<div class="mySlides">
        		<img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" style="width:100%; height: 100%;">
+       		<div class="header-content">
+		        <div class="header-content-inner">
+		          <h1 id="homeHeading">Bobby Hails</h1>
+		          <hr>
+				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
+		        </div>
+      		</div>
      	</div>
 
 	   	<div class="mySlides">
 	    	<img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" style="width:100%; height: 100%;">
+	    	<div class="header-content">
+		        <div class="header-content-inner">
+		          <h1 id="homeHeading">Spencer Wolfe</h1>
+		          <hr>
+				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
+		        </div>
+      		</div>
 	    </div>
 
 	</div>
@@ -66,14 +95,7 @@
         <span class="dot" onclick="setSlideIndex(3)"></span> 
         <span class="dot" onclick="setSlideIndex(4)"></span>
       </div>
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
-          <hr>
-		  <p>"This product is... good" - Verified Sources</p><br><br>
-		  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
-        </div>
-      </div>
+      
     </header>
 
     <section class="bg-primary" id="about">
