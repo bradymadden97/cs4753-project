@@ -27,7 +27,7 @@
 	
 	<!--Our own css -->
 	<link href="css/homepage.css" rel="stylesheet">
-
+	
   </head>
 
   <body id="page-top">
@@ -36,66 +36,22 @@
 		include(dirname(__FILE__).'/nav.php');
 	?>
 
-    <header class="masthead">
-
-    <div class="slides">
-
-    	<div class="mySlides">
-    		<img src="../img/header.jpg" style="width: 100%; height: 100%;"">
-    		<div class="header-content">
-		        <div class="header-content-inner">
-		          <h1 id="homeHeading">It's air, but in a can...<br>...it's canned air</h1>
-		          <hr>
-				  <p>"This product is... good" - Verified Sources</p><br><br>
-				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
-		        </div>
-      		</div>
-    	</div>
-
-      	<div class="mySlides">
-        	<img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" style="width:100%; height: 100%">
-        	<div class="header-content">
-		        <div class="header-content-inner">
-		          <h1 id="homeHeading">Brady Madden</h1>
-		          <hr>
-				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
-		        </div>
-      		</div>
-      	</div>
-
-      	<div class="mySlides">
-       		<img src="https://static.pexels.com/photos/33109/fall-autumn-red-season.jpg" style="width:100%; height: 100%;">
-       		<div class="header-content">
-		        <div class="header-content-inner">
-		          <h1 id="homeHeading">Bobby Hails</h1>
-		          <hr>
-				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
-		        </div>
-      		</div>
-     	</div>
-
-	   	<div class="mySlides">
-	    	<img src="https://static.pexels.com/photos/20974/pexels-photo.jpg" style="width:100%; height: 100%;">
-	    	<div class="header-content">
-		        <div class="header-content-inner">
-		          <h1 id="homeHeading">Spencer Wolfe</h1>
-		          <hr>
-				  <a class="btn btn-primary btn-xxl js-scroll-trigger" href="/shop">Shop Now</a>
-		        </div>
-      		</div>
-	    </div>
-
-	</div>
-
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot" onclick="setSlideIndex(1)"></span>
-        <span class="dot" onclick="setSlideIndex(2)"></span> 
-        <span class="dot" onclick="setSlideIndex(3)"></span> 
-        <span class="dot" onclick="setSlideIndex(4)"></span>
-      </div>
-      
+    <header id="homepage-header" class="masthead">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1 id="homeHeading">IT'S AIR, BUT IN A CAN...<br>...IT'S CANNED AIR</h1>
+          <hr>
+		  <p>"This product is... good" - Verified Sources</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="/shop">Shop Now</a>
+        </div>
+		<br>
+		<div id="dot-div" style="text-align:center">
+			<span class="dot dot-active" id="dot-0" data-slide="1"></span>
+			<span class="dot" id="dot-1" data-slide="2"></span> 
+			<span class="dot" id="dot-2" data-slide="3"></span> 
+			<span class="dot" id="dot-3" data-slide="4"></span>
+		</div>
+      </div>      
     </header>
 
     <section id="services">
@@ -271,55 +227,6 @@
       </div>
     </section>
 
-    <!-- Script controlling the carousel actions -->
-    <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function setSlideIndex(n){
-    	showSlides(slideIndex = n)
-    }
-    
-    function showSlides(n) {
-	  var i;
-	  var slides = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("dot");
-	  if (n > slides.length) {slideIndex = 1}    
-	  if (n < 1) {slideIndex = slides.length}
-	  for (i = 0; i < slides.length; i++) {
-	      slides[i].style.display = "none";  
-	  }
-	  for (i = 0; i < dots.length; i++) {
-	      dots[i].className = dots[i].className.replace(" active", "");
-	  }
-	  slides[slideIndex-1].style.display = "block";  
-	  dots[slideIndex-1].className += " active";
-	  //setTimeout(showSlides, 2000); // Change image every 5 seconds
-	  //slideIndex++;
-	  
-	}
-	
-    /*
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-           slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (n > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 5 seconds
-    }
-    */
-    
-    </script>
-
     <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
@@ -332,6 +239,19 @@
 
     <!-- Custom scripts for this template -->
     <script src="./js/creative.min.js"></script>
+	
+	<!--Preload the background images -->
+	<script>
+		var h1 = new Image();
+		var h2 = new Image();
+		var h3 = new Image();
+		h1.src = "img/header1.jpg";
+		h2.src = "img/header2.jpg";
+		h3.src = "img/header3.jpg";
+	</script>
+	
+	<!--Our own js -->
+	<script src="js/homepage.js"></script>
 
   </body>
 
