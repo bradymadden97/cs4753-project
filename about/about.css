@@ -9,3 +9,8 @@ body {
 #aboutLine{
 	color: #eb3812;
 }
+
+#founderImages div{
+	display: inline-block;
+	text-align: center;
+}
