@@ -22,10 +22,10 @@
 
   <body>
 	<?php
-		include('../nav.php');
+		include('../components/nav.php');
 	?>
 	<!--Override Navbar CSS -->
-	<link href="../css/nav-dark.css" rel="stylesheet">
+	<link href="../components/nav-dark.css" rel="stylesheet">
 	
 	<!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">

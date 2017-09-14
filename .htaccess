@@ -1,3 +1,15 @@
+<Files "README.md">
+	Order allow,deny
+	Deny from all
+</Files>
+
+<Files "LICENSE">
+	Order allow,deny
+	Deny from all
+</Files>
+
+ErrorDocument 403 /
+
 RewriteEngine On
 
 #Remove trailing index.php

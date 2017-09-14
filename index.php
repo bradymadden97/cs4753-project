@@ -33,7 +33,7 @@
   <body id="page-top">
 
 	<?php
-		include(dirname(__FILE__).'/nav.php');
+		include(dirname(__FILE__).'/components/nav.php');
 	?>
 
     <header id="homepage-header" class="masthead">
