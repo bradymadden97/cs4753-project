@@ -43,7 +43,7 @@
         <div id = "whoWeAre">
           <h5>Who We Are</h5>
           <div id = "founderImages" style>
-          <ol style="size: 10%;">
+          <ul style="size: 10%;">
             <li>
               <img src="../img/header1.jpg">
             </li>
@@ -53,7 +53,7 @@
             <li>
               <img src="../img/header3.jpg">
             </li>
-          </ol>
+          </ul>
           </div>
         </div>
       </div>
