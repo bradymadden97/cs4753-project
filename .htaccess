@@ -8,7 +8,7 @@
 	Deny from all		
 </Files>
  
-ErrorDocument 403 /index.php 
+ErrorDocument 403 /403.php
 
 RewriteEngine On
 

@@ -21,11 +21,16 @@
   </head>
 
   <body>
+
 	<?php
 		include('../components/nav.php');
 	?>
-	<!--Override Navbar CSS -->
-	<link href="../components/nav-dark.css" rel="stylesheet">
+	<style>
+		<?php
+			include('../components/nav-dark.css');
+		?>
+	</style>
+
 	
 	<!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
