@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About</title>
+    <title>Zephair - About</title>
 	
 	
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>

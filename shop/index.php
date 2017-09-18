@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About Us</title>
+    <title>Zephair - Shop</title>
 	
 	
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>

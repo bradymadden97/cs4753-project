@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title>Zephair - Log in</title>
 	
 	
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
@@ -41,7 +41,7 @@
     <div class="container">
 
       <form class="form-signin">
-        <h4 style="text-align:center;margin-top:100px;margin-bottom:30px" class="form-signin-heading">Log into Zephair</h4>
+        <h4 style="text-align:center;margin-top:100px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -56,7 +56,7 @@
 	  
 	  
 	  <div id="tosignupdiv">
-	  Don't have an account? <a href="/register" id="tosignup">Sign up</a>
+	  Don't have an account? <a href="/register" id="tosignup">Create Account</a>
 	  </div>
 
     </div>

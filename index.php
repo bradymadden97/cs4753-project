@@ -1,6 +1,6 @@
 <html lang="en">
 <?php
-  $Company_Name = "ZEPHAIR";
+  $Company_Name = "Zephair";
   $Slogan = "LIVE CLEAN, BREATHE EASY";
 ?>
 
@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><?php echo $Company_Name . " - " . $Slogan ?></title>
+    <title>Zephair - Live Clean, Breathe Easy</title>
 	
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 
