@@ -101,7 +101,7 @@
 	        </div>
         </div>
         <a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Shop Now</a>
-        <a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Sign Up</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/register">Sign Up</a>
       </div>
 
     </div>
