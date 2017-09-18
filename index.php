@@ -1,7 +1,7 @@
 <html lang="en">
 <?php
-  $Company_Name = "CANNED AIR";
-  $Slogan = "Slogan";
+  $Company_Name = "ZEPHAIR";
+  $Slogan = "LIVE CLEAN, BREATHE EASY";
 ?>
 
   <head>
