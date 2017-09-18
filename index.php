@@ -41,9 +41,9 @@
     <header id="homepage-header" class="masthead" style="background-attachment:fixed">
       <div class="header-content">
         <div class="header-content-inner">
-          <h1 id="homeHeading">IT'S AIR, BUT IN A CAN...<br>...IT'S CANNED AIR</h1>
+          <h1 id="homeHeading">FRESH AIR <br> FOR EVERYONE</h1>
           <hr>
-		  <p>"This product is... good" - Verified Sources</p>
+		  <p>Clean, natural solutions</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="/shop">Shop Now</a>
         </div>
 		<br>

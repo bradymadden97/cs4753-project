@@ -74,8 +74,10 @@
         <div id = "Benefits" style="position: relative; margin-top: 300px;">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
+          <div class = "col-lg-10" style="margin-left: 75px;">
           <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
-          <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished.</p>
+          <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished becuase after all, the only way to keep air pure is to keep it clean.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -97,11 +99,11 @@
           <h5>Our Values</h5>
           <hr id = "contentLines">
           <p id = "valueHeadings">People</p>
-          <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product.</p> 
+          <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product. We try to create relationships with our customers by providing timely and helpful customer service.</p> 
           <p id = "valueHeadings">Health</p>
-          <p>Placeholder text for Health value.</p>
+          <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who do not live in low quality air enviornments by providing them with the cleanest, freshest airon the globe in order for them to live healthier.</p>
           <p id = "valueHeadings">Service</p>
-          <p>Zephair is committed to making the world a better place.</p>
+          <p>Zephair is committed to making the world a better place. Not only are we concerned with the health aspects that clean air provides, but also in giving back to the community by trying to purify low quality air enviornments with purifiers to make the world a better place. </p>
         </div>
         <div id = "Founders">
         	<h5>The Founders</h5>
