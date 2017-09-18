@@ -39,6 +39,14 @@
     <h4 style="text-align: center; margin-top: 100px;">About Us</h4>
     <hr id = "aboutLine" style="width: 100%;">
 
+    <div class="container">
+    	<div id = "whoWeAre">
+          <h5>Who We Are</h5>
+          <hr id = "contentLines">
+          <p>Canned Air is a company out of Charlottesville, Virginia interested in change and pursuing a better quality of life.</p>
+        </div>
+    </div>
+
     <div style="position:relative">
 		<div class="call-to-action" style="background-image: url('../img/mission.jpg'); background-position:;">
 		
@@ -54,33 +62,34 @@
     <div class="container">
 
       <div>
-        <!--<div id = "mission">
-          <h5>Our Mission</h5>
-          <hr id = "contentLines">
-          <p>Our mission is to provide clean, healthy air to all of mankind. To achieve this, we use a variety of methods to harvest the air, compromising of drone collection, boat collection, and collection by man.</p>
-        </div>-->
         <div id = "Benefits" style="position: relative; margin-top: 300px;">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
           <p>Our Benefits would go here</p>
         </div>
-        <div id = "mission">
-          <h5>Our Clients</h5>
-          <hr id = "contentLines">
-          <p>How do we help people</p>
-        </div>
-        <div id = "products">
-          <h5>Our Products</h5>
-          <hr id = "contentLines">
-          <p>Products</p>
-        </div>
-        <div id = "values">
+      </div>
+    </div>
+
+    <div style="position:relative">
+		<div class="call-to-action" style="background-image: url('../img/products.jpg'); background-position:;">
+		
+		</div>
+		<div class="text-center call-to-action-text">
+			<h2 style="color:white; margin-bottom:50px">Our Products</h2>
+			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
+				<p id = "missionText">Our products go here</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+        <div id = "values" style="position: relative; margin-top: 300px;">
           <h5>Our Values</h5>
           <hr id = "contentLines">
           <p>What values our company stands for</p>
         </div>
-        <div id = "whoWeAre">
-        	<h5>Who We Are</h5>
+        <div id = "Founders">
+        	<h5>The Founders</h5>
         	<hr id = "contentLines" style="margin-bottom:50px">
         	<div class="row" id = "us" style="text-align: center;">
         		<div class="col-lg-4" id = "brady">
