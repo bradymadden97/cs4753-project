@@ -13,3 +13,7 @@ body {
 	display: inline-block;
 	text-align: center;
 }
+
+#contentLines{
+	text-align: left;
+}
