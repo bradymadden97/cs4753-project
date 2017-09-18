@@ -17,17 +17,17 @@
 
 
 	<!--Creative css -->
-	<link href="css/creative.min.css" rel="stylesheet">
+	<link href="/css/creative.min.css" rel="stylesheet">
   </head>
 
   <body style="height:auto">
 
 	<?php
-		include('components/nav.php');
+		include('/components/nav.php');
 	?>
 	<style>
 		<?php
-			include('components/nav-dark.css');
+			include('/components/nav-dark.css');
 		?>
 	</style>
     <div style="text-align:center;margin-top:100px" class="container">
