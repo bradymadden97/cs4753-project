@@ -8,8 +8,8 @@
 	Deny from all		
 </Files>
  
-ErrorDocument 403 /cs4753-project/404.php
-ErrorDocument 404 /cs4753-project/404.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
 
 RewriteEngine On
 
