@@ -104,12 +104,18 @@
 	        </div>
         </div>
       </div>
-      <div style="text-align: center; position: relative; bottom: 0px; margin-bottom: 0px;">
-      	<a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Shop Now</a>
-      	<a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Sign Up</a>
-      </div>
-
-    </div>
+	</div>
+	<div style="position:relative">
+		<div class="call-to-action">
+		
+		</div>
+		<div class="text-center call-to-action-text">
+			<h2 style="color:white; margin-bottom:50px">Get started today!</h2>
+			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
+				<a class="btn btn-primary btn-xl js-scroll-trigger sr-icons" href="/shop">Shop Now</a>
+			</div>
+		</div>
+	</div>
 
     <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
