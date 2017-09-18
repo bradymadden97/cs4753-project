@@ -15,6 +15,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+	<!-- Plugin CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
+
 
   <!--Creative css -->
   <link href="../css/creative.min.css" rel="stylesheet">
@@ -63,38 +66,38 @@
         </div>
         <div id = "whoWeAre">
         	<h5>Who We Are</h5>
-        	<hr id = "contentLines">
+        	<hr id = "contentLines" style="margin-bottom:50px">
         	<div class="row" id = "us" style="text-align: center;">
         		<div class="col-lg-4" id = "brady">
-        			<br>
+	        		<div id = "bradyImage">
+	        			<img class="sr-icons rounded-circle" src = "../img/brady.jpg" style="width: 80%;">
+	        		</div>
+					<br>
 	        		<h6>Brady Madden</h6>
 	        		<div id = "bradyText">
 	        			<p>Placeholder Bio Text</p>
 	        		</div>
-	        		<div id = "bradyImage" style="display: inline;">
-	        			<img src = "../img/brady.jpg" style="width: 30%;">
-	        		</div>
 	        	</div>
 	        	<br>
 	        	<div class="col-lg-4" id = "bobby">
-	        		<br>
-	        		<h6>Bobby Hails</h6>
-	        		<div id = "bradyText">
-	        			<p>Placeholder Bio Text</p>
+	        		<div id = "bobbyImage">
+	        			<img class="sr-icons rounded-circle" src = "../img/bobby.jpg" style="width: 80%;">
 	        		</div>
-	        		<div id = "bradyImage">
-	        			<img src = "../img/bobby.jpg" style="width: 30%;">
+					<br>
+	        		<h6>Bobby Hails</h6>
+	        		<div id = "bobbyText">
+	        			<p>Placeholder Bio Text</p>
 	        		</div>
 	        	</div>
 	        	<br>
 	        	<div class="col-lg-4" id = "spencer">
-	        		<br>
-	        		<h6>Spencer Wolfe</h6>
-	        		<div id = "bradyText">
-	        			<p>Placeholder Bio Text</p>
+	        		<div id = "spencerImage">
+	        			<img class="sr-icons rounded-circle" src = "../img/spencer.jpg" style="width: 80%;">
 	        		</div>
-	        		<div id = "bradyImage">
-	        			<img src = "../img/spencer.jpg" style="width: 30%;">
+					<br>
+	        		<h6>Spencer Wolfe</h6>
+	        		<div id = "spencerText">
+	        			<p>Placeholder Bio Text</p>
 	        		</div>
 	        	</div>
 	        	<br>
@@ -108,10 +111,16 @@
 
     </div>
 
+    <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-	
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.6/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
 	
