@@ -50,7 +50,7 @@
 		  <div class="row">
 			<div class="col-lg-1"></div>
 			<div class="col-lg-10">
-				<p><b style="color:#f05f40">Canned Air</b> is a fresh-air distribution company based out of Charlottesville, Virginia interested in global health change and pursuing a better quality of life for all. Our products are designed for everyday humans in low air-quality environments, to provide them with higher-quality, breathable air, in hopes of improving their health. Our air is sourced from the cleanest, most natural areas across the globe and certified by humans to ensure high quality, revitalizing, air.</p>
+				<p><b style="color:#f05f40">Zephair</b> is a fresh-air distribution company based out of Charlottesville, Virginia interested in global health change and pursuing a better quality of life for all. Our products are designed for everyday humans in low air-quality environments, to provide them with higher-quality, breathable air, in hopes of improving their health. Our air is sourced from the cleanest, most natural areas across the globe and certified by humans to ensure high quality, revitalizing, air.</p>
 			</div>
 		  </div>
         </div>
@@ -97,11 +97,11 @@
           <h5>Our Values</h5>
           <hr id = "contentLines">
           <p id = "valueHeadings">People</p>
-          <p>Canned air is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product.</p> 
+          <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product.</p> 
           <p id = "valueHeadings">Health</p>
           <p>Placeholder text for Health value.</p>
           <p id = "valueHeadings">Service</p>
-          <p>Canned air is committed to making the world a better place.</p>
+          <p>Zephair is committed to making the world a better place.</p>
         </div>
         <div id = "Founders">
         	<h5>The Founders</h5>
