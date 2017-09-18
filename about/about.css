@@ -7,6 +7,7 @@ body {
 
 #aboutLine{
 	color: #eb3812;
+	max-width: 100%;
 }
 
 #founderImages div img{
@@ -16,4 +17,8 @@ body {
 
 #contentLines{
 	text-align: left;
+	max-width: 100%;
+}
+p{
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }

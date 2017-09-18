@@ -46,13 +46,19 @@
           <p>Our mission is to provide clean, healthy air to all of mankind. To achieve this, we use a variety of methods to harvest the air, compromising of drone collection, boat collection, and collection by man.</p>
         </div>
         <br>
+        <div id = "values">
+          <h5>Our Values</h5>
+          <hr id = "contentLines">
+          <p></p>
+        </div>
         <div id = "whoWeAre">
         	<h5>Who We Are</h5>
         	<hr id = "contentLines">
-        	<div id = "us" style="text-align: center;">
-        		<div id = "brady" style="display: inline;">
+        	<div class="row" id = "us" style="text-align: center;">
+        		<div class="col-lg-4" id = "brady">
+        			<br>
 	        		<h6>Brady Madden</h6>
-	        		<div id = "bradyText" style="display: inline;">
+	        		<div id = "bradyText">
 	        			<p>Placeholder Bio Text</p>
 	        		</div>
 	        		<div id = "bradyImage" style="display: inline;">
@@ -60,24 +66,24 @@
 	        		</div>
 	        	</div>
 	        	<br>
-	        	<div id = "bobby" style="display: inline;">
+	        	<div class="col-lg-4" id = "bobby">
 	        		<br>
 	        		<h6>Bobby Hails</h6>
-	        		<div id = "bradyText" style="display: inline;">
+	        		<div id = "bradyText">
 	        			<p>Placeholder Bio Text</p>
 	        		</div>
-	        		<div id = "bradyImage" style="display: inline;">
+	        		<div id = "bradyImage">
 	        			<img src = "../img/bobby.jpg" style="width: 30%;">
 	        		</div>
 	        	</div>
 	        	<br>
-	        	<div id = "brady" style="display: inline;">
+	        	<div class="col-lg-4" id = "spencer">
 	        		<br>
 	        		<h6>Spencer Wolfe</h6>
-	        		<div id = "bradyText" style="display: inline;">
+	        		<div id = "bradyText">
 	        			<p>Placeholder Bio Text</p>
 	        		</div>
-	        		<div id = "bradyImage" style="display: inline;">
+	        		<div id = "bradyImage">
 	        			<img src = "../img/spencer.jpg" style="width: 30%;">
 	        		</div>
 	        	</div>
