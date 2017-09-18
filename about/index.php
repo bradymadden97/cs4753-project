@@ -46,20 +46,22 @@
         </div>
         <br>
         <div id = "whoWeAre">
-          <h5>Who We Are</h5>
-          <div id = "founderImages" style>
-          <ul style="size: 10%;">
-            <li>
-              <img src="../img/header1.jpg">
-            </li>
-            <li>
-              <img src = "../img/header2.jpg">
-            </li>
-            <li>
-              <img src="../img/header3.jpg">
-            </li>
-          </ul>
-          </div>
+        	<h5>Who We Are</h5>
+        	<div id = "us" style="text-align: center; display:">
+        		<div id = "brady">
+	        		<h6>Brady Madden</h6>
+	        		<p>Third year Computer Science Major with an Engineering Business Minor. Member of Sigma Pi fraternity. Sick level: Bronchitis</p>
+	        		<img src = "../img/header1.jpg" style="width: 30%;">
+	        	</div>
+	        	<br>
+	        	<div id = "bob">
+	        		<h6>Bobby Hails</h6>
+	        		<p>Jared. He's 19 and never learned how to read.</p>
+	        		<img src = "../img/header2.jpg" style="width: 30%;">
+	        	</div>
+	        	<br>
+	        	<h6>Spencer Wolfe</h6>
+	        </div>
         </div>
       </div>
 
