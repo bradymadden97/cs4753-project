@@ -32,8 +32,6 @@
 			include('../components/nav-dark.css');
 		?>
 	</style>
-  <!--Override Navbar CSS -->
-  <link href="../css/nav-dark.css" rel="stylesheet">
   
   <!-- Custom styles for this template -->
     <link href="about.css" rel="stylesheet">
