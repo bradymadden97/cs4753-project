@@ -28,8 +28,9 @@ body {
 
 #contentLines{
 	text-align: left;
-	max-width: 50%;
+	max-width: 12%;
 	border-width: 1px;
+	margin-left: 0px;
 }
 p{
 	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
