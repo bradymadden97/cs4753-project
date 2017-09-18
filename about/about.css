@@ -18,7 +18,17 @@ body {
 #contentLines{
 	text-align: left;
 	max-width: 100%;
+	border-width: 1px;
 }
 p{
 	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+#aboutButtons {
+	position: relative;
+	bottom: 0;
+}
+
+#signUp{
+	border: 1px solid #eb3812;
 }

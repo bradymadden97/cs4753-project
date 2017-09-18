@@ -46,10 +46,20 @@
           <p>Our mission is to provide clean, healthy air to all of mankind. To achieve this, we use a variety of methods to harvest the air, compromising of drone collection, boat collection, and collection by man.</p>
         </div>
         <br>
+        <div id = "Benefits">
+          <h5>Our Benefits</h5>
+          <hr id = "contentLines">
+          <p>Our Benefits would go here</p>
+        </div>
+        <div id = "mission">
+          <h5>Our Clients</h5>
+          <hr id = "contentLines">
+          <p>How do we help people</p>
+        </div>
         <div id = "values">
           <h5>Our Values</h5>
           <hr id = "contentLines">
-          <p></p>
+          <p>What values our company stands for</p>
         </div>
         <div id = "whoWeAre">
         	<h5>Who We Are</h5>
@@ -90,6 +100,8 @@
 	        	<br>
 	        </div>
         </div>
+        <a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Shop Now</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger col-lg-2" href="/shop">Sign Up</a>
       </div>
 
     </div>
