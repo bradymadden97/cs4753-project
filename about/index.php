@@ -44,7 +44,7 @@
     	<div id = "whoWeAre">
           <h5>Who We Are</h5>
           <hr id = "contentLines">
-          <p>Canned Air is a company out of Charlottesville, Virginia interested in change and pursuing a better quality of life.</p>
+          <p style="text-align: center;">Canned Air is a company out of Charlottesville, Virginia interested in change and pursuing a better quality of life.</p>
         </div>
     </div>
 
@@ -66,7 +66,8 @@
         <div id = "Benefits" style="position: relative; margin-top: 300px;">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
-          <p>Free two day shipping -- amazon prime</p>
+          <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
+          <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished.</p>
         </div>
       </div>
     </div>
@@ -87,7 +88,8 @@
         <div id = "values" style="position: relative; margin-top: 300px;">
           <h5>Our Values</h5>
           <hr id = "contentLines">
-          <p>What values our company stands for</p>
+          <p>Value</p>
+          <p>Description of the value and why we are for it</p> 
         </div>
         <div id = "Founders">
         	<h5>The Founders</h5>
@@ -98,9 +100,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/brady.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Brady Madden</h6>
+	        		<h6>Brady Madden - Co-Founder</h6>
 	        		<div id = "bradyText">
-	        			<p>Placeholder Bio Text</p>
+	        			<p>Third year Computer Science Major at the University of Virginia with an Engineering Business Minor</p>
 	        		</div>
 	        	</div>
 	        	<br>
@@ -109,9 +111,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/bobby.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Bobby Hails</h6>
+	        		<h6>Bobby Hails - Co-Founder</h6>
 	        		<div id = "bobbyText">
-	        			<p>Placeholder Bio Text</p>
+	        			<p>Third year Computer Science Major at the University of Virginia</p>
 	        		</div>
 	        	</div>
 	        	<br>
@@ -120,9 +122,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/spencer.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Spencer Wolfe</h6>
+	        		<h6>Spencer Wolfe - Co-Founder</h6>
 	        		<div id = "spencerText">
-	        			<p>Placeholder Bio Text</p>
+	        			<p>Fourth year Aerospace Engineering Major at the University of Virginia with a Computer Science Minor</p>
 	        		</div>
 	        	</div>
 	        	<br>
