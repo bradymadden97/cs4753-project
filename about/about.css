@@ -38,7 +38,6 @@ h5 {
 }
 p{
 	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-	text-align: center;
 }
 
 #aboutButtons {
@@ -52,6 +51,11 @@ p{
     background-size: cover;
     padding: 150px 0;
     background-image: url('../img/header.jpg');
+
+}
+
+#valueHeadings{
+	font-size: 120%;
 }
 
 #missionText{
