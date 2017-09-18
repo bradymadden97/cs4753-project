@@ -38,6 +38,7 @@
 
     <h4 style="text-align: center; margin-top: 100px;">About Us</h4>
     <hr id = "aboutLine" style="width: 100%;">
+    <br>
 
     <div class="container">
     	<div id = "whoWeAre">
@@ -65,7 +66,7 @@
         <div id = "Benefits" style="position: relative; margin-top: 300px;">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
-          <p>Our Benefits would go here</p>
+          <p>Free two day shipping -- amazon prime</p>
         </div>
       </div>
     </div>
