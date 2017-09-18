@@ -33,7 +33,7 @@
   <link href="../css/nav-dark.css" rel="stylesheet">
   
   <!-- Custom styles for this template -->
-    <link href="login.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
 
     <div class="container">
 
