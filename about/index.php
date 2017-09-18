@@ -36,17 +36,30 @@
   <!-- Custom styles for this template -->
     <link href="about.css" rel="stylesheet">
 
+    <h4 style="text-align: center; margin-top: 100px;">About Us</h4>
+    <hr id = "aboutLine" style="width: 100%;">
+
+    <div style="position:relative">
+		<div class="call-to-action" style="background-image: url('../img/mission.jpg'); background-position:;">
+		
+		</div>
+		<div class="text-center call-to-action-text">
+			<h2 style="color:white; margin-bottom:50px">Our Mission</h2>
+			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
+				<p id = "missionText">Our mission is to provide clean, healthy air to all of mankind... <br> ...especially those in places where it is a threat to physical health</p>
+			</div>
+		</div>
+	</div>
+
     <div class="container">
 
-      <h4 style="text-align: center; margin-top: 100px;">About Us</h4>
-      <hr id = "aboutLine" style="width: 100%;">
       <div>
-        <div id = "mission">
+        <!--<div id = "mission">
           <h5>Our Mission</h5>
           <hr id = "contentLines">
           <p>Our mission is to provide clean, healthy air to all of mankind. To achieve this, we use a variety of methods to harvest the air, compromising of drone collection, boat collection, and collection by man.</p>
-        </div>
-        <div id = "Benefits">
+        </div>-->
+        <div id = "Benefits" style="position: relative; margin-top: 300px;">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
           <p>Our Benefits would go here</p>
@@ -55,6 +68,11 @@
           <h5>Our Clients</h5>
           <hr id = "contentLines">
           <p>How do we help people</p>
+        </div>
+        <div id = "products">
+          <h5>Our Products</h5>
+          <hr id = "contentLines">
+          <p>Products</p>
         </div>
         <div id = "values">
           <h5>Our Values</h5>

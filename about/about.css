@@ -49,3 +49,14 @@ p{
     background-image: url('../img/header.jpg');
 }
 
+#missionText{
+	color: #fff;
+	font-size: 20px;
+}
+
+@media (max-width: 992px){
+	#missionText{
+		font-size: 1em;
+	}
+}
+
