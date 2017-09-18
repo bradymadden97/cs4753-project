@@ -88,8 +88,12 @@
         <div id = "values" style="position: relative; margin-top: 300px;">
           <h5>Our Values</h5>
           <hr id = "contentLines">
-          <p>Value</p>
-          <p>Description of the value and why we are for it</p> 
+          <p id = "valueHeadings">People</p>
+          <p>Canned air is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product.</p> 
+          <p id = "valueHeadings">Health</p>
+          <p>Placeholder text for Health value.</p>
+          <p id = "valueHeadings">Service</p>
+          <p>Canned air is committed to making the world a better place.</p>
         </div>
         <div id = "Founders">
         	<h5>The Founders</h5>

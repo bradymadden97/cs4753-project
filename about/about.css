@@ -50,6 +50,11 @@ p{
     background-size: cover;
     padding: 150px 0;
     background-image: url('../img/header.jpg');
+
+}
+
+#valueHeadings{
+	font-size: 120%;
 }
 
 #missionText{
