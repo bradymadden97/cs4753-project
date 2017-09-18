@@ -46,7 +46,6 @@
           <hr id = "contentLines">
           <p>Our mission is to provide clean, healthy air to all of mankind. To achieve this, we use a variety of methods to harvest the air, compromising of drone collection, boat collection, and collection by man.</p>
         </div>
-        <br>
         <div id = "Benefits">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
