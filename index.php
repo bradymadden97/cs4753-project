@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title><?php echo $Company_Name . " - " . $Slogan ?></title>
+	
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +38,7 @@
 		include(dirname(__FILE__).'/components/nav.php');
 	?>
 
-    <header id="homepage-header" class="masthead">
+    <header id="homepage-header" class="masthead" style="background-attachment:fixed">
       <div class="header-content">
         <div class="header-content-inner">
           <h1 id="homeHeading">IT'S AIR, BUT IN A CAN...<br>...IT'S CANNED AIR</h1>
@@ -101,7 +103,7 @@
       <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/alaska.jpg">
+            <a id="pf-1" class="portfolio-box" href="img/alaska.jpg">
               <img class="img-fluid" src="img/alaska.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -116,7 +118,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/newz.jpg">
+            <a id="pf-2" class="portfolio-box" href="img/newz.jpg">
               <img class="img-fluid" src="img/newz.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -131,7 +133,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/chile.jpg">
+            <a id="pf-3" class="portfolio-box" href="img/chile.jpg">
               <img class="img-fluid" src="img/chile.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -146,7 +148,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/iceland.jpg">
+            <a id="pf-4" class="portfolio-box" href="img/iceland.jpg">
               <img class="img-fluid" src="img/iceland.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -161,7 +163,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/spain.jpg">
+            <a id="pf-5" class="portfolio-box" href="img/spain.jpg">
               <img class="img-fluid" src="img/spain.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -176,7 +178,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/antarctica.jpg">
+            <a id="pf-6" class="portfolio-box show-hover" href="img/antarctica.jpg">
               <img class="img-fluid" src="img/antarctica.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">

@@ -67,3 +67,7 @@
 .dot-active, .dot:hover {
   background-color: #ffffff;
 }
+
+.show-hover{
+	color:#f05f40;
+}

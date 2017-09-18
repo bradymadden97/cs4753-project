@@ -6,6 +6,9 @@
     <meta name="author" content="">
 
     <title>About Us</title>
+	
+	
+	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
