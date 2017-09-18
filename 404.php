@@ -17,17 +17,21 @@
 
 
 	<!--Creative css -->
-	<link href="css/creative.min.css" rel="stylesheet">
+	<style>
+		<?php
+			include(dirname(__FILE__).'/css/creative.min.css');
+		?>
+	</style>
   </head>
 
   <body style="height:auto">
 
 	<?php
-		include('components/nav.php');
+		include(dirname(__FILE__).'/components/nav.php');
 	?>
 	<style>
 		<?php
-			include('components/nav-dark.css');
+			include(dirname(__FILE__).'/components/nav-dark.css');
 		?>
 	</style>
     <div style="text-align:center;margin-top:100px" class="container">
