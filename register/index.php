@@ -39,7 +39,7 @@
     <div class="container">
 
       <form class="form-signin" id="signupform">
-        <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Sign up for Canned Air</h4>
+        <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Sign up for Zephair</h4>
         <label for="inputFirstName" class="sr-only">First Name</label>
 		<input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
 		<label for="inputLastName" class="sr-only">Last Name</label>

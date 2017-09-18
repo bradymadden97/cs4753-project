@@ -1,6 +1,6 @@
 <!-- Navigation -->
 <?php
-  $Company_Name = "CANNED AIR";
+  $Company_Name = "ZEPHAIR";
 ?>
 <!-- Include Navbar CSS file -->
 <style rel="text/css">
