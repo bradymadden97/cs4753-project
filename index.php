@@ -131,7 +131,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+            <a class="portfolio-box" href="img/chile.jpg">
               <img class="img-fluid" src="img/chile.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -146,7 +146,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+            <a class="portfolio-box" href="img/iceland.jpg">
               <img class="img-fluid" src="img/iceland.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -161,15 +161,15 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+            <a class="portfolio-box" href="img/spain.jpg">
+              <img class="img-fluid" src="img/spain.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Category
+                    Air from
                   </div>
                   <div class="project-name">
-                    Project Name
+                    Spain
                   </div>
                 </div>
               </div>
