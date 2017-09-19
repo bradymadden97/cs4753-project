@@ -54,8 +54,9 @@ p{
 
 }
 
-#valueHeadings{
+.valueHeadings{
 	font-size: 120%;
+	color: #f05f40;
 }
 
 #missionText{
@@ -74,5 +75,9 @@ p{
 
 #wwa-contain{
 	margin-bottom: 40px;
+}
+
+#Founders{
+	margin-top: 50px;
 }
 

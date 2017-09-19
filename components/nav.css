@@ -94,4 +94,7 @@ html {
 }
 .navbar-brand{
 	font-size: 24px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	padding-left: 20px;
 }

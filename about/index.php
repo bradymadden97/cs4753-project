@@ -98,11 +98,11 @@
         <div id = "values" style="position: relative; margin-top: 300px;">
           <h5>Our Values</h5>
           <hr id = "contentLines">
-          <p id = "valueHeadings">People</p>
+          <p class = "valueHeadings sr-button">People</p>
           <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product. We try to create relationships with our customers by providing timely and helpful customer service.</p> 
-          <p id = "valueHeadings">Health</p>
+          <p class = "valueHeadings sr-button">Health</p>
           <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who do not live in low quality air enviornments by providing them with the cleanest, freshest airon the globe in order for them to live healthier.</p>
-          <p id = "valueHeadings">Service</p>
+          <p class = "valueHeadings sr-button">Service</p>
           <p>Zephair is committed to making the world a better place. Not only are we concerned with the health aspects that clean air provides, but also in giving back to the community by trying to purify low quality air enviornments with purifiers to make the world a better place. </p>
         </div>
         <div id = "Founders">
@@ -153,7 +153,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Get started today!</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<a class="btn btn-primary btn-xl js-scroll-trigger sr-icons" href="/shop">Shop Now</a>
+				<a class="btn btn-primary btn-xl js-scroll-trigger sr-button" href="/shop">Shop Now</a>
 			</div>
 		</div>
 	</div>
