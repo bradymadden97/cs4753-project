@@ -91,7 +91,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Our Products</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<p id = "missionText">Our products go here</p>
+				<p id = "missionText">We offer cannistered air in multiple sizes, from 12 ounce cans to 100 ounce compressed containers. Air is sourced from all seven continents, and specialty air can be retrieved from new, untapped sources at request.</p>
 			</div>
 		</div>
 	</div>
@@ -116,9 +116,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/brady.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Brady Madden - Co-Founder</h6>
+	        		<h6><b>Brady Madden</b></h6>
 	        		<div id = "bradyText">
-	        			<p>Third year Computer Science Major at the University of Virginia with an Engineering Business Minor</p>
+	        			<p style="font-size:14px">Third year Computer Science Major at the University of Virginia with an Engineering Business Minor</p>
 	        		</div>
 	        	</div>
 	        	<br>
@@ -127,9 +127,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/bobby.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Bobby Hails - Co-Founder</h6>
+	        		<h6><b>Bobby Hails</b></h6>
 	        		<div id = "bobbyText">
-	        			<p>Third year Computer Science Major at the University of Virginia</p>
+	        			<p style="font-size:14px">Third year Computer Science Major at the University of Virginia</p>
 	        		</div>
 	        	</div>
 	        	<br>
@@ -138,9 +138,9 @@
 	        			<img class="sr-icons rounded-circle" src = "../img/spencer.jpg" style="width: 80%;">
 	        		</div>
 					<br>
-	        		<h6>Spencer Wolfe - Co-Founder</h6>
+	        		<h6><b>Spencer Wolfe</b></h6>
 	        		<div id = "spencerText">
-	        			<p>Fourth year Aerospace Engineering Major at the University of Virginia with a Computer Science Minor</p>
+	        			<p style="font-size:14px">Fourth year Aerospace Engineering Major at the University of Virginia with a Computer Science Minor</p>
 	        		</div>
 	        	</div>
 	        	<br>
