@@ -91,7 +91,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Our Products</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<p id = "missionText">We offer cannistered air in multiple sizes, from 12 ounce cans to 100 ounce compressed containers. Air is sourced from all seven continents, and specialty air can be retrieved from new, untapped sources at request.</p>
+				<p id = "missionText">We offer cannistered air in multiple sizes, from 12 ounce cans to 100 ounce compressed containers. Air is sourced from all seven continents, and specialty air can be retrieved from new, untapped sources at request. All products are factory sealed and then hand checked to ensure the highest quality before they are shipped to your door.</p>
 			</div>
 		</div>
 	</div>
