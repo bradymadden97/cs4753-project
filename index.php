@@ -41,9 +41,9 @@
     <header id="homepage-header" class="masthead" style="background-attachment:fixed">
       <div class="header-content">
         <div class="header-content-inner">
-          <h1 id="homeHeading">FRESH AIR <br> FOR EVERYONE</h1>
+          <h1 id="homeHeading">FRESH AIR. <br> FOR EVERYONE.</h1>
           <hr>
-		  <p>Clean, natural solutions</p>
+		  <p style="font-size:20px">Clean, natural solutions to the air quality epidemic</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="/shop">Shop Now</a>
         </div>
 		<br>
