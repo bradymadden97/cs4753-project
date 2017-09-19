@@ -38,16 +38,28 @@
 
     <div class="container">
 
-      <form class="form-signin" id="signupform">
+      <form class="form-signin" id="signupform" novalidate>
         <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Create a Zephair Account</h4>
         <label for="inputFirstName" class="sr-only">First Name</label>
 		<input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
+		  <span class="invalid-feedback">
+			Provide a valid first name.
+		  </span>
 		<label for="inputLastName" class="sr-only">Last Name</label>
 		<input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required>
+		  <div class="invalid-feedback">
+			Provide a valid last name.
+		  </div>
 		<label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required style="margin-bottom:-2px" pattern="[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}">
+		  <div class="invalid-feedback">
+			Provide a valid email address.
+		  </div>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required style="margin-bottom:-2px">
+		  <div class="invalid-feedback">
+			Provide a valid password with at least 6 characters.
+		  </div>
 		<label for="inputPasswordCheck" class="sr-only">Re-type Password</label>
         <input type="password" id="inputPasswordCheck" class="form-control" placeholder="Re-type Password" required>
 

@@ -62,11 +62,11 @@ body {
 	border-top-left-radius: 0.25rem;
 }
 #inputLastName{
-	margin-bottom: 20px;
 	border-bottom-left-radius: 0.25rem;
 	border-bottom-right-radius: 0.25rem;
 }
 #inputEmail{
+	margin-top: 20px;
 	border-top-right-radius: 0.25rem;
 	border-top-left-radius: 0.25rem;
 }

@@ -26,3 +26,14 @@ $("#inputPasswordCheck").blur(function(){
 		$("#signupbtn").prop('disabled', false);
 	}
 });
+
+window.addEventListener("load", function(){
+	var form = document.getElementById("signupform");
+	form.addEventListener("submit", function(event){
+		if(form.checkValidity() == false){
+			event.preventDefault();
+			event.stopPropagation();
+		}
+		form.classList.add("was-validated");
+	}, false);
+}, false);
