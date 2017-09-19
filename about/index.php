@@ -50,7 +50,7 @@
 		  <div class="row">
 			<div class="col-lg-1"></div>
 			<div class="col-lg-10">
-				<p><b style="color:#f05f40">Zephair</b> is a fresh-air distribution company based out of Charlottesville, Virginia interested in global health change and pursuing a better quality of life for all. Our products are designed for everyday humans in low air-quality environments, to provide them with higher-quality, breathable air, in hopes of improving their health. Our air is sourced from the cleanest, most natural areas across the globe and certified by humans to ensure high quality, revitalizing, air.</p>
+				<p><b style="color:#f05f40">Zephair</b> is a fresh-air distribution company based out of Charlottesville, Virginia interested in global health change and pursuing a better quality of life for all. Our products are designed for everyday humans in low air-quality environments, to provide them with higher-quality, breathable air, in hopes of improving their health. Our air is sourced from the cleanest, most natural areas across the globe and certified by humans to ensure high quality, revitalizing, air. <br><br> The word <b style="color:#f05f40">Zephair</b> comes from the word Zephyr, meaning a gentle, mild breeze. Our name contains the word "air" to pay homage to our mission of providing clean air to all.</p>
 			</div>
 		  </div>
         </div>
@@ -71,13 +71,15 @@
     <div class="container">
 
       <div>
-        <div id = "Benefits" style="position: relative; margin-top: 300px;">
+        <div id = "Benefits" style="position: relative; margin-top: 350px;margin-bottom: 10px">
           <h5>Our Benefits</h5>
           <hr id = "contentLines">
-          <div class = "col-lg-10" style="margin-left: 75px;">
-          <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
-          <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished becuase after all, the only way to keep air pure is to keep it clean.</p>
-          </div>
+		  <div class="row"><div class="col-lg-1"></div>
+			  <div class = "col-lg-10">
+			  <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
+			  <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished becuase after all, the only way to keep air pure is to keep it clean.</p>
+			  </div>
+		  </div>
         </div>
       </div>
     </div>
