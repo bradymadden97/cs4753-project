@@ -91,7 +91,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Our Products</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<p id = "missionText">Our products go here</p>
+				<p id = "missionText">Zephair air is amongs the cleanest quality that money can buy. They will take your senses back to the climate from which they came. All of our products are factory sealed and then hand checked to ensure the highest quality before they are shipped to your door.</p>
 			</div>
 		</div>
 	</div>
