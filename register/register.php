@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once("../config/config.php");
 
 
@@ -93,6 +95,14 @@ try {
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
 			$account_id = $conn->lastInsertId('user-id');
 			
+			session_destroy();
+			session_start();
+			$_SESSION['user_id'] = $account_id;
+			$_SESSION['first_name'] = $first_name;
+			$_SESSION['last_name'] = $last_name;
+			$_SESSION['email'] = $email;
+			header("Location:/");
+			die();			
 		}else{
 			header("Location:index.php?err=db");
 			die();
