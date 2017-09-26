@@ -1,15 +1,22 @@
 <?php
 
+/*
+This persists $_SESSION variables across multiple pages.
+We will use $_SESSION variables to keep track of who a user is once they've logged in.
+*/
 session_start();
 
+//Includes database connection variables 
 require_once("../config/config.php");
 
-
+//Validate input fields server side is more secure. Cannot rely on client-side validation.
 function validate_first_name(){
 	if(isset($_POST['first_name'])){
 		if(ctype_alpha($_POST['first_name'])){
 			return $_POST['first_name'];
 		}else{
+			//header("Location: ... ") is used to redirect page
+			//It is good to put die(); afterwards to end register.php script from continuing to run
 			header("Location:index.php?err=fn&type=nonalpha");
 			die();
 		}
@@ -61,13 +68,15 @@ function validate_password(){
 	}	
 }
 	
+//Check if email already exists as a user by getting COUNT of number of rows in table with email
 function email_exists($db, $e){
 	$val_email = $db->prepare('SELECT COUNT(*) FROM users WHERE email = :email');
 	$val_email->bindParam(":email", $e);
 	$val_email->execute();
 	return $val_email->fetchColumn();
 }
-	
+
+//Creating new account by inserting new row
 function create_account($db, $fn, $ln, $e, $p){
 	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES (:first_name, :last_name, :email, :pass, now())');
 	$act->bindParam(":first_name", $fn);
@@ -76,7 +85,8 @@ function create_account($db, $fn, $ln, $e, $p){
 	$act->bindParam(":pass", $p);
 	return $act->execute();
 }
-	
+
+//Must be in try/catch in case database connection fails
 try {	
 	$first_name = validate_first_name();
 	$last_name = validate_last_name();
@@ -84,6 +94,7 @@ try {
 	$pass = validate_password();
 			
 	
+	//Use either PDO or MySQLi to prevent against SQL injection attacks
 	$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
@@ -95,12 +106,16 @@ try {
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
 			$account_id = $conn->lastInsertId('user-id');
 			
+			//Destroy session variables in case someone was logged in and created a new account
 			session_destroy();
+			//Begin a new session and set necessary session variables
 			session_start();
 			$_SESSION['user_id'] = $account_id;
 			$_SESSION['first_name'] = $first_name;
 			$_SESSION['last_name'] = $last_name;
 			$_SESSION['email'] = $email;
+			
+			//Redirect to homepage for right now. Will break on XAMPP due to filepath differences
 			header("Location:/");
 			die();			
 		}else{
