@@ -77,7 +77,7 @@
 		  <div class="row"><div class="col-lg-1"></div>
 			  <div class = "col-lg-10">
 			  <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
-			  <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished becuase after all, the only way to keep air pure is to keep it clean.</p>
+			  <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished because after all, the only way to keep air pure is to keep it clean.</p>
 			  </div>
 		  </div>
         </div>
@@ -103,7 +103,7 @@
           <p class = "valueHeadings sr-button">People</p>
           <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product. We try to create relationships with our customers by providing timely and helpful customer service.</p> 
           <p class = "valueHeadings sr-button">Health</p>
-          <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who do not live in low quality air enviornments by providing them with the cleanest, freshest airon the globe in order for them to live healthier.</p>
+          <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who live in low quality air enviornments by providing them with the cleanest, freshest air on the globe in order for them to live healthier.</p>
           <p class = "valueHeadings sr-button">Service</p>
           <p>Zephair is committed to making the world a better place. Not only are we concerned with the health aspects that clean air provides, but also in giving back to the community by trying to purify low quality air enviornments with purifiers to make the world a better place. </p>
         </div>
