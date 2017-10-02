@@ -63,7 +63,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Our Mission</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<p id = "missionText">Our mission is to provide clean, healthy air to all of mankind... <br> ...especially those in places where it is a threat to physical health</p>
+				<p id = "missionText">Our mission is to provide clean, <b style="color: #f05f40">healthy air</b> to all of mankind... <br> ...especially those in places where it is a threat to physical health</p>
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 		  <div class="row"><div class="col-lg-1"></div>
 			  <div class = "col-lg-10">
 			  <p>Our company offers air from many different countries around the world so each customer can get the air that best suits their tastes and needs. Although we provide many options, if those options are not sufficient for your specific needs and tastes, a special order can be placed to harvest air from the specified country.</p> 
-			  <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and we never use artificial preservatives. We believing in keeping the natural quality of our product intact and untarnished because after all, the only way to keep air pure is to keep it clean.</p>
+			  <p>The air that we provide is one hundred percent natural. Each batch of air is harvested by us for you and <b style="color: #f05f40">we never use artificial preservatives</b>. We believing in keeping the natural quality of our product intact and untarnished because after all, the only way to keep air pure is to keep it clean.</p>
 			  </div>
 		  </div>
         </div>
@@ -91,7 +91,7 @@
 		<div class="text-center call-to-action-text">
 			<h2 style="color:white; margin-bottom:50px">Our Products</h2>
 			<div style="text-align:center; position: relative; bottom: 0px; margin-bottom: 0px;">
-				<p id = "missionText">We offer cannistered air in multiple sizes, from 12 ounce cans to 100 ounce compressed containers. Air is sourced from all seven continents, and specialty air can be retrieved from new, untapped sources at request. All products are factory sealed and then hand checked to ensure the highest quality before they are shipped to your door.</p>
+				<p id = "missionText">We offer cannistered air in multiple sizes, from 12 ounce cans to 100 ounce compressed containers. Air is <b style="color: #f05f40">sourced from all seven continents</b>, and specialty air can be retrieved from new, untapped sources at request. All products are factory sealed and then hand checked to ensure the highest quality before they are shipped to your door.</p>
 			</div>
 		</div>
 	</div>
@@ -101,11 +101,11 @@
           <h5>Our Values</h5>
           <hr id = "contentLines">
           <p class = "valueHeadings sr-button">People</p>
-          <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a personalized experience for each person that visits our site and orders our product. We try to create relationships with our customers by providing timely and helpful customer service.</p> 
+          <p>Zephair is a people company committed to helping and serving each customer. We aim to provide a <b style="color: #f05f40">personalized experience</b> for each person that visits our site and orders our product. We try to create relationships with our customers by providing timely and helpful customer service.</p> 
           <p class = "valueHeadings sr-button">Health</p>
-          <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who live in low quality air enviornments by providing them with the cleanest, freshest air on the globe in order for them to live healthier.</p>
+          <p>Zephair is a company formed around the idea of a healthier life. Our main goal is to help those who live in low quality air enviornments by providing them with the <b style="color: #f05f40">cleanest, freshest air</b> on the globe in order for them to live healthier.</p>
           <p class = "valueHeadings sr-button">Service</p>
-          <p>Zephair is committed to making the world a better place. Not only are we concerned with the health aspects that clean air provides, but also in giving back to the community by trying to purify low quality air enviornments with purifiers to make the world a better place. </p>
+          <p>Zephair is committed to making the world a <b style="color: #f05f40">better place</b>. Not only are we concerned with the health aspects that clean air provides, but also in giving back to the community by trying to purify low quality air enviornments with purifiers to make the world a better place. </p>
         </div>
         <div id = "Founders">
         	<h5>The Founders</h5>
