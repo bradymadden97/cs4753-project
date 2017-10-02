@@ -24,12 +24,27 @@
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger nav-margin-10px" href="/shop"><span>Shop</span></a>
 				</li>
+				<?php
+					if(!isset($_SESSION['user_id'])){
+				?>						
 				<li class="nav-item">
 					<a class="btn-solid-color nav-link js-scroll-trigger" href="/register"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Sign up</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="btn-outline nav-link js-scroll-trigger" href="/login"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Login</span></a>
-				</li>			
+				</li>
+				<?php
+					}else{
+				?>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger"><span class="nav-margin-10px" id="hellonav">My Account</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px"><span><i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> Cart</span></a>
+				</li>
+				<?php
+					}
+				?>				
 			</ul>
 		</div>
 	</div>

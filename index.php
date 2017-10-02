@@ -1,9 +1,10 @@
-<html lang="en">
 <?php
-  $Company_Name = "Zephair";
-  $Slogan = "LIVE CLEAN, BREATHE EASY";
-?>
+	session_start();
 
+	$Company_Name = "Zephair";
+	$Slogan = "LIVE CLEAN, BREATHE EASY";
+?>
+<html lang="en">
   <head>
 
     <meta charset="utf-8">
