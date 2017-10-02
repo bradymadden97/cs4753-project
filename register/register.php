@@ -12,7 +12,7 @@ require_once("../config/config.php");
 //Validate input fields server side is more secure. Cannot rely on client-side validation.
 function validate_first_name(){
 	if(isset($_POST['first_name'])){
-		if(ctype_alpha($_POST['first_name'])){
+		if(preg_match("/^([A-z \-]+)$/i", $_POST['first_name'])){
 			return $_POST['first_name'];
 		}else{
 			//header("Location: ... ") is used to redirect page
@@ -28,7 +28,7 @@ function validate_first_name(){
 
 function validate_last_name(){
 	if(isset($_POST['last_name'])){
-		if(ctype_alpha($_POST['last_name'])){
+		if(preg_match("/^([A-z \-]+)$/i", $_POST['last_name'])){
 			return $_POST['last_name'];
 		}else{
 			header("Location:index.php?err=ln&type=nonalpha");
