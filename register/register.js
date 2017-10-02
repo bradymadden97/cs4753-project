@@ -134,7 +134,7 @@ $("#inputPasswordCheck").bind('keyup', function(e){
 	}
 });
 
-//Validating password and retype password
+//Blocking submit button if passwords arent equal
 $("#inputPassword").keyup(function(){
 	if($("#inputPassword").val() !== $("#inputPasswordCheck").val()){
 		$("#signupbtn").prop('disabled', true);
@@ -164,11 +164,28 @@ $("#inputPasswordCheck").blur(function(){
 	}
 });
 
+function checkFormValid(){
+	var fn = $("#inputFirstName").val().trim();
+	var ln = $("#inputLastName").val().trim();
+	var e = $("#inputEmail").val().trim();
+	var p = $("#inputPassword").val();
+	var pp = $("#inputPasswordCheck").val();
+	
+	
+	var fn_check = validateFirstName(fn);
+	var ln_check = validateLastName(ln);
+	var e_check = validateEmail(e);
+	var p_check = validatePassword(p);
+	var pp_check = validatePasswordCheck(pp);
+	
+	return fn_check && ln_check && e_check && p_check && pp_check;
+}
+
 //Onsubmit validation
 window.addEventListener("load", function(){
 	var form = document.getElementById("signupform");
 	form.addEventListener("submit", function(event){
-		if(form.checkValidity() == false){
+		if(checkFormValid() == false){
 			event.preventDefault();
 			event.stopPropagation();
 		}
@@ -176,6 +193,7 @@ window.addEventListener("load", function(){
 }, false);
 
 
+//Regex for validations
 function validateName(str){
     return str.match(/^([A-z \-]+)$/i);
 };

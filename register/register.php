@@ -87,7 +87,17 @@ function create_account($db, $fn, $ln, $e, $p){
 }
 
 //Must be in try/catch in case database connection fails
-try {	
+try {
+	if(isset($_POST['first_name'])){
+		$_SESSION['temp_first_name'] = $_POST['first_name'];
+	}
+	if(isset($_POST['last_name'])){
+		$_SESSION['temp_last_name'] = $_POST['last_name'];
+	}
+	if(isset($_POST['email'])){
+		$_SESSION['temp_email'] = $_POST['email'];
+	}
+	
 	$first_name = validate_first_name();
 	$last_name = validate_last_name();
 	$email = validate_email();
