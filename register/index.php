@@ -60,7 +60,7 @@
 			</div>
 			<div>
 				<label for="inputEmail" class="sr-only">Email address</label>
-				<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required style="margin-bottom:-2px" pattern="[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}">
+				<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required style="margin-bottom:-2px">
 				  <span id="emailfeedback" class="invalid-feedback">
 					Provide a valid email address.
 				  </span>
