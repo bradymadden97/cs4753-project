@@ -164,6 +164,24 @@ $("#inputPasswordCheck").blur(function(){
 	}
 });
 
+//Prevent blurring on button clicks
+$("#signupbtn").mousedown(function(e){
+	e.stopImmediatePropagation();
+    e.preventDefault();
+});
+
+
+//Onsubmit validation
+window.addEventListener("load", function(){
+	var form = document.getElementById("signupform");
+	form.addEventListener("submit", function(event){
+		if(checkFormValid() == false){
+			event.preventDefault();
+			event.stopPropagation();
+		}
+	}, false);
+}, false);
+
 function checkFormValid(){
 	var fn = $("#inputFirstName").val().trim();
 	var ln = $("#inputLastName").val().trim();
@@ -180,17 +198,6 @@ function checkFormValid(){
 	
 	return fn_check && ln_check && e_check && p_check && pp_check;
 }
-
-//Onsubmit validation
-window.addEventListener("load", function(){
-	var form = document.getElementById("signupform");
-	form.addEventListener("submit", function(event){
-		if(checkFormValid() == false){
-			event.preventDefault();
-			event.stopPropagation();
-		}
-	}, false);
-}, false);
 
 
 //Regex for validations

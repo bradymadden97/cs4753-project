@@ -131,5 +131,21 @@
 	
 	<script src="register.js"></script>
 	<script src="error.js"></script>
+	<script>
+		var a_elements = document.getElementsByTagName('a');
+		for(var i = a_elements.length - 1; i >= 0; i--){
+			$(a_elements[i]).mousedown(function(e){
+				e.stopImmediatePropagation();
+				e.preventDefault();
+			});
+		}
+	</script>
+	<!-- Set auto-infocus text ahead of cursor always -->
+	<script>
+		$("#inputFirstName").focus();
+		var temp_in = $("#inputFirstName").val();
+		$("#inputFirstName").val("");
+		$("#inputFirstName").val(temp_in);
+	</script>
   </body>
 </html>
