@@ -170,7 +170,7 @@ function checkFormValid(){
 	var e = $("#inputEmail").val().trim();
 	var p = $("#inputPassword").val();
 	var pp = $("#inputPasswordCheck").val();
-	
+		
 	
 	var fn_check = validateFirstName(fn);
 	var ln_check = validateLastName(ln);
