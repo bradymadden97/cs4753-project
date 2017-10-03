@@ -34,7 +34,8 @@ function getUrlParams(){
 			$("#emailfeedback").text("Email cannot be empty");
 			$("#emailfeedback").show();
 		}else if(err_msg == "exists"){
-			$("#emailfeedback").html("Account already exists. Is this you? <a href='/login'>Log in<a>");
+			var email = encodeURIComponent($("#inputEmail").val().trim());
+			$("#emailfeedback").html("Account already exists. Is this you? <a href='/login?email=" + email + "'>Log in<a>");
 			$("#emailfeedback").show();
 		}
 	}else if(err == "pass"){

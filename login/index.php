@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	
+	$preset_email = "";	
+	if(isset($_GET['email'])){
+		$preset_email = urldecode($_GET['email']);
+	}
 ?>
 
 <html lang="en">
@@ -47,7 +52,7 @@
       <form class="form-signin">
         <h4 style="text-align:center;margin-top:100px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" value="<?php echo $preset_email; ?>" required>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
@@ -77,6 +82,12 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
+	<script>
+		$("#inputEmail").focus();
+		var temp_in = $("#inputEmail").val();
+		$("#inputEmail").val("");
+		$("#inputEmail").val(temp_in);
+	</script>
 	
   </body>
 </html>
