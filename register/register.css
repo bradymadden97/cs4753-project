@@ -115,3 +115,16 @@ textarea:focus, input:focus{
 #tologindiv{
 	margin-bottom: 30px;
 }
+
+#wrapper{
+	max-width: 370px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#bodycontainer{
+	margin-top: 60px;
+}

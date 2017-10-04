@@ -63,12 +63,12 @@
 	<!-- Custom styles for this template -->
     <link href="register.css" rel="stylesheet">
 
-    <div class="container">
+    <div id="bodycontainer" class="container">
 	
 		<div id="dberror" class="alert alert-danger" style="display:none" role="alert">
 			<strong>Error:</strong> Our servers experienced an error. Please try again.
 		</div>
-
+	<div id="wrapper">
       <form class="form-signin" id="signupform" novalidate action="register.php" method="POST" name="signupform">
         <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Create a Zephair Account</h4>
 			<div>
@@ -113,7 +113,7 @@
 	  <div id="tologindiv">
 	  Already have an account? <a href="/login" id="tologin">Log in</a>
 	  </div>
-
+	</div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -146,6 +146,17 @@
 		var temp_in = $("#inputFirstName").val();
 		$("#inputFirstName").val("");
 		$("#inputFirstName").val(temp_in);
+	</script>
+	
+	<!-- Edit scrollspy nav switch -->
+	<script>
+	$(window).scroll(function() {
+		if ($("#mainNav").offset().top > 1) {
+		  $("#mainNav").addClass("navbar-shrink");
+		} else {
+		  $("#mainNav").removeClass("navbar-shrink");
+		}
+	});
 	</script>
   </body>
 </html>
