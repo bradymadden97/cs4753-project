@@ -1,13 +1,21 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background-image: url(../img/header1.jpg);
 }
+
 
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  background-color: #eee;
+
+}
+
+#tologindiv{
+	background-color: #eee;
+	background-size: 10px;
 }
 
 .form-signin .form-signin-heading,
