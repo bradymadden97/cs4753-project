@@ -1,0 +1,130 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../img/signup.jpg);
+}
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #eee;
+
+}
+
+#tologindiv{
+	background-color: #eee;
+	background-size: 10px;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  border-color: #f05f40;
+  z-index: 2;
+}
+.btn{
+	cursor: pointer;
+	border-radius: 10px;
+}
+.btn-brand-color{
+	color: #ffffff;
+	border-color: #f05f40;
+	background-color: #f05f40;
+}
+.btn-brand-color:hover{
+	border-color: #eb3812;
+	background-color: #eb3812;
+}
+.btn-brand-color:disabled{
+	color: #ffffff;
+	border-color: #f05f40;
+	background-color: #f05f40;
+	cursor: auto;
+}
+.form-signin input{
+	border-radius: 0px;
+	margin-bottom: -1px;
+}
+#inputPasswordCheck {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+#inputFirstName{
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+#inputLastName{
+	border-bottom-left-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+#inputEmail{
+	margin-top: 20px;
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+}
+#tologindiv{
+	margin-top:30px;
+	text-align: center;
+}
+#tologin{
+	text-decoration: none;
+}
+.invalid-feedback{
+	padding-left: 5px !important;
+	font-size: 12px;
+	margin-top:2px !important;
+	margin-bottom:10px !important;
+}
+textarea:focus, input:focus{
+    outline: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+#signupbtn{
+  margin-top: 50px;
+}
+
+.form-control{
+	display:inline !important;
+}
+#dberror{
+	margin-right:auto;
+	margin-left:auto;
+	width: 75%;
+	text-align:center;
+	margin-top:50px;
+	margin-bottom:0px;
+}
+
+#tologindiv{
+	margin-bottom: 30px;
+}
+
+#wrapper{
+	max-width: 370px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#bodycontainer{
+	margin-top: 60px;
+}
