@@ -47,10 +47,10 @@
 	<!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
 
-    <div class="container">
-
+    <div id="bodycontainer" class="container">
+	<div id="wrapper">
       <form class="form-signin">
-        <h4 style="text-align:center;margin-top:100px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
+        <h4 style="text-align:center;margin-top:10px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" value="<?php echo $preset_email; ?>" required>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -67,7 +67,7 @@
 	  <div id="tosignupdiv">
 	  Don't have an account? <a href="/register" id="tosignup">Create Account</a>
 	  </div>
-
+	</div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -87,6 +87,17 @@
 		var temp_in = $("#inputEmail").val();
 		$("#inputEmail").val("");
 		$("#inputEmail").val(temp_in);
+	</script>
+	
+	<!-- Edit scrollspy nav switch -->
+	<script>
+	$(window).scroll(function() {
+		if ($("#mainNav").offset().top > 1) {
+		  $("#mainNav").addClass("navbar-shrink");
+		} else {
+		  $("#mainNav").removeClass("navbar-shrink");
+		}
+	});
 	</script>
 	
   </body>

@@ -1,7 +1,7 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background-image: url(../img/header1.jpg);
 }
 
 .form-signin {
@@ -59,3 +59,17 @@ body {
 #tosignup{
 	text-decoration: none;
 }
+#wrapper{
+	max-width: 370px;
+    padding: 15px;
+	padding-bottom: 30px;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#bodycontainer{
+	margin-top: 60px;
+}
+
