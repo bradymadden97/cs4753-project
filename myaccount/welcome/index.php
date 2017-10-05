@@ -26,16 +26,16 @@
 
 
 	<!--Creative css -->
-	<link href="../css/creative.min.css" rel="stylesheet">
+	<link href="../../css/creative.min.css" rel="stylesheet">
   </head>
 
   <body>
 	<?php
-		include('../components/nav.php');
+		include('../../components/nav.php');
 	?>
   	<style>
 		<?php
-			include('../components/nav-dark.css');
+			include('../../components/nav-dark.css');
 		?>
 	</style>
 	
@@ -100,7 +100,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 	<!-- Custom scripts for this template -->
-    <script src="../js/creative.min.js"></script>
+    <script src="../../js/creative.min.js"></script>
 	
 	<script src="information.js"></script>
 	<script src="error.js"></script>

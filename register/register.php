@@ -125,8 +125,8 @@ try {
 			$_SESSION['last_name'] = $last_name;
 			$_SESSION['email'] = $email;
 			
-			//Redirect to homepage for right now. Will break on XAMPP due to filepath differences
-			header("Location:/");
+			//Redirect to information collection. Will break on XAMPP due to filepath differences
+			header("Location:/myaccount/welcome");
 			die();			
 		}else{
 			header("Location:index.php?err=db");
