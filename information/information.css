@@ -13,7 +13,7 @@ body {
 
 }
 
-#tologindiv{
+#skipdiv{
 	background-color: #eee;
 	background-size: 10px;
 }
@@ -60,28 +60,20 @@ body {
 	border-radius: 0px;
 	margin-bottom: -1px;
 }
-#inputPasswordCheck {
+#inputZip {
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
-#inputFirstName{
+#inputAddress{
 	border-top-right-radius: 0.25rem;
 	border-top-left-radius: 0.25rem;
 }
-#inputLastName{
-	border-bottom-left-radius: 0.25rem;
-	border-bottom-right-radius: 0.25rem;
-}
-#inputEmail{
-	margin-top: 20px;
-	border-top-right-radius: 0.25rem;
-	border-top-left-radius: 0.25rem;
-}
-#tologindiv{
+#skipdiv{
 	margin-top:30px;
 	text-align: center;
+	margin-bottom: 30px;
 }
-#tologin{
+#skip{
 	text-decoration: none;
 }
 .invalid-feedback{
@@ -96,7 +88,7 @@ textarea:focus, input:focus{
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
 }
-#signupbtn{
+#submitinfobtn{
   margin-top: 50px;
 }
 
@@ -112,10 +104,6 @@ textarea:focus, input:focus{
 	margin-bottom:0px;
 }
 
-#tologindiv{
-	margin-bottom: 30px;
-}
-
 #wrapper{
 	max-width: 370px;
     padding: 15px;
@@ -127,4 +115,10 @@ textarea:focus, input:focus{
 
 #bodycontainer{
 	margin-top: 60px;
+}
+
+#pleaseinfo{
+	margin-bottom: 20px;
+	text-align:center;
+	font-size:14px;
 }

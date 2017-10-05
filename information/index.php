@@ -1,27 +1,6 @@
 <?php
 	session_start();
 	
-	$temp_fn = "";
-	$temp_ln = "";
-	$temp_email = "";
-	
-	if(isset($_GET['err'])){
-		if(isset($_SESSION['temp_first_name'])){
-			$temp_fn = $_SESSION['temp_first_name'];
-		}
-		if(isset($_SESSION['temp_last_name'])){
-			$temp_ln = $_SESSION['temp_last_name'];
-		}
-		if(isset($_SESSION['temp_email'])){
-			$temp_email = $_SESSION['temp_email'];
-		}
-	}else{
-		$_SESSION['temp_first_name'] = "";
-		$_SESSION['temp_last_name'] = "";
-		$_SESSION['temp_email'] = "";
-	}
-	
-
 	
 ?>
 
@@ -32,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Zephair - Create Account</title>
+    <title>Zephair - Account Information</title>
 	
 	
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
@@ -69,42 +48,43 @@
 			<strong>Error:</strong> Our servers experienced an error. Please try again.
 		</div>
 	<div id="wrapper">
-      <form class="form-signin" id="signupform" novalidate action="information.php" method="POST" name="signupform">
-        <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Create a Zephair Account</h4>
+      <form class="form-signin" id="infoform" novalidate action="information.php" method="POST" name="infoform">
+        <h4 style="text-align:center;margin-top:30px;margin-bottom:15px" class="form-signin-heading">Welcome to Zephair, <?php echo $_SESSION['first_name']; ?></h4>
+		<p id="pleaseinfo" >Please provide your shipping address to finish your registration.</p>
 			<div>
-				<label for="inputFirstName" class="sr-only">Address</label>
-				<input type="text" id="inputFirstName" name="first_name" class="form-control" placeholder="Address" value="<?php echo $temp_fn; ?>" required autofocus>
-				  <div id="firstnamefeedback" class="invalid-feedback">
-					Provide a valid first name.
+				<label for="inputAddress" class="sr-only">Address</label>
+				<input type="text" id="inputAddress" name="address" class="form-control" placeholder="Address" required autofocus>
+				  <div id="addressfeedback" class="invalid-feedback">
+					Provide a valid address.
 				  </div>
 			</div>
 			<div>
-				<label for="inputLastName" class="sr-only">City</label>
-				<input type="text" id="inputLastName" name="last_name" class="form-control" placeholder="City" value="<?php echo $temp_ln; ?>" required>
-				  <div id="lastnamefeedback" class="invalid-feedback">
-					Provide a valid last name.
+				<label for="inputCity" class="sr-only">City</label>
+				<input type="text" id="inputCity" name="last_name" class="form-control" placeholder="City" required>
+				  <div id="cityfeedback" class="invalid-feedback">
+					Provide a valid city.
 				  </div>
 			</div>
 			<div>
 				<label for="inputEmail" class="sr-only">State</label>
-				<input type="email" id="inputEmail" name="email" class="form-control" placeholder="State" value="<?php echo $temp_email; ?>" required style="margin-bottom:-2px">
-				  <div id="emailfeedback" class="invalid-feedback">
-					Provide a valid email address.
+				<input type="text" id="inputState" name="state" class="form-control" placeholder="State" required style="margin-bottom:-2px">
+				  <div id="statefeedback" class="invalid-feedback">
+					Provide a valid state.
 				  </div>
 			</div>
 			<div>
-				<label for="inputPassword" class="sr-only">Zip Code</label>
-				<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Zip Code" required style="margin-bottom:-2px">
-				  <div id="passwordfeedback" class="invalid-feedback">
-					Provide a valid password with at least 6 characters.
+				<label for="inputZip" class="sr-only">Zip Code</label>
+				<input type="text" id="inputZip" name="zip" class="form-control" placeholder="Zip Code" required style="margin-bottom:-2px">
+				  <div id="zipfeedback" class="invalid-feedback">
+					Provide a valid five digit zip code.
 				  </div>
 			</div>
-        <button class="btn btn-lg btn-brand-color btn-block" id="signupbtn" type="submit">Create Account</button>
+        <button class="btn btn-lg btn-brand-color btn-block" id="submitinfobtn" type="submit">Continue</button>
       </form>
 	  
 	  
-	  <div id="tologindiv">
-	  Want to do this later? <a href="../" id="tologin">Skip</a>
+	  <div id="skipdiv">
+	  Want to do this later? <a href="/" id="skip">Skip</a>
 	  </div>
 	</div>
     </div>
@@ -135,10 +115,10 @@
 	</script>
 	<!-- Set auto-infocus text ahead of cursor always -->
 	<script>
-		$("#inputFirstName").focus();
-		var temp_in = $("#inputFirstName").val();
-		$("#inputFirstName").val("");
-		$("#inputFirstName").val(temp_in);
+		$("#inputAddress").focus();
+		var temp_in = $("#inputAddress").val();
+		$("#inputAddress").val("");
+		$("#inputAddress").val(temp_in);
 	</script>
 	
 	<!-- Edit scrollspy nav switch -->
