@@ -49,7 +49,7 @@
 		</div>
 	<div id="wrapper">
       <form class="form-signin" id="infoform" novalidate action="information.php" method="POST" name="infoform">
-        <h4 style="text-align:center;margin-top:30px;margin-bottom:15px" class="form-signin-heading">Welcome to Zephair, <?php echo $_SESSION['first_name']; ?></h4>
+        <h4 style="text-align:center;margin-top:30px;margin-bottom:15px" class="form-signin-heading">Welcome to <b style="color:#f05f40">Zephair</b>, <?php echo $_SESSION['first_name']; ?></h4>
 		<p id="pleaseinfo" >Please provide your shipping address to finish your registration.</p>
 			<div>
 				<label for="inputAddress" class="sr-only">Address</label>
@@ -66,11 +66,13 @@
 				  </div>
 			</div>
 			<div>
-				<label for="inputEmail" class="sr-only">State</label>
-				<input type="text" id="inputState" name="state" class="form-control" placeholder="State" required style="margin-bottom:-2px">
-				  <div id="statefeedback" class="invalid-feedback">
-					Provide a valid state.
-				  </div>
+				<label for="inputState" class="sr-only">State</label>
+				<div class="dropdown">
+				<button id="inputState" class="form-control dropbtn">State</button>
+					<div class = "dropdown-content">
+						<a href="#">Link 1</a>
+					</div>
+				</div>
 			</div>
 			<div>
 				<label for="inputZip" class="sr-only">Zip Code</label>

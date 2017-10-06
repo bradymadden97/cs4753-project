@@ -20,6 +20,17 @@ function validateCity(c){
 	return false;
 };
 
+function validateState(s){
+	if(s != ""){
+		$("#statefeedback").hide();
+		return true;
+	}else{
+		$("#statefeedback").text("State cannot be empty");
+		$("#statefeedback").show();
+	}
+	return false;
+};
+
 function validateZip(z){
 	if(z != ""){
 		if(validateZipCode(z)){
@@ -64,6 +75,18 @@ $("#inputCity").bind('keyup', function(e){
 	if(key != 9){
 		var c = $("#inputCity").val().trim();
 		validateCity(c);
+	}
+});
+
+$("#inputState").blur(function(){
+	var s = $("#inputState").val().trim();
+	validateState(s);
+});
+$("#inputState").bind('keyup', function(e){
+	var key = e.keyCode || e.which;
+	if(key != 9){
+		var s = $("#inputState").val().trim();
+		validateCity(s);
 	}
 });
 
