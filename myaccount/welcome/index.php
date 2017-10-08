@@ -1,6 +1,11 @@
 <?php
 	session_start();
 	
+	if(!isset($_SESSION['user_id'])){
+		header("Location: /login");
+		die();
+	}
+	
 	
 ?>
 
@@ -60,7 +65,7 @@
 			</div>
 			<div>
 				<label for="inputCity" class="sr-only">City</label>
-				<input type="text" id="inputCity" name="last_name" class="form-control" placeholder="City" required>
+				<input type="text" id="inputCity" name="city" class="form-control" placeholder="City" required>
 				  <div id="cityfeedback" class="invalid-feedback">
 					Provide a valid city.
 				  </div>

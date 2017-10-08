@@ -7,124 +7,88 @@ We will use $_SESSION variables to keep track of who a user is once they've logg
 session_start();
 
 //Includes database connection variables 
-require_once("../config/config.php");
+require_once("../../config/config.php");
 
 //Validate input fields server side is more secure. Cannot rely on client-side validation.
-function validate_first_name(){
-	if(isset($_POST['first_name'])){
-		if(preg_match("/^([A-z \-]+)$/i", $_POST['first_name'])){
-			return $_POST['first_name'];
-		}else{
-			//header("Location: ... ") is used to redirect page
-			//It is good to put die(); afterwards to end register.php script from continuing to run
-			header("Location:index.php?err=fn&type=nonalpha");
-			die();
-		}
+function validate_address(){
+	if(isset($_POST['address'])){
+		return $_POST['address'];
 	}else{
-		header("Location:index.php?err=fn&type=missing");
+		header("Location:index.php?err=address&type=missing");
 		die();
 	}
 }
 
-function validate_last_name(){
-	if(isset($_POST['last_name'])){
-		if(preg_match("/^([A-z \-]+)$/i", $_POST['last_name'])){
-			return $_POST['last_name'];
-		}else{
-			header("Location:index.php?err=ln&type=nonalpha");
+function validate_city(){
+	if(isset($_POST['city'])){
+		return $_POST['city'];
+	}else{
+		header("Location:index.php?err=city&type=missing");
+		die();
+	}
+}
+
+function validate_state(){
+	if(isset($_POST['state'])){
+		if($_POST['state'] == 'State'){
+			header("Location: index.php?err=state&type=invalid");
 			die();
+		}else{
+			return $_POST['state'];
 		}
 	}else{
-		header("Location:index.php?err=ln&type=missing");
+		header("Location:index.php?err=state&type=missing");
 		die();
-	}	
+	}
 }
 
-function validate_email(){
-	if(isset($_POST['email'])){
-		return $_POST['email'];
-	}else{
-		header("Location:index.php?err=email&type=missing");
-		die();
-	}	
-}
-
-function validate_password(){
-	if(isset($_POST['password']) && isset($_POST['password_retype'])){
-		if($_POST['password'] == $_POST['password_retype']){
-			if(strlen($_POST['password']) >= 6){
-				return password_hash($_POST['password'], PASSWORD_DEFAULT);
+function validate_zip(){
+	if(isset($_POST['zip'])){
+		if(preg_match("/[0-9]+$/i", $_POST['zip'])){
+			if(strlen($_POST['zip']) != 5){
+				header("Location:index.php?err=zip&type=length");
+				die();				
 			}else{
-				header("Location:index.php?err=pass&type=short");
-				die();
+				return $_POST['zip'];
 			}
 		}else{
-			header("Location:index.php?err=pass&type=match");
+			header("Location:index.php?err=zip&type=invalid");
 			die();
-		}
+		}		
 	}else{
-		header("Location:index.php?err=pass&type=missing");
-		die();
-	}	
-}
-	
-//Check if email already exists as a user by getting COUNT of number of rows in table with email
-function email_exists($db, $e){
-	$val_email = $db->prepare('SELECT COUNT(*) FROM users WHERE email = :email');
-	$val_email->bindParam(":email", $e);
-	$val_email->execute();
-	return $val_email->fetchColumn();
+		header("Location:index.php?err=zip&type=missing");
+		die();	
+	}
 }
 
 //Creating new account by inserting new row
-function create_account($db, $fn, $ln, $e, $p){
-	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES (:first_name, :last_name, :email, :pass, now())');
-	$act->bindParam(":first_name", $fn);
-	$act->bindParam(":last_name", $ln);
-	$act->bindParam(":email", $e);
-	$act->bindParam(":pass", $p);
+function update_account_info($db, $id, $address, $city, $state, $zip){
+	$act = $db->prepare('UPDATE users SET address=:address, city=:city, state=:state, zip=:zip WHERE user_id=:uid');
+	$act->bindParam(":address", $address);
+	$act->bindParam(":city", $city);
+	$act->bindParam(":state", $state);
+	$act->bindParam(":zip", $zip);
+	$act->bindParam(":uid", $id);
 	return $act->execute();
 }
 
 //Must be in try/catch in case database connection fails
-try {
-	if(isset($_POST['first_name'])){
-		$_SESSION['temp_first_name'] = $_POST['first_name'];
-	}
-	if(isset($_POST['last_name'])){
-		$_SESSION['temp_last_name'] = $_POST['last_name'];
-	}
-	if(isset($_POST['email'])){
-		$_SESSION['temp_email'] = $_POST['email'];
-	}
-	
-	$first_name = validate_first_name();
-	$last_name = validate_last_name();
-	$email = validate_email();
-	$pass = validate_password();
-			
-	
-	//Use either PDO or MySQLi to prevent against SQL injection attacks
-	$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
-	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
-	
-	if(email_exists($conn, $email) > 0){
-		header("Location:index.php?err=email&type=exists");
+try {	
+	if(!isset($_SESSION['user_id'])){
+		header("Location:/login");
 		die();
 	}else{
-		if(create_account($conn, $first_name, $last_name, $email, $pass)){
-			$account_id = $conn->lastInsertId('user-id');
-			
-			//Destroy session variables in case someone was logged in and created a new account
-			session_destroy();
-			//Begin a new session and set necessary session variables
-			session_start();
-			$_SESSION['user_id'] = $account_id;
-			$_SESSION['first_name'] = $first_name;
-			$_SESSION['last_name'] = $last_name;
-			$_SESSION['email'] = $email;
-			
+		$address = validate_address();
+		$city = validate_city();
+		$state = validate_state();
+		$zip = validate_zip();
+				
+		
+		//Use either PDO or MySQLi to prevent against SQL injection attacks
+		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		if(update_account_info($conn, $_SESSION['user_id'], $address, $city, $state, $zip)){
 			//Redirect to homepage for right now. Will break on XAMPP due to filepath differences
 			header("Location:/");
 			die();			
