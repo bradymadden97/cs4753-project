@@ -67,7 +67,7 @@
 			</div>
 			<div>
 				<label for="inputState" class="sr-only">State</label>
-				<select name="cars" class="form-control" id="inputState">
+				<select name="state" class="form-control" id="inputState">
 				    <option value="State">State</option>
 				    <option value="Alabama">Alabama</option>
 				    <option value="Alaska">Alaska</option>
@@ -120,6 +120,9 @@
 				    <option value="Wisconsin">Wisconsin</option>
 				    <option value="Wyoming">Wyoming</option>
 				</select>
+				<div id="statefeedback" class="invalid-feedback">
+					Provide a valid state.
+				</div>
 			</div>
 			<div>
 				<label for="inputZip" class="sr-only">Zip Code</label>
@@ -179,6 +182,10 @@
 		  $("#mainNav").removeClass("navbar-shrink");
 		}
 	});
+	</script>
+	
+	<script>
+		checkStateColor();
 	</script>
   </body>
 </html>

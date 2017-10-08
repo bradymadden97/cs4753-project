@@ -127,4 +127,9 @@ textarea:focus, input:focus{
 	text-align: left;
 	background-color: #fff;
 	cursor: pointer;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left:7px;
+	border-radius: 0px;
+	margin-bottom: -1px;
 }

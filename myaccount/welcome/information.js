@@ -21,11 +21,11 @@ function validateCity(c){
 };
 
 function validateState(s){
-	if(s != ""){
+	if(s != "State"){
 		$("#statefeedback").hide();
 		return true;
 	}else{
-		$("#statefeedback").text("State cannot be empty");
+		$("#statefeedback").text("State cannot be unselected");
 		$("#statefeedback").show();
 	}
 	return false;
@@ -68,7 +68,7 @@ $("#inputAddress").bind('keyup', function(e){
 
 $("#inputCity").blur(function(){
 	var c = $("#inputCity").val().trim();
-	validateCity(ln);
+	validateCity(c);
 });
 $("#inputCity").bind('keyup', function(e){
 	var key = e.keyCode || e.which;
@@ -79,15 +79,8 @@ $("#inputCity").bind('keyup', function(e){
 });
 
 $("#inputState").blur(function(){
-	var s = $("#inputState").val().trim();
+	var s = $("#inputState").val();
 	validateState(s);
-});
-$("#inputState").bind('keyup', function(e){
-	var key = e.keyCode || e.which;
-	if(key != 9){
-		var s = $("#inputState").val().trim();
-		validateCity(s);
-	}
 });
 
 $("#inputZip").blur(function(){
@@ -101,6 +94,20 @@ $("#inputZip").bind('keyup', function(e){
 		validateZip(p);
 	}
 });
+
+$("#inputState").change(function(){
+	checkStateColor();
+	var s = $("#inputState").val();
+	validateState(s);
+});
+
+function checkStateColor(){
+	if($("#inputState").val() == "State"){
+		$("#inputState").css('color', 'grey');
+	}else{
+		$("#inputState").css('color', 'black');
+	}
+};
 
 //Prevent blurring on button clicks
 $("#submitinfobtn").mousedown(function(e){
@@ -123,14 +130,16 @@ window.addEventListener("load", function(){
 function checkFormValid(){
 	var a = $("#inputAddress").val().trim();
 	var c = $("#inputCity").val().trim();
+	var s = $("#inputState").val();
 	var z = $("#inputZip").val().trim();
 		
 	
 	var a_check = validateAddress(a);
 	var c_check = validateCity(c);
+	var s_check = validateState(s);
 	var z_check = validateZip(z);
 	
-	return a_check && c_check && z_check;
+	return a_check && c_check && s_check && z_check;
 }
 
 
