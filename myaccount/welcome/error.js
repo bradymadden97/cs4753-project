@@ -13,43 +13,34 @@ function getUrlParams(){
 		}
 	}
 	
-	if(err == "fn"){
-		if(err_msg == "nonalpha"){
-			$("#firstnamefeedback").text("First name can only contain letters and hyphens");
-			$("#firstnamefeedback").show();
-		}else if(err_msg == "missing"){
-			$("#firstnamefeedback").text("First name cannot be empty");
-			$("#firstnamefeedback").show();
-		}
-	}else if(err == "ln"){
-		if(err_msg == "nonalpha"){
-			$("#lastnamefeedback").text("Last name can only contain letters and hyphens");
-			$("#lastnamefeedback").show();
-		}else if(err_msg == "missing"){
-			$("#lastnamefeedback").text("Last name cannot be empty");
-			$("#lastnamefeedback").show();
-		}
-	}else if(err == "email"){
+	if(err == "address"){
 		if(err_msg == "missing"){
-			$("#emailfeedback").text("Email cannot be empty");
-			$("#emailfeedback").show();
-		}else if(err_msg == "exists"){
-			var email = encodeURIComponent($("#inputEmail").val().trim());
-			$("#emailfeedback").html("Account already exists. Is this you? <a href='/login?email=" + email + "'>Log in<a>");
-			$("#emailfeedback").show();
+			$("#addressfeedback").text("Address cannot be empty");
+			$("#addressfeedback").show();
 		}
-	}else if(err == "pass"){
+	}else if(err == "city"){
 		if(err_msg == "missing"){
-			$("#passwordfeedback").text("Password cannot be empty");
-			$("#passwordfeedback").show();
-			$("#passwordcheckfeedback").text("Password cannot be empty");
-			$("#passwordcheckfeedback").show();
-		}else if(err_msg == "short"){
-			$("#passwordfeedback").text("Password not at least 6 characters");
-			$("#passwordfeedback").show();
-		}else if(err_msg == "match"){
-			$("#passwordcheckfeedback").text("Passwords don't match");
-			$("#passwordcheckfeedback").show();
+			$("#cityfeedback").text("City cannot be empty");
+			$("#cityfeedback").show();
+		}
+	}else if(err == "state"){
+		if(err_msg == "invalid"){
+			$("#statefeedback").text("State cannot be unselected");
+			$("#statefeedback").show();
+		}else if(err_msg == "missing"){
+			$("#statefeedback").text("State cannot be unselected");
+			$("#statefeedback").show();
+		}
+	}else if(err == "zip"){
+		if(err_msg == "length"){
+			$("#zipfeedback").text("Zip code must be 5 digits");
+			$("#zipfeedback").show();
+		}else if(err_msg == "invalid"){
+			$("#zipfeedback").text("Zip code should only contain numbers 0-9");
+			$("#zipfeedback").show();
+		}else if(err_msg == "missing"){
+			$("#zipfeedback").text("Zip code cannot be empty");
+			$("#zipfeedback").show();
 		}
 	}else if(err == "db"){
 		$("#dberror").css('display', 'block');

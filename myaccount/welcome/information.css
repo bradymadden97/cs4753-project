@@ -101,7 +101,7 @@ textarea:focus, input:focus{
 	width: 75%;
 	text-align:center;
 	margin-top:50px;
-	margin-bottom:0px;
+	margin-bottom:10px;
 }
 
 #wrapper{
