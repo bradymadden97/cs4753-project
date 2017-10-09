@@ -133,3 +133,9 @@ textarea:focus, input:focus{
 	border-radius: 0px;
 	margin-bottom: -1px;
 }
+#inputState option {
+	color: black;
+}
+#defaultState{
+	color: grey !important;
+}

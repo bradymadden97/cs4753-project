@@ -1,10 +1,10 @@
 <?php
 	session_start();
 	
-	if(!isset($_SESSION['user_id'])){
+	/*if(!isset($_SESSION['user_id'])){
 		header("Location: /login");
 		die();
-	}
+	}*/
 	
 	
 ?>
@@ -73,7 +73,7 @@
 			<div>
 				<label for="inputState" class="sr-only">State</label>
 				<select name="state" class="form-control" id="inputState">
-				    <option value="State">State</option>
+				    <option id="defaultState" value="State">State</option>
 				    <option value="Alabama">Alabama</option>
 				    <option value="Alaska">Alaska</option>
 				    <option value="Arizona">Arizona</option>
