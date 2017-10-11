@@ -1,0 +1,8 @@
+body {
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.container {
+	background-image: url("../img/header.jpg");
+}

@@ -36,10 +36,12 @@
 			include('../components/nav-dark.css');
 		?>
 	</style>
+	<link rel="stylesheet" href="shop.css">
 	
 	<!-- Custom styles for this template -->
 
     <div class="container">
+    	<h4 style="text-align: center; margin-top: 100px;">SHOP</h4>
 
     </div>
     <!-- Bootstrap core JavaScript -->
