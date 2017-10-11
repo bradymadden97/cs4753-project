@@ -34,12 +34,22 @@ function validateState(s){
 function validateZip(z){
 	if(z != ""){
 		if(validateZipCode(z)){
-			if(z.length <= 5){
-				$("#zipfeedback").hide();
-				return true;
+			if($("#inputZip").is(":focus")){
+				if(z.length > 5){
+					$("#zipfeedback").text("Zip code can only be 5 numbers");
+					$("#zipfeedback").show();
+				}else{
+					$("#zipfeedback").hide();
+					return true;
+				}
 			}else{
-				$("#zipfeedback").text("Zip code can only be 5 numbers");
-				$("#zipfeedback").show();				
+				if(z.length == 5){
+					$("#zipfeedback").hide();
+					return true;
+				}else{
+					$("#zipfeedback").text("Zip code must be 5 numbers");
+					$("#zipfeedback").show();
+				}
 			}
 		}else{
 			$("#zipfeedback").text("Zip code should only contain numbers 0-9");
