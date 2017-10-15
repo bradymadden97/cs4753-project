@@ -1,5 +1,25 @@
 <?php
 	session_start();
+	
+	require_once("../config/config.php");
+	
+	try {
+		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$stmt = $conn->prepare('SELECT * FROM items');
+		$stmt->execute();
+		
+		
+	
+	}
+	catch(PDOException $e){
+		header("Location:index.php?err=db");	
+	}
+	
+	
+	
+	
 ?>	
 
 <html lang="en">
@@ -40,9 +60,33 @@
 	
 	<!-- Custom styles for this template -->
 
-    <div class="container">
-    	<h4 style="text-align: center; margin-top: 100px;">SHOP</h4>
-
+    <div class="container body-container">
+    	<hr style="max-width:80%">
+		<div class="items-container" style="width: 80%; margin: auto">
+			<div class="row">
+				<?php
+					foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $resrow){
+				?>
+						<div class="item col-md-4 col-sm-12" id="item-<?php echo $resrow['item_id']; ?>" >
+							<div style="text-align:center; margin-top:10px;">
+								<img src="<?php echo $resrow['image_url']; ?>" alt="<?php echo $resrow['item_name']; ?>" class="item-image">
+							</div>
+							<div style="margin-top: 5px; padding-right: 12px; padding-left: 12px; overflow:hidden">
+								<span class="item-name"><?php echo $resrow['item_name']; ?></span>
+								<span class="item-price"><?php echo $resrow['bitcoin_price']; ?> BTC</span>
+							</div>
+							
+							<div style="text-align:center; margin-bottom: 10px; margin-top: 5px">
+								<button class="item-add-to-cart">Add to cart</button>						
+							</div>
+						
+						
+						</div>
+				<?php
+					}	
+				?>
+			</div>
+		</div>
     </div>
     <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -56,6 +100,17 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
+	
+		<!-- Edit scrollspy nav switch -->
+	<script>
+	$(window).scroll(function() {
+		if ($("#mainNav").offset().top > 1) {
+		  $("#mainNav").addClass("navbar-shrink");
+		} else {
+		  $("#mainNav").removeClass("navbar-shrink");
+		}
+	});
+	</script>
 	
   </body>
 </html>
