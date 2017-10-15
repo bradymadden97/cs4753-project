@@ -7,7 +7,7 @@
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$stmt = $conn->prepare('SELECT * FROM items');
+		$stmt = $conn->prepare('SELECT item_name, item_id, bitcoin_price, image_url FROM items');
 		$stmt->execute();
 		
 		

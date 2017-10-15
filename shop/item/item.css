@@ -6,3 +6,47 @@ body {
 .body-container{
 	padding-top: 80px;
 }
+
+.item-image {
+	width: 95%;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+.item-name {
+	margin-bottom: 20px;
+	overflow:hidden;
+}
+
+.item-name-span{
+	font-size: 28px;
+	float: left;
+}
+
+.item-price-span{
+	padding-right: 50px;
+	font-size: 20px;
+	float: right;
+	color: #5baf3a;
+}
+
+.item-description{
+	font-size: 14px;
+}
+
+.col-md-4{
+	margin-left: 4.166% !important;
+}
+
+.item-add-to-cart{
+	background-color: #fa845e;
+	width: 90%;
+	max-width: 350px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	cursor: pointer;
+	color: white;
+	margin-top: 35px;
+	padding-top: 7.5px;
+	padding-bottom: 7.5px;
+}

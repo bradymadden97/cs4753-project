@@ -1,15 +1,27 @@
 <?php
 	session_start();
 	
+	if(!isset($_GET['id'])){
+		header("Location: /shop");
+		die();
+	}
+	
 	require_once("../../config/config.php");
 	
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
+		$stmt = $conn->prepare('SELECT * FROM items WHERE item_id=:id');
+		$stmt->bindParam(":id", $_GET['id']);
+		$stmt->execute();
 		
+		if($stmt->rowCount() == 0){
+			header("Location: /shop");
+		}
 		
-	
+		$result = $stmt->fetch();
+		
 	}
 	catch(PDOException $e){
 		header("Location:index.php?err=db");	
@@ -27,7 +39,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Zephair - Shop</title>
+    <title>Zephair - <?php echo $result['item_name']; ?></title>
 	
 	
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
@@ -60,7 +72,27 @@
 
     <div class="container body-container">
     	<hr style="max-width:80%">
-		
+		<div class="item-container" style="width: 90%; margin: auto; margin-bottom: 30px; margin-top:25px">
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<img src="<?php echo $result['image_url']; ?>" alt="<?php echo $result['item_name']; ?>" class="item-image">				
+				</div>
+				<div class="col-md-7 col-sm-12">
+					<div class="item-name">
+						<span class="item-name-span"><?php echo $result['item_name']; ?></span>
+						<span class="item-price-span"><?php echo $result['bitcoin_price'];?> BTC</span>
+					</div>
+					
+					<div class="item-description">
+						<?php echo $result['description']; ?>
+					</div>
+					
+					<div style="text-align: center">
+						<button class="item-add-to-cart">Add to cart</button>
+					</div>
+				</div>		
+			</div>		
+		</div>		
     </div>
     <!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
