@@ -19,11 +19,17 @@ body {
 	margin: 5px;
 	border-radius: 5px;
 	background-color: white;
+	cursor: pointer;
+	padding:0px !important;
 }
 
 .item-name{
 	float: left;
 	font-size: 18px;
+	color: black !important;
+}
+.item:hover  .item-name{
+	text-decoration: underline;	
 }
 
 .item-price{
@@ -34,6 +40,8 @@ body {
 
 .item-image{
 	width: 90%;
+	height: 175px;
+	background-size: contain;
 	margin: auto;
 	border-radius: 2px;
 	
