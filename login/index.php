@@ -5,6 +5,10 @@
 	if(isset($_GET['email'])){
 		$preset_email = urldecode($_GET['email']);
 	}
+	
+	if(isset($_SESSION['temp-email'])){
+		$preset_email = $_SESSION['temp-email'];
+	}
 ?>
 
 <html lang="en">
@@ -86,6 +90,8 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
+	<script src="login.js"></script>
+	<script src="error.js"></script>
 	<script>
 		$("#inputEmail").focus();
 		var temp_in = $("#inputEmail").val();
@@ -102,6 +108,16 @@
 		  $("#mainNav").removeClass("navbar-shrink");
 		}
 	});
+	</script>
+	
+	<script>
+		var a_elements = document.getElementsByTagName('a');
+		for(var i = a_elements.length - 1; i >= 0; i--){
+			$(a_elements[i]).mousedown(function(e){
+				e.stopImmediatePropagation();
+				e.preventDefault();
+			});
+		}
 	</script>
 	
   </body>
