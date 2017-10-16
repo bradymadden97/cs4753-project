@@ -19,7 +19,6 @@ body {
 	margin: 5px;
 	border-radius: 5px;
 	background-color: white;
-	cursor: pointer;
 	padding:0px !important;
 }
 
@@ -28,7 +27,11 @@ body {
 	font-size: 18px;
 	color: black !important;
 }
-.item:hover  .item-name{
+
+.item-link{
+	cursor: pointer;
+}
+.item-link:hover  .item-name{
 	text-decoration: underline;	
 }
 
@@ -49,7 +52,7 @@ body {
 
 .item-add-to-cart{
 	background-color: #fa845e;
-	width: 95%;
+	width: 80%;
 	border: 1px solid rgba(0,0,0,0.2);
 	border-radius: 5px;
 	cursor: pointer;

@@ -68,7 +68,7 @@
 					foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $resrow){
 				?>
 						<div class="item col-md-4 col-sm-12" id="item-<?php echo $resrow['item_id']; ?>" >
-							<a href="/shop/item/?id=<?php echo $resrow['item_id']; ?>">
+							<a class="item-link" href="/shop/item/?id=<?php echo $resrow['item_id']; ?>">
 								<div style="padding-right: 15px; padding-left:15px">
 									<div style="text-align:center; margin-top:10px;">
 											<img src="<?php echo $resrow['image_url']; ?>" alt="<?php echo $resrow['item_name']; ?>" class="item-image">
@@ -77,12 +77,11 @@
 										<span class="item-name"><?php echo $resrow['item_name']; ?></span>
 										<span class="item-price"><?php echo $resrow['bitcoin_price']; ?> BTC</span>
 									</div>
-									
-									<div style="text-align:center; margin-bottom: 10px; margin-top: 5px; z-index: 10">
-										<button class="item-add-to-cart">Add to cart</button>						
-									</div>
 								</div>
 							</a>
+							<div style="text-align:center; margin-bottom: 10px; margin-top: 10px; z-index: 10">
+								<button data-id="<?php echo $resrow['item_id']?>" class="item-add-to-cart">Add to cart</button>						
+							</div>
 						</div>
 				<?php
 					}	
@@ -103,6 +102,8 @@
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
 	
+	<script src="shop.js"></script>
+	
 		<!-- Edit scrollspy nav switch -->
 	<script>
 	$(window).scroll(function() {
@@ -112,13 +113,6 @@
 		  $("#mainNav").removeClass("navbar-shrink");
 		}
 	});
-	
-	$(".item-add-to-cart").click(function(e){
-		console.log('add to cart');
-		e.stopPropagation();
-	});
-	
-	
 	</script>
 	
   </body>
