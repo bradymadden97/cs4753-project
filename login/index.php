@@ -49,21 +49,25 @@
 
     <div id="bodycontainer" class="container">
 	<div id="wrapper">
-      <form class="form-signin">
-        <h4 style="text-align:center;margin-top:10px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" value="<?php echo $preset_email; ?>" required>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input style="text-align:right" type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-brand-color btn-block" type="submit">Log in</button>
-      </form>
-	  
-	  
+	
+		<form class="form-signin" id="loginform" novalidate action="login.php" method="POST" name="loginform">
+        <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
+			<div>
+				<label for="inputEmail" class="sr-only">Email</label>
+				<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" value="<?php echo $preset_email; ?>" required autofocus>
+				  <div id="emailfeedback" class="invalid-feedback">
+					Provide a valid email.
+				  </div>
+			</div>
+			<div>
+				<label for="inputPassword" class="sr-only">Password</label>
+				<input type="password" id="inputPassword" name="pass" class="form-control" placeholder="Password" required>
+				  <div id="passwordfeedback" class="invalid-feedback">
+					Provide a valid password.
+				  </div>
+			</div>
+        <button class="btn btn-lg btn-brand-color btn-block" id="loginbtn" type="submit">Log in</button>
+      </form>	  
 	  <div id="tosignupdiv">
 	  Don't have an account? <a href="/register" id="tosignup">Create Account</a>
 	  </div>

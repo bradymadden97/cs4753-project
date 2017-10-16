@@ -88,7 +88,7 @@
 					</div>
 					
 					<div style="text-align: center">
-						<button class="item-add-to-cart">Add to cart</button>
+						<button data-id="<?php echo $_GET['id']?>" class="item-add-to-cart">Add to cart</button>
 					</div>
 				</div>		
 			</div>		
@@ -106,6 +106,9 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../../js/creative.min.js"></script>
+	
+	
+	<script src="item.js"></script>
 	
 		<!-- Edit scrollspy nav switch -->
 	<script>
