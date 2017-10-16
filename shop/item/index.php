@@ -24,7 +24,7 @@
 		
 	}
 	catch(PDOException $e){
-		header("Location:index.php?err=db");	
+		echo "Database error";	
 	}
 	
 	
