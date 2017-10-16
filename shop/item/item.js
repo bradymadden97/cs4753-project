@@ -10,6 +10,14 @@ $(".item-add-to-cart").click(function(){
 		}else if(d.hasOwnProperty("added")){
 			if(d["added"]){
 				this_btn.html("Added!");
+				$("#cart-item-count").html(d["cartcount"]);
+				$("#cart-item-count").html(d["cartcount"]);
+				$("#cart-item-count").attr("data-count", d["cartcount"]);
+				if(document.getElementById("cart-item-count").getAttribute("data-count") > 0){
+					document.getElementById("cart-item-count").style.display = "inline";		
+				}else{
+					document.getElementById("cart-item-count").style.display = "none";
+				}
 			}
 		}
 	});

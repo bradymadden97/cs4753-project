@@ -109,3 +109,13 @@ html {
 	font-size: 1.5em;
 	cursor: pointer;
 }
+
+#cart-item-count{
+	background-color: #ff3300;
+	border-radius: 50px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-right: 8px !important;
+	padding-left: 8px !important;
+	color: white !important;
+}

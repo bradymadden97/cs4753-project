@@ -41,9 +41,14 @@
 		$stmt->bindParam(":iid", $item_id);
 		$stmt->bindParam(":quant", $quantity);
 		$res = $stmt->execute();
+		
+		$cartfind = $conn->prepare('SELECT COUNT(*) FROM cart WHERE user_id = :uid');
+		$cartfind->bindParam(":uid", $_SESSION['user_id']);
+		$cartfind->execute();
+		$cartcount = $cartfind->fetchColumn();
 
 		header('Content-Type: application/json');
-		echo json_encode(array('added' => $res));
+		echo json_encode(array('added' => $res, 'cartcount'=> $cartcount));
 		die();
 		
 	}

@@ -80,10 +80,26 @@
 				
 				<div class="col-md-9 col-sm-12">
 					<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="view-account-information">act</div>
-						<div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="view-shipping-information">ship</div>
-						<div class="tab-pane fade" id="cart" role="tabpanel" aria-labelledby="view-my-cart">cart</div>
-						<div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="view-my-orders">orders</div>
+						<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="view-account-information">
+							<?php
+								include('accountinfo.php');
+							?>
+						</div>
+						<div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="view-shipping-information">
+							<?php
+								include('shippinginfo.php');
+							?>
+						</div>
+						<div class="tab-pane fade" id="cart" role="tabpanel" aria-labelledby="view-my-cart">
+							<?php
+								include('mycart.php');
+							?>
+						</div>
+						<div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="view-my-orders">
+							<?php
+								include('myorders.php');
+							?>
+						</div>
 					</div>			
 				</div>
 			</div>

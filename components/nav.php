@@ -1,6 +1,30 @@
 <!-- Navigation -->
 <?php
-  $Company_Name = "ZEPHAIR";
+	
+	require_once(realpath(__DIR__ . '/..' . '/config/config.php'));
+	
+	$cartcount = 0;
+	try {
+		$navdb = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
+		$navdb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		
+		if(isset($_SESSION['user_id'])){
+			$cartfind = $navdb->prepare('SELECT COUNT(*) FROM cart WHERE user_id = :uid');
+			$cartfind->bindParam(":uid", $_SESSION['user_id']);
+			$cartfind->execute();
+			
+			$cartcount = $cartfind->fetchColumn();
+		}
+		
+	}
+	catch(PDOException $e){
+		echo $e;	
+	}
+	
+
+
+
 ?>
 <!-- Include Navbar CSS file -->
 <style rel="text/css">
@@ -40,7 +64,14 @@
 					<a class="nav-link js-scroll-trigger" href="/myaccount"><span class="nav-margin-10px" id="hellonav">My Account</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px" href="/myaccount#cart"><span><i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> Cart</span></a>
+					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px" href="/myaccount#cart">
+						<span>
+							<i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> 
+							Cart
+						</span>
+						
+						<span id="cart-item-count" data-count="<?php echo $cartcount; ?>" style="display:none" ><?php echo $cartcount; ?></span>
+					</a>
 				</li>
 				<?php
 					}
@@ -49,3 +80,11 @@
 		</div>
 	</div>
 </nav>
+
+<script>
+	if(document.getElementById("cart-item-count").getAttribute("data-count") > 0){
+		document.getElementById("cart-item-count").style.display = "inline";		
+	}else{
+		document.getElementById("cart-item-count").style.display = "none";
+	}
+</script>

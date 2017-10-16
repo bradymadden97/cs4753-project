@@ -1,0 +1,4 @@
+<FilesMatch "accountinfo\.php|shippinginfo\.php|mycart\.php|myorders\.php">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
