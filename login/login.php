@@ -39,13 +39,28 @@
 				$stmt->bindParam(":email", $_POST['email']);
 				$stmt->execute();
 				
+				$next = $_SESSION['next'];				
+				$next_id = $_SESSION['next_id'];
+				
 				session_destroy();
 				session_start();
+				
+				$_SESSION['next'] = $next;
+				$_SESSION['next_id'] = $next_id;
 				
 				$_SESSION['user_id'] = $res[1];
 				$_SESSION['first_name'] = $res[2];
 				$_SESSION['last_name'] = $res[3];
 				$_SESSION['email'] = $res[4];
+				
+				if($next == "atc"){
+					unset $_SESSION['next'];
+					unset $_SESSION['next_id'];
+					
+					header("Location:/shop/item/?id=".$next_id);
+					die();
+					
+				}
 				
 				header("Location:/myaccount");
 				die();	

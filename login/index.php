@@ -1,5 +1,13 @@
 <?php
 	session_start();
+		
+	if(isset($_GET['next'])){
+		$_SESSION['next'] = $_GET['next'];
+	}
+	
+	if(isset($_GET['id'])){
+		$_SESSION['next_id'] = $_GET['id'];
+	}
 	
 	$preset_email = "";	
 	if(isset($_GET['email'])){
