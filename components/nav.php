@@ -40,7 +40,7 @@
 					<a class="nav-link js-scroll-trigger" href="/myaccount"><span class="nav-margin-10px" id="hellonav">My Account</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px"><span><i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> Cart</span></a>
+					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px" href="/myaccount#cart"><span><i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> Cart</span></a>
 				</li>
 				<?php
 					}

@@ -54,8 +54,8 @@
 				$_SESSION['email'] = $res[4];
 				
 				if($next == "atc"){
-					unset $_SESSION['next'];
-					unset $_SESSION['next_id'];
+					unset($_SESSION['next']);
+					unset($_SESSION['next_id']);
 					
 					header("Location:/shop/item/?id=".$next_id);
 					die();

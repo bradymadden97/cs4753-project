@@ -1,0 +1,17 @@
+body {
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.body-container{
+	padding-top: 80px;
+}
+
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link {
+	color: white;
+	background-color: #f05f40;
+}
+
+.pills {
+	margin-top: 5px;
+}

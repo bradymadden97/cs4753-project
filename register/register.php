@@ -126,7 +126,7 @@ try {
 			$_SESSION['email'] = $email;
 			
 			//Redirect to information collection. Will break on XAMPP due to filepath differences
-			header("Location:/myaccount/welcome");
+			header("Location:/register/welcome");
 			die();			
 		}else{
 			header("Location:index.php?err=db");
