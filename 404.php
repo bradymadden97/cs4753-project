@@ -42,7 +42,7 @@
 		<h1>404. That's an error.</h1>
 		
 		<div style="margin-top: 30px">
-			<b><span id="cur-url"></span></b> does not exist or has been moved. <br>Go <a href="/">home</a>.
+			This page does not exist or has been moved. <br>Go <a href="/">home</a>.
 		</div>
 
     </div>
@@ -50,10 +50,5 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#cur-url").text(window.location.pathname);
-		});
-	</script>
   </body>
 </html>
