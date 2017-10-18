@@ -131,5 +131,7 @@
 	});
 	</script>
 	
+	<script src="accountinfo.js"></script>
+	
   </body>
 </html>

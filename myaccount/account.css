@@ -22,3 +22,25 @@ body {
 	padding-bottom:10px;
 	border-radius:5px;
 }
+
+.invalid-feedback{
+	font-size:10px !important;
+	padding-left: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+.successupdate{
+	background-color: #93e493 !important;
+}
+
+#updatefeedback{
+	font-size: 12px !important;
+	padding-top: 10px;
+	padding-left: 0px !important;
+}
+
+#changefeedback{
+	font-size: 12px !important;
+	padding-top: 10px;
+	padding-left: 0px !important;
+}

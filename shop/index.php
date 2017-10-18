@@ -67,7 +67,7 @@
 				<?php
 					foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $resrow){
 				?>
-						<div class="item col-md-4 col-sm-12" id="item-<?php echo $resrow['item_id']; ?>" >
+						<div class="item col-md-4 col-sm-12 sr-button" id="item-<?php echo $resrow['item_id']; ?>" >
 							<a class="item-link" href="/shop/item/?id=<?php echo $resrow['item_id']; ?>">
 								<div style="padding-right: 15px; padding-left:15px">
 									<div style="text-align:center; margin-top:10px;">
