@@ -80,7 +80,7 @@
 				
 				<div class="col-md-9 col-sm-12">
 					<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="view-account-information">
+						<div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="view-account-information">
 							<?php
 								include('accountinfo.php');
 							?>
@@ -132,6 +132,7 @@
 	</script>
 	
 	<script src="accountinfo.js"></script>
+	<script src="shippinginfo.js"></script>
 	
   </body>
 </html>

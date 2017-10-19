@@ -31,6 +31,19 @@
 		display: inline !important;
 		width: 50% !important;
 	}
+	select{
+		display: inline !important;
+		width: 50% !important;
+		padding-left: 7.5px !important;
+		cursor: pointer;
+		padding-bottom: 5px !important;
+	}
+	select option{
+		color: #495057;
+	}
+	#defaultState {
+		color: grey !important;
+	}
 	.label{
 		text-align: right;
 		padding-right: 10px;
@@ -42,6 +55,10 @@
 		cursor: pointer;
 	}
 	#changebtn{
+		margin-top: 20px;
+		cursor: pointer;
+	}
+	#updateshippingbtn{
 		margin-top: 20px;
 		cursor: pointer;
 	}
