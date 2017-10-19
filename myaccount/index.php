@@ -133,6 +133,7 @@
 	
 	<script src="accountinfo.js"></script>
 	<script src="shippinginfo.js"></script>
+	<script src="mycart.js"></script>
 	
   </body>
 </html>
