@@ -86,31 +86,6 @@ function create_account($db, $fn, $ln, $e, $p){
 	return $act->execute();
 }
 
-function getVerification($email,$code){
-	$query_check = "UPDATE `email_var` SET `status` = '1' where `email` = '$email' && `code` = '$code'";
-	if (mysql_query($query_check)) {
-		return true;
-	}
-	else{
-		return false;
-	}
-}
-
-function checkLogin($username,$password){
-	$password = md5($password);
-	$query_check_login = "SELECT * from `email_var` where `username` = '$username' && `password` = '$password' && `status` = '1'";
-	$res = mysql_query($query_check_login);
-	if (mysql_num_rows($res) >= 1) {
-		$row = mysql_fetch_array($res);
-		session_start();
-		$_SESSION['username'] = $row['username'];
-		header("Location: dashboard.php");
-	}
-	else{
-		echo "<script>alert('Username or Password is incorrect')</script>";
-	}
-}
-
 //Must be in try/catch in case database connection fails
 try {
 	if(isset($_POST['first_name'])){
@@ -164,7 +139,7 @@ try {
 			$mail->send();
 
 			$query_insert = "INSERT into `email_var` (`username`,`email`,`password`,`code`,`status`) VALUES ('$username','$email','$password','$rand_num','0')";
-			if (mysql_query($query_insert)) {
+			if ($conn->prepare($query_insert)) {
 				return "<script>alert('Please check your mailbox for confirmation')</script>";
 			}
 			//Destroy session variables in case someone was logged in and created a new account
@@ -177,7 +152,7 @@ try {
 			$_SESSION['email'] = $email;
 
 			//Redirect to information collection. Will break on XAMPP due to filepath differences
-			header("Location:/register/welcome");
+			header("Location:/register/verify.php");
 			die();
 		}else{
 			header("Location:index.php?err=db");
