@@ -29,7 +29,14 @@
 		
 		//TODO
 		//need to return a json containing the new amount of items to update other sections of the webpage
-		echo 1;
+		
+		$cart = $conn->prepare("SELECT COUNT(*), SUM(items.bitcoin_price) as total_cost FROM cart JOIN items ON cart.item_id = items.item_id WHERE user_id = :uid");
+		$cart->bindParam(":uid", $_SESSION['user_id']);
+		$cart->execute();
+		
+		$cartres = $cart->fetch();
+				
+		echo json_encode(array('cart_items' => $cartres['COUNT(*)'], 'total_cost' => $cartres['total_cost']));
 		die();		
 	}
 	catch(PDOException $e){

@@ -48,7 +48,7 @@
 				</div>
 				
 				<div class="col-xs-3 cartrowinfo">
-					<span class="cartitemprice"><?php echo $cart['bitcoin_price']; ?> BTC</span>
+					<span class="cartitemprice"><?php echo (float)$cart['bitcoin_price']; ?> BTC</span>
 				</div>
 				
 				<div class="col-xs-1 cartremovecol">

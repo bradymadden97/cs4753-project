@@ -5,8 +5,18 @@ $(".cartremoveX").click(function(){
 		item_id: t.attr('data-remove-id'),
 	},
 	function(d, s){
-		if(d == 1){
+		if(d != 0){
 			t.parent().parent().css('display', 'none');
+			var dd = JSON.parse(d);
+			$("#cart-item-count").html(dd["cart_items"]);
+			$("#cart-item-count").attr("data-count", dd["cart_items"]);
+			$("#checkoutnumitems").html(dd["cart_items"]);
+			$("#checkoutprice").html((dd["total_cost"] * 1).toString() + " BTC");
+			if(document.getElementById("cart-item-count").getAttribute("data-count") > 0){
+				document.getElementById("cart-item-count").style.display = "inline";		
+			}else{
+				document.getElementById("cart-item-count").style.display = "none";
+			}
 		}
 	});
 });
