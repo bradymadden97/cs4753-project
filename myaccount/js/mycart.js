@@ -1,6 +1,6 @@
 $(".cartremoveX").click(function(){
 	var t = $(this);
-	$.post("removefromcart.php",
+	$.post("utils/removefromcart.php",
 	{
 		item_id: t.attr('data-remove-id'),
 	},

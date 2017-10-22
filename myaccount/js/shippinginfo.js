@@ -132,7 +132,7 @@ $("#updateshippingbtn").mousedown(function(e){
 $("#updateshippingbtn").click(function(){
 	$("#shippingfeedback").hide();
 	if(checkshippingvalid()){
-		$.post("updateshippinginfo.php",
+		$.post("utils/updateshippinginfo.php",
 		{
 			address: $("#inputAddress").val().trim(),
 			city: $("#inputCity").val().trim(),

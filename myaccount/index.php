@@ -61,7 +61,7 @@
 			include('../components/nav-dark.css');
 		?>
 	</style>
-	<link rel="stylesheet" href="account.css">
+	<link rel="stylesheet" href="css/account.css">
 	
 	<!-- Custom styles for this template -->
 
@@ -118,7 +118,7 @@
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
 	
-	<script src="account.js"></script>
+	<script src="js/account.js"></script>
 	
 		<!-- Edit scrollspy nav switch -->
 	<script>
@@ -131,9 +131,9 @@
 	});
 	</script>
 	
-	<script src="accountinfo.js"></script>
-	<script src="shippinginfo.js"></script>
-	<script src="mycart.js"></script>
+	<script src="js/accountinfo.js"></script>
+	<script src="js/shippinginfo.js"></script>
+	<script src="js/mycart.js"></script>
 	
   </body>
 </html>

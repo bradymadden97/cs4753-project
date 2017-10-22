@@ -2,7 +2,7 @@
 
 	session_start();
 	
-	require_once("../config/config.php");
+	require_once("../../config/config.php");
 	
 	
 	if(!isset($_SESSION['user_id'])){
@@ -26,10 +26,7 @@
 		$del->bindParam(":iid", $_POST['item_id']);
 		
 		$delres = $del->execute();
-		
-		//TODO
-		//need to return a json containing the new amount of items to update other sections of the webpage
-		
+				
 		$cart = $conn->prepare("SELECT COUNT(*), SUM(items.bitcoin_price) as total_cost FROM cart JOIN items ON cart.item_id = items.item_id WHERE user_id = :uid");
 		$cart->bindParam(":uid", $_SESSION['user_id']);
 		$cart->execute();
