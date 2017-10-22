@@ -76,7 +76,13 @@
 				<span id="checkoutnumitems"><?php echo $number_items; ?></span> items: <span id="checkoutprice"><?php echo $total_price; ?> BTC</span>
 			</div>
 				<hr class="checkouthr">
-			<button class="btn" id="checkoutbtn">Place Order</button>
+				
+			<form action="https://test.bitpay.com/checkout" method="post" >
+			  <input type="hidden" name="action" value="checkout" />
+			  <input type="hidden" name="posData" value="" />
+			  <input type="hidden" name="data" value="gKARxl3aXk+XK4ebKD2NeJ905wNjACXuDlz4OMUgwAHabj6fkJgNrTa5HN4J0cHtBUtRZMqb/V5ysg192OREYJHxvDyuCf9hm6dqoEn3rWumBb+teJ7FfRaiObNbJJ8OpoMUATvRkY34jVuGKjAvbtQffUCYsXokR7rmv7gr6GPtO4ljqaeGWQ1aprMS4gLcY9tqq6U+tzSSRftYDzLHZThyav8LXUJZDs2/eU7sO4dKfN1EdY3QM6E6mobjr/mMPovUFyz2icKxk6K0CUiyn9ci+giaUctb4spIgMSHyYY+BYxPPqIsZrv981wbUYyjB5zfMYJbH/Xt6Di0kFAi5FUWA512wxvBBS8HWqRuR6U=" />
+			  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+			</form>
 		
 		</div>	
 	</div>
