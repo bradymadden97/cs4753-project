@@ -29,7 +29,9 @@
 <div class="row">
 	<div class="col-sm-12 col-md-8">
 		<?php
+			$rowcount = 0;
 			foreach($mycart->fetchAll(PDO::FETCH_ASSOC) as $cart){
+				$rowcount += 1;
 				$number_items += 1;
 				$total_price += $cart['bitcoin_price'];
 		?>
@@ -61,6 +63,10 @@
 		<?php
 			}
 		?>	
+		
+		<div id="emptycartdiv" style="<?php if($rowcount != 0){ ?>display:none; <?php } ?> text-align:center">
+			<h5 style="margin-top: 20px">Your cart is empty! <a href='/shop'>Shop</a></h5>	
+		</div>
 	</div>
 	<div class="col-sm-12 col-md-4">
 		<div id="checkoutbox">

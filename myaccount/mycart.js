@@ -13,9 +13,11 @@ $(".cartremoveX").click(function(){
 			$("#checkoutnumitems").html(dd["cart_items"]);
 			$("#checkoutprice").html((dd["total_cost"] * 1).toString() + " BTC");
 			if(document.getElementById("cart-item-count").getAttribute("data-count") > 0){
-				document.getElementById("cart-item-count").style.display = "inline";		
+				document.getElementById("cart-item-count").style.display = "inline";
+				document.getElementById("emptycartdiv").style.display = "none";
 			}else{
 				document.getElementById("cart-item-count").style.display = "none";
+				document.getElementById("emptycartdiv").style.display = 'block';
 			}
 		}
 	});
