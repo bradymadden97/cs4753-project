@@ -4,6 +4,12 @@
 This persists $_SESSION variables across multiple pages.
 We will use $_SESSION variables to keep track of who a user is once they've logged in.
 */
+
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 session_start();
 
 //Includes database connection variables
@@ -116,12 +122,9 @@ try {
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
 			$account_id = $conn->lastInsertId('user-id');
 
-
-			// Import PHPMailer classes into the global namespace
-			// These must be at the top of your script, not inside a function
-			use PHPMailer\PHPMailer\PHPMailer;
-			use PHPMailer\PHPMailer\Exception;
-
+			$rand_num = md5(rand(1000,10000));
+			$password = md5($pass);
+			
 			//Load composer's autoloader
 			require 'vendor/autoload.php';
 
@@ -131,11 +134,11 @@ try {
 			    //Server settings
 			    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
-			    $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+			    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
 			    $mail->Username = 'zephair.merchant@gmail.com';       // SMTP username
 			    $mail->Password = 'cs4753project';                    // SMTP password
-			    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+			    //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			    $mail->Port = 587;                                    // TCP port to connect to
 
 			    //Recipients
@@ -157,7 +160,8 @@ try {
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
 					$mail->Body    = $bodyContent;
 
-			    $mail->AltBody = 'Greetings from Zephair, Please confirm your zephair account:';
+					// just in case we need an alternate body for people with nonHTML clients
+			    //$mail->AltBody = 'Greetings from Zephair, Please confirm your zephair account:';
 
 			    $mail->send();
 			    echo 'Message has been sent';

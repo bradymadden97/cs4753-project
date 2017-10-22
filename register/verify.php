@@ -28,14 +28,14 @@ try {
     $check_status = getVerification($email, $code);
 
     if($check_status){
-      header("Location:/register/welcome")
+      header("Location:/register/welcome");
     }
     else{
-      header("Location:index.php?err=db")
+      header("Location:index.php?err=db");
     }
 
   }
-  
+
 }
 catch(PDOException $e){
 	header("Location:index.php?err=db");
