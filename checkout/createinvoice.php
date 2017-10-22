@@ -2,7 +2,7 @@
 
 	session_start();
 
-	$autoloader = __DIR__ . '/../vendor/php-bitpay-client/src/Bitpay/Autoloader.php';
+	$autoloader = __DIR__ . '/../bitpay/src/Bitpay/Autoloader.php';
 	if (true === file_exists($autoloader) &&
 		true === is_readable($autoloader))
 	{
