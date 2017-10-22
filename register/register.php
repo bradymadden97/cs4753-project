@@ -116,27 +116,56 @@ try {
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
 			$account_id = $conn->lastInsertId('user-id');
 
-			// email confirmation with PHP my mailer here!!
-			require 'PHPMailer/PHPMailerAutoload.php';
-			$mail = new PHPMailer;
 
-			$mail->isSMTP();                                   // Set mailer to use SMTP
-			$mail->Host = 'smtp.gmail.com';                    // Specify main and backup SMTP servers
-			$mail->SMTPAuth = true;                            // Enable SMTP authentication
-			$mail->Username = 'Enter your email';          // SMTP username
-			$mail->Password = 'enter your gmail password'; // SMTP password
-			$mail->SMTPSecure = 'tls';                         // Enable TLS encryption, `ssl` also accepted
-			$mail->Port = 587;                                 // TCP port to connect to
+			// Import PHPMailer classes into the global namespace
+			// These must be at the top of your script, not inside a function
+			use PHPMailer\PHPMailer\PHPMailer;
+			use PHPMailer\PHPMailer\Exception;
 
-			$mail->isHTML(true); // set email format to html_entity_decode
+			//Load composer's autoloader
+			require 'vendor/autoload.php';
 
-			$bodyContent = '<h1>Email Verification using PHP, Mysql and PHPMailer</h1>';
-			$bodyContent .= '<p><a href="http://localhost/webidea/email_var/check.php?email='.$email.'&&code='.$rand_num.'">Click Here for confirmation</a></p>';
+			$mail = new PHPMailer(true);
 
-			$mail->Subject = 'Email from Localhost by Weidea4u';
-			$mail->Body    = $bodyContent;
+			try {
+			    //Server settings
+			    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+			    $mail->isSMTP();                                      // Set mailer to use SMTP
+			    $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+			    $mail->Username = 'zephair.merchant@gmail.com';       // SMTP username
+			    $mail->Password = 'cs4753project';                    // SMTP password
+			    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+			    $mail->Port = 587;                                    // TCP port to connect to
 
-			$mail->send();
+			    //Recipients
+			    $mail->setFrom('zephair.merchant@gmail.com', 'Mailer');
+			    //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+			    //$mail->addAddress('ellen@example.com');               // Name is optional
+					$mail->addAddress($email);															// Add user email as recipient
+			    $mail->addReplyTo('zephair.merchant@gmail.com', 'Information'); 			// reply information
+			    //$mail->addCC('cc@example.com');
+			    //$mail->addBCC('bcc@example.com');
+
+
+			    //Content
+			    $mail->isHTML(true);                                  // Set email format to HTML
+
+					$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
+					$bodyContent .= '<p><a href="http://localhost/webidea/email_var/check.php?email='.$email.'&&code='.$rand_num.'">Click Here to confirm your account</a></p>';
+
+					$mail->Subject = 'Zephair Sign-Up Confirmation';
+					$mail->Body    = $bodyContent;
+
+			    $mail->AltBody = 'Greetings from Zephair, Please confirm your zephair account:';
+
+			    $mail->send();
+			    echo 'Message has been sent';
+			}
+			catch (Exception $e) {
+			    echo 'Message could not be sent.';
+			    echo 'Mailer Error: ' . $mail->ErrorInfo;
+			}
 
 			$query_insert = "INSERT into `email_var` (`username`,`email`,`password`,`code`,`status`) VALUES ('$username','$email','$password','$rand_num','0')";
 			if ($conn->prepare($query_insert)) {
