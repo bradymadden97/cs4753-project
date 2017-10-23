@@ -7,13 +7,11 @@ require_once("../config/config.php");
 include('../register/register.php');
 
 function getVerification($email,$code){
-	$query_check = "UPDATE `email_var` SET `status` = '1' where `email` = '$email' && `code` = '$code'";
-	if (mysql_query($query_check)) {
-		return true;
-	}
-  else{
-		return false;
-	}
+	$query_check = $conn->prepare("UPDATE users SET status = 1 where email = :email and code = :code");
+	$query_check->bindParam(':email', $email);
+	$query_check->bindParam(":code", $code);
+	$query_check->execute();
+	return $query_check;
 }
 
 try {
@@ -28,10 +26,10 @@ try {
     $check_status = getVerification($email, $code);
 
     if($check_status){
-      header("Location:/register/welcome");
+      header("Location:/myaccount");
     }
     else{
-      header("Location:index.php?err=db");
+      header("Location:/myaccount?err=db");
     }
 
   }

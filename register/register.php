@@ -150,11 +150,11 @@ try {
 			    $mail->Port = 587;                                    // TCP port to connect to
 
 			    //Recipients
-			    $mail->setFrom('zephair.merchant@gmail.com', 'Mailer');
+			    $mail->setFrom('zephair.merchant@gmail.com', 'Zephair');
 			    //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 			    //$mail->addAddress('ellen@example.com');               // Name is optional
 					$mail->addAddress($email);															// Add user email as recipient
-			    $mail->addReplyTo('zephair.merchant@gmail.com', 'Information'); 			// reply information
+			    $mail->addReplyTo('zephair.merchant@gmail.com', 'Zephair Customer Service'); 			// reply information
 			    //$mail->addCC('cc@example.com');
 			    //$mail->addBCC('bcc@example.com');
 
@@ -164,7 +164,7 @@ try {
 
 					$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
 					// need to change link
-					$bodyContent .= '<p><a href="http://localhost/webidea/email_var/check.php?email='.$email.'&&code='.$rand_num.'">Click Here to confirm your account</a></p>';
+					$bodyContent .= '<p><a href="https://cs4753-project.heroku.com/register/verify.php?code=$rand_num'.$email.'&&code='.$rand_num.'">Click Here to confirm your account</a></p>';
 
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
 					$mail->Body    = $bodyContent;
