@@ -102,19 +102,24 @@
 	
 	
 	try {
-		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
-		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 		$invoiceupdate = $conn->prepare("UPDATE orders SET invoice_id = :iid WHERE order_id = :oid");
 		$invoiceupdate->bindParam(":iid", $invoice->getId());
 		$invoiceupdate->bindParam(":oid", $order_id);
 		$invoiceupdate->execute();
+		
+		
+		$removecart = $conn->prepare("DELETE FROM cart WHERE user_id = :uid AND item_id = :iid");
+		$removecart->bindParam(":uid", $_SESSION['user_id']);
+		$cart_item_array = explode(",", $item_list);
+		foreach($cart_item_array as $ci){
+			$removecart->bindParam(":iid", $ci);
+			$removecart->execute();
+		}
 				
 	}catch(PDOException $e){
 		header("Location: /myaccount/#cart");
 		die();
 	}
-	
 	
 	header("Location: ". $invoice->getUrl() );
 	die();	

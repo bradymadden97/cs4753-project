@@ -26,7 +26,7 @@ $(".cartremoveX").click(function(){
 window.addEventListener("load", function(){
 	var form = document.getElementById("checkoutform");
 	form.addEventListener("submit", function(event){
-		if($("cart-item-count").attr("data-count") > 0){
+		if($("#cart-item-count").attr("data-count") == 0){
 			event.preventDefault();
 			event.stopPropagation();
 		}
