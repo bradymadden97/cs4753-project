@@ -86,7 +86,7 @@
 	$invoice->setCurrency(new \Bitpay\Currency('BTC'));
 	$invoice
 		->setOrderId($order_id)
-		->setNotificationUrl('https://cs4753-project/checkout/transactioncomplete.php');
+		->setNotificationUrl('https://cs4753-project.herokuapp.com/checkout/fetchinvoice.php');
 
 	try {
 		$client->createInvoice($invoice);
