@@ -88,7 +88,7 @@ function email_exists($db, $e){
 
 //Creating new account by inserting new row
 function create_account($db, $fn, $ln, $e, $p, $s, $vc){
-	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date, status, verification_code) VALUES (:first_name, :last_name, :email, :pass, now()), :status, :code');
+	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date, status, verification_code) VALUES (:first_name, :last_name, :email, :pass, now(), :status, :code)');
 	$act->bindParam(":first_name", $fn);
 	$act->bindParam(":last_name", $ln);
 	$act->bindParam(":email", $e);
@@ -140,7 +140,7 @@ try {
 
 			try {
 			    //Server settings
-			    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+			    //$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
 			    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -172,6 +172,8 @@ try {
 			    $mail->send();
 			}
 			catch (Exception $e) {
+				echo $e;
+				die();
 				header("Location:index.php?err=db");
 				die();
 			}
@@ -195,6 +197,8 @@ try {
 	}
 }
 catch(PDOException $e){
+	echo $e;
+	die();
 	header("Location:index.php?err=db");
 	die();
 }
