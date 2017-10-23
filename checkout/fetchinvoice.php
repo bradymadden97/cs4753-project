@@ -4,12 +4,6 @@
 	
 	require_once("../config/config.php");
 	
-	if(!isset($_POST['id'])){
-		header("Location: /");
-		die();
-	}
-
-	
 	//Autoload Bitpay Library
 	$autoloader = __DIR__ . '/../bitpay/src/Bitpay/Autoloader.php';
 	if (true === file_exists($autoloader) &&
@@ -19,6 +13,20 @@
 		\Bitpay\Autoloader::register();
 	} else {
 		throw new Exception('BitPay Library could not be loaded');
+	}
+	
+	$raw_post_data = file_get_contents('php://input');
+	$date = date('m/d/Y h:i:s a', time());
+	if (false === $raw_post_data) {
+		throw new \Exception('Could not read from the php://input stream or invalid Bitpay IPN received.');
+	}
+	
+	$ipn = json_decode($raw_post_data);
+	if (true === empty($ipn)) {
+		throw new \Exception('Could not decode the JSON payload from BitPay.');
+	}
+	if (true === empty($ipn -> id)) {
+		throw new \Exception('Invalid Bitpay payment notification message received - did not receive invoice ID.');
 	}
 	
 	$client = new \Bitpay\Client\Client();
@@ -31,7 +39,7 @@
 	$client->setToken($token);
 
 	
-	$invoice = $client->getInvoice($_POST['id']);
+	$invoice = $client->getInvoice($ipn -> id);
 	$invoiceId = $invoice->getId();
 	$invoiceOrderId = $invoice->getOrderId();
 	$invoiceStatus = $invoice->getStatus();
