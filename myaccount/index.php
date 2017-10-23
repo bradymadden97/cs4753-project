@@ -134,6 +134,7 @@
 	<script src="js/accountinfo.js"></script>
 	<script src="js/shippinginfo.js"></script>
 	<script src="js/mycart.js"></script>
+	<script src="js/myorders.js"></script>
 	
   </body>
 </html>

@@ -43,6 +43,7 @@
 		<?php } ?>
 			<div class="orderitem row">
 				<div class="col-md-5">
+					<div class="row">
 					<?php 
 						$list_items = explode(",", $order['item_list']);
 						if(count($list_items) == 1){
@@ -51,10 +52,14 @@
 							echo count($list_items) . " items";
 						}
 						
-						echo "<a href='#' class='orderdetail'>Details</a>";
-					?>				
-			
-				
+						echo "<a href='#' role='button' class='orderdetail' data-open='false' data-item-list='" . $order['item_list']. "'>Details</a>";
+					?>
+					</div>
+					<div class="row orderdetaillist">
+						<ul>
+						
+						</ul>					
+					</div>
 				</div>
 				<div class="col-md-2">
 					<?php
