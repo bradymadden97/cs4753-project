@@ -4,6 +4,7 @@ $(".orderdetail").click(function(){
 	if($(this).attr("data-open") == 'true'){
 		$(order).parent().next().css('display', 'none');
 		$(order).attr("data-open", "false");
+		$(order).html("Details");
 	}else{
 		$(order).parent().next().children(":first").html("");
 		$.post("utils/getdetails.php",
@@ -23,6 +24,7 @@ $(".orderdetail").click(function(){
 					
 					$(order).parent().next().css('display', 'block');
 					$(order).attr("data-open", "true");
+					$(order).html("Hide");
 				});
 				
 			}		
