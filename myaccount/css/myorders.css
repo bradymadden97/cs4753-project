@@ -45,11 +45,23 @@
 .orderpayinvoice{
 	cursor: pointer;
 	border-radius: 5px;
-	font-size: 14px;
+	font-size: 13px;
 	margin-left: 20px;
 	background-color: #f05f40;
 	color: white;
 }
 .orderpayinvoice:hover{
 	color: #ede8e3;
+}
+
+.orderviewinvoice{
+	color: #31c731;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	font-size: 13px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.orderviewinvoice:hover{
+	color: #31c731;
 }

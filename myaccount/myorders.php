@@ -56,12 +56,12 @@
 			
 				
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<?php
 						echo "<span class='orderpricespan'>". floatval($order['order_price'])." BTC </span>";
 					?>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5" style="text-align:right">
 					<?php
 						if($order['state'] == 'new'){
 							echo '<span class="orderdangerspan">Unpaid</span>';
@@ -70,8 +70,10 @@
 							echo '<span class="orderdangerspan">Order Expired</span>';
 						}else if($order['state'] == 'paid'){
 							echo '<span class="orderprocessingspan">Paid: processing</span>';
+							echo '<a class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
 						}else if($order['state'] == 'complete' || $order['state'] == 'confirmed'){
 							echo '<span class="ordercompletespan">Paid: complete</span>';
+							echo '<a class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
 						}else{
 							echo '<span class="orderdangerspan">Payment Error</span>';
 						}
