@@ -10,6 +10,10 @@ We will use $_SESSION variables to keep track of who a user is once they've logg
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require '../phpmailer/PHPMailer/src/Exception.php';
+require '../phpmailer/PHPMailer/src/PHPMailer.php';
+require '../phpmailer/PHPMailer/src/SMTP.php';
+
 session_start();
 
 //Includes database connection variables
@@ -94,7 +98,6 @@ function create_account($db, $fn, $ln, $e, $p, $s, $vc){
 	return $act->execute();
 }
 
-$rand_num = md5(rand(1000,10000));
 
 //Must be in try/catch in case database connection fails
 try {
@@ -123,14 +126,15 @@ try {
 		header("Location:index.php?err=email&type=exists");
 		die();
 	}else{
-		if(create_account($conn, $first_name, $last_name, $email, $pass)){
+		$rand_num = md5(rand(1000,10000)); // random number hashed for the verification code
+		if(create_account($conn, $first_name, $last_name, $email, $pass, 0, $rand_num)){
 			$account_id = $conn->lastInsertId('user-id');
 
 
 			$password = md5($pass);
 
 			//Load composer's autoloader
-			require 'vendor/autoload.php';
+			//require 'vendor/autoload.php';
 
 			$mail = new PHPMailer(true);
 
@@ -159,6 +163,7 @@ try {
 			    $mail->isHTML(true);                                  // Set email format to HTML
 
 					$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
+					// need to change link
 					$bodyContent .= '<p><a href="http://localhost/webidea/email_var/check.php?email='.$email.'&&code='.$rand_num.'">Click Here to confirm your account</a></p>';
 
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
@@ -175,10 +180,10 @@ try {
 			    echo 'Mailer Error: ' . $mail->ErrorInfo;
 			}
 
-			$query_insert = "INSERT into `email_var` (`username`,`email`,`password`,`code`,`status`) VALUES ('$username','$email','$password','$rand_num','0')";
-			if ($conn->prepare($query_insert)) {
-				return "<script>alert('Please check your mailbox for confirmation')</script>";
-			}
+			//$query_insert = "INSERT into `email_var` (`username`,`email`,`password`,`code`,`status`) VALUES ('$username','$email','$password','$rand_num','0')";
+			//if ($conn->prepare($query_insert)) {
+			//	return "<script>alert('Please check your mailbox for confirmation')</script>";
+			//}
 			//Destroy session variables in case someone was logged in and created a new account
 			session_destroy();
 			//Begin a new session and set necessary session variables
@@ -189,7 +194,7 @@ try {
 			$_SESSION['email'] = $email;
 
 			//Redirect to information collection. Will break on XAMPP due to filepath differences
-			header("Location:/register/verify.php");
+			header("Location:/register/welcome");
 			die();
 		}else{
 			header("Location:index.php?err=db");
