@@ -223,7 +223,7 @@
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-2x sr-contact"></i>
             <p class="iconspace" >
-              <a href="mailto:contactus@cannedair.com">contactus@cannedair.com</a>
+              <a href="mailto:zephair.merchant@gmail.com">zephair.merchant@gmail.com</a>
             </p>
           </div>
         </div>
