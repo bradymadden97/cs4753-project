@@ -163,27 +163,19 @@ try {
 			    $mail->isHTML(true);                                  // Set email format to HTML
 
 					$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
-					// need to change link
-					$bodyContent .= '<p><a href="https://cs4753-project.heroku.com/register/verify.php?code=$rand_num'.$email.'&&code='.$rand_num.'">Click Here to confirm your account</a></p>';
-
+					$bodyContent .= '<p><a href="https://cs4753-project.herokuapp.com/register/verify.php?code='. $rand_num. '&email='. urlencode($email). '">Click here to confirm your account</a></p>';
+					
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
 					$mail->Body    = $bodyContent;
 
-					// just in case we need an alternate body for people with nonHTML clients
-			    //$mail->AltBody = 'Greetings from Zephair, Please confirm your zephair account:';
 
 			    $mail->send();
-			    echo 'Message has been sent';
 			}
 			catch (Exception $e) {
-			    echo 'Message could not be sent.';
-			    echo 'Mailer Error: ' . $mail->ErrorInfo;
+				header("Location:index.php?err=db");
+				die();
 			}
 
-			//$query_insert = "INSERT into `email_var` (`username`,`email`,`password`,`code`,`status`) VALUES ('$username','$email','$password','$rand_num','0')";
-			//if ($conn->prepare($query_insert)) {
-			//	return "<script>alert('Please check your mailbox for confirmation')</script>";
-			//}
 			//Destroy session variables in case someone was logged in and created a new account
 			session_destroy();
 			//Begin a new session and set necessary session variables
@@ -204,6 +196,7 @@ try {
 }
 catch(PDOException $e){
 	header("Location:index.php?err=db");
+	die();
 }
 
 ?>
