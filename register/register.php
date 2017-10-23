@@ -114,7 +114,7 @@ try {
 		die();
 	}else{
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
-			$account_id = $conn->lastInsertId('user-id');
+			$account_id = $conn->lastInsertId('user_id');
 			
 			//Destroy session variables in case someone was logged in and created a new account
 			session_destroy();
