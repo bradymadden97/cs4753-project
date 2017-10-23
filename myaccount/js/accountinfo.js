@@ -148,7 +148,7 @@ $("#updatebtn").mousedown(function(e){
 $("#updatebtn").click(function(){
 	$("#updatefeedback").hide();
 	if(checkupdatevalid()){
-		$.post("updateaccountinfo.php",
+		$.post("utils/updateaccountinfo.php",
 		{
 			first_name: $("#inputFirstName").val().trim(),
 			last_name: $("#inputLastName").val().trim(),
@@ -173,7 +173,7 @@ $("#updatebtn").click(function(){
 $("#changebtn").click(function(){
 	$("#changefeedback").hide();
 	if(checkpasswordvalid()){
-		$.post("updatepassword.php",
+		$.post("utils/updatepassword.php",
 		{
 			current_password: $("#inputCurrentPassword").val(),
 			new_password: $("#inputNewPassword").val(),
@@ -183,6 +183,10 @@ $("#changebtn").click(function(){
 			if(d == 2){
 				$("#changebtn").addClass('successupdate');
 				$("#changebtn").html("Password Changed!");
+				
+				$("#inputCurrentPassword").val("");
+				$("#inputNewPassword").val("");
+				$("#inputNewPasswordRetype").val("");
 				
 				setTimeout(function(){
 					$("#changebtn").removeClass('successupdate');

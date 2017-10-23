@@ -141,7 +141,7 @@
 	  
 	  
 	  <div id="skipdiv">
-	  Want to do this later? <a href="/" id="skip">Skip</a>
+	  Want to do this later? <a href="/myaccount" id="skip">Skip</a>
 	  </div>
 	</div>
     </div>

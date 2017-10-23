@@ -6,6 +6,8 @@
 	$DB_PORT = "";
 	$DB_NAME = "cs4753_project";
 	
+	$BITPAY_TOKEN = "";
+	
 	if(getenv("AWS_RDS_URL")){
 		$DB_HOST = getenv("AWS_RDS_URL");
 	}
@@ -20,6 +22,10 @@
 	}
 	if(getenv("AWS_RDS_DB")){
 		$DB_NAME = getenv("AWS_RDS_DB");
+	}
+	
+	if(getenv("ZEPHAIR_BITPAY_TOKEN")){
+		$BITPAY_TOKEN = getenv("ZEPHAIR_BITPAY_TOKEN");
 	}
 	
 ?>	

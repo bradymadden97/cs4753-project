@@ -1,0 +1,67 @@
+.orderitem{
+	background-color: white;
+	border-bottom: 1px solid lightgrey;
+	padding: 15px;
+}
+
+.orderdate{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 2.5px;
+}
+
+.orderdate + .orderitem{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.orderitem:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 0px;
+}
+
+.orderdetail{
+	margin-left: 30px;
+	font-size: 12px;
+}
+
+.orderpricespan{
+	color: #31c731;
+}
+
+.orderdangerspan{
+	color: #D22020;
+}
+
+.orderprocessingspan{
+	color: #ECCB23;
+}
+
+.ordercompletespan{
+	color: #31c731;
+}
+
+.orderpayinvoice{
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 13px;
+	margin-left: 20px;
+	background-color: #f05f40;
+	color: white;
+}
+.orderpayinvoice:hover{
+	color: #ede8e3;
+}
+
+.orderviewinvoice{
+	color: #31c731;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	font-size: 13px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.orderviewinvoice:hover{
+	color: #31c731;
+}

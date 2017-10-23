@@ -80,7 +80,7 @@
 				<div class="col-md-7 col-sm-12">
 					<div class="item-name">
 						<span class="item-name-span"><?php echo $result['item_name']; ?></span>
-						<span class="item-price-span"><?php echo $result['bitcoin_price'];?> BTC</span>
+						<span class="item-price-span"><?php echo (float)$result['bitcoin_price'];?> BTC</span>
 					</div>
 					
 					<div class="item-description">

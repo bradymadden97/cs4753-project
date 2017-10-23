@@ -75,7 +75,7 @@
 									</div>
 									<div style="margin-top: 10px; padding-right: 12px; padding-left: 12px; overflow:hidden">
 										<span class="item-name"><?php echo $resrow['item_name']; ?></span>
-										<span class="item-price"><?php echo $resrow['bitcoin_price']; ?> BTC</span>
+										<span class="item-price"><?php echo (float)$resrow['bitcoin_price']; ?> BTC</span>
 									</div>
 								</div>
 							</a>

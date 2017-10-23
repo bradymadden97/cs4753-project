@@ -1,0 +1,114 @@
+	#checkoutbox{
+		border: 1px solid #f05f40;
+		border-radius: 5px;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		background-color: white;
+	}
+	
+	#checkoutheader{
+		padding-bottom: 5px;
+	}
+
+	#checkoutbtn{
+		background-color: #f05f40;
+		color: white;
+		cursor: pointer;
+	}
+	
+	.checkouthr{
+		border-width: 1px;
+		max-width: 100% !important;
+		width: 66%;		
+		padding-bottom: 7.5px;
+	}
+	
+	#checkoutitemsandprice{
+		font-size: 14px;
+		
+	}
+	
+	#checkoutprice {
+		margin-left: 15px;
+		color: #31c731;
+	}
+	
+	.cartitem{
+		border: 1px solid #d3d3d3;
+		border-radius: 5px;
+		margin-bottom: 2px;
+		background-color: white;
+		padding-bottom: 10px;
+	}
+	
+	.cartitemlink{
+		margin-left: 10px;
+		color: #495057;
+		font-size: 16px;
+		align-self: center;
+	}
+	.cartitemlink:hover{
+		color: #495057;
+	}
+	
+	.cartitemimagelink{
+		border: 0px;
+		color: rgba(0,0,0,0) !important;
+	}
+	
+	
+	.cartitemimage{
+		width: 100px;
+		background-size: contain;
+		border-radius: 2.5px;
+		
+		margin-top: 10px;
+		margin-left: 7.5px;
+		margin-right: 7.5px;
+		cursor: pointer;
+	}
+	
+	.cartitemprice{
+		color: #31c731;
+		align-self: center;
+	}
+	
+	.cartrowmain{
+		min-width: 55%;
+		display: flex;
+	}
+	
+	.cartrowinfo{
+		min-width: 28%;
+		display: flex;
+		justify-content: center;
+	}
+	
+	.cartremovecol{
+		min-width: 12%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.cartremoveX{
+		border: 1px solid #ff8080;
+		background-color: #ff8080;
+		padding-right: 5px;
+		padding-left: 5px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		border-radius: 2px;
+		align-self: center;
+		display: none;
+		cursor:pointer;
+		color: white;
+	}
+	.cartitem:hover .cartremoveX{
+		display:block;
+	}
+	.cartitem:hover .cartitemlink{
+		text-decoration: underline;
+	}

@@ -1,7 +1,12 @@
 function validateAddress(a){
 	if(a != ""){
-		$("#addressfeedback").hide();
-		return true;
+		if(validateAddressString(a)){
+			$("#addressfeedback").hide();
+			return true;
+		}else{
+			$("#addressfeedback").text("Invalid address characters");
+			$("#addressfeedback").show();
+		}
 	}else{
 		$("#addressfeedback").text("Address cannot be empty");
 		$("#addressfeedback").show();
@@ -11,8 +16,13 @@ function validateAddress(a){
 
 function validateCity(c){
 	if(c != ""){
-		$("#cityfeedback").hide();
-		return true;
+		if(validateCityString(c)){
+			$("#cityfeedback").hide();
+			return true;
+		}else{
+			$("#cityfeedback").text("Invalid city characters");
+			$("#cityfeedback").show();
+		}
 	}else{
 		$("#cityfeedback").text("City cannot be empty");
 		$("#cityfeedback").show();
@@ -157,3 +167,12 @@ function checkFormValid(){
 function validateZipCode(str){
 	return str.match(/[0-9]+$/i);
 };
+
+function validateAddressString(str){
+	return str.match(/[A-z \-0-9#&\(\)\.]+$/i);
+};
+
+function validateCityString(str){
+	return str.match(/[A-z \-&\.]+$/i);
+};
+
