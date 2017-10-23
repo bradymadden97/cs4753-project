@@ -89,8 +89,7 @@ try {
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		if(update_account_info($conn, $_SESSION['user_id'], $address, $city, $state, $zip)){
-			//Redirect to homepage for right now. Will break on XAMPP due to filepath differences
-			header("Location:/");
+			header("Location:/myaccount");
 			die();			
 		}else{
 			header("Location:index.php?err=db");
