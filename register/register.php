@@ -83,14 +83,18 @@ function email_exists($db, $e){
 }
 
 //Creating new account by inserting new row
-function create_account($db, $fn, $ln, $e, $p){
-	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES (:first_name, :last_name, :email, :pass, now())');
+function create_account($db, $fn, $ln, $e, $p, $s, $vc){
+	$act = $db->prepare('INSERT INTO users (first_name, last_name, email, pass, registration_date, status, verification_code) VALUES (:first_name, :last_name, :email, :pass, now()), :status, :code');
 	$act->bindParam(":first_name", $fn);
 	$act->bindParam(":last_name", $ln);
 	$act->bindParam(":email", $e);
 	$act->bindParam(":pass", $p);
+	$act->bindParam(":status", $s);
+	$act->bindParam(":code", $vc);
 	return $act->execute();
 }
+
+$rand_num = md5(rand(1000,10000));
 
 //Must be in try/catch in case database connection fails
 try {
@@ -122,9 +126,9 @@ try {
 		if(create_account($conn, $first_name, $last_name, $email, $pass)){
 			$account_id = $conn->lastInsertId('user-id');
 
-			$rand_num = md5(rand(1000,10000));
+
 			$password = md5($pass);
-			
+
 			//Load composer's autoloader
 			require 'vendor/autoload.php';
 
