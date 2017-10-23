@@ -15,7 +15,7 @@ $(".orderdetail").click(function(){
 				var data = JSON.parse(d);
 				$.each(data, function(key, value){
 					var a = document.createElement('a');
-					$(a).attr('href', "/myaccount/item/?id=" + key);
+					$(a).attr('href', "/shop/item/?id=" + key);
 					$(a).html(value);
 					var li = document.createElement('li');
 					$(li).html(a);
