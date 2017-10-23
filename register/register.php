@@ -144,8 +144,8 @@ try {
 			    $mail->isSMTP();                                      // Set mailer to use SMTP
 			    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-			    $mail->Username = 'zephair.merchant@gmail.com';       // SMTP username
-			    $mail->Password = 'cs4753project';                    // SMTP password
+			    $mail->Username = $PHPMAILER_EMAIL;       // SMTP username
+			    $mail->Password = $PHPMAILER_PASSWORD;                    // SMTP password
 			    //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			    $mail->Port = 587;                                    // TCP port to connect to
 
@@ -164,7 +164,7 @@ try {
 
 					$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
 					$bodyContent .= '<p><a href="https://cs4753-project.herokuapp.com/register/verify.php?code='. $rand_num. '&email='. urlencode($email). '">Click here to confirm your account</a></p>';
-					
+
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
 					$mail->Body    = $bodyContent;
 

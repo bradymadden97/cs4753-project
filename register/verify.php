@@ -5,7 +5,7 @@ session_start();
 //Includes database connection variables
 require_once("../config/config.php");
 
-function getVerification($conn, $email,$code){
+function getVerification($email,$code){
 	$query_check = $conn->prepare("UPDATE users SET status = 1 where email = :email and verification_code = :code");
 	$query_check->bindParam(':email', $email);
 	$query_check->bindParam(":code", $code);
@@ -22,7 +22,7 @@ try {
     $email = $_GET['email'];
     $code = $_GET['code'];
 
-    $check_status = getVerification($conn, $email, $code);
+    $check_status = getVerification($email, $code);
 
     if($check_status){
       header("Location:/myaccount");
@@ -35,8 +35,6 @@ try {
 
 }
 catch(PDOException $e){
-	echo $e;
-	die();
 	header("Location:index.php?err=db");
 }
 
