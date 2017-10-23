@@ -70,10 +70,10 @@
 							echo '<span class="orderdangerspan">Order Expired</span>';
 						}else if($order['state'] == 'paid'){
 							echo '<span class="orderprocessingspan">Paid: processing</span>';
-							echo '<a class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
+							echo '<a target"_blank" class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
 						}else if($order['state'] == 'complete' || $order['state'] == 'confirmed'){
 							echo '<span class="ordercompletespan">Paid: complete</span>';
-							echo '<a class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
+							echo '<a target"_blank" class="btn orderviewinvoice" href="https://test.bitpay.com/invoice?id='. $order['invoice_id']. '">View</a>';
 						}else{
 							echo '<span class="orderdangerspan">Payment Error</span>';
 						}
