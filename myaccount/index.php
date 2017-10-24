@@ -1,31 +1,35 @@
 <?php
 	session_start();
-	
+
 	require_once("../config/config.php");
-	
+
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
+
 		if(!isset($_SESSION['user_id'])){
+			if(isset($_GET['verified']) && isset($_GET['vemail'])){
+				header("Location:/login?verified=". $_GET['verified']."&vemail=".$_GET['vemail']);
+				die();
+			}
 			header("Location:/login");
 			die();
 		}
-		
+
 		$stmt = $conn->prepare('SELECT first_name, last_name, email FROM users WHERE user_id = :uid');
 		$stmt->bindParam(":uid", $_SESSION['user_id']);
 		$stmt->execute();
-		
-		$res = $stmt->fetch();	
+
+		$res = $stmt->fetch();
 	}
 	catch(PDOException $e){
-		echo "Database error";	
+		echo "Database error";
 	}
-	
-	
-	
-	
-?>	
+
+
+
+
+?>
 
 <html lang="en">
   <head>
@@ -35,13 +39,13 @@
     <meta name="author" content="">
 
     <title>Zephair - My Account</title>
-	
-	
+
+
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<!-- Custom fonts for this template -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -62,7 +66,7 @@
 		?>
 	</style>
 	<link rel="stylesheet" href="css/account.css">
-	
+
 	<!-- Custom styles for this template -->
 
     <div class="container body-container">
@@ -77,10 +81,13 @@
 						<a class="nav-link pills" data-frag="orders" id="pill-my-orders" data-toggle="pill" href="#orders" role="tab" aria-controls="orders" aria-expanded="true">My Orders</a>
 					</div>
 				</div>
-				
+
 				<div class="col-md-9 col-sm-12">
 					<div class="tab-content" id="v-pills-tabContent">
 						<div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="view-account-information">
+							<div id="verifytrue" class="alert alert-success" style="display:none;text-align:center" role="alert">
+								<strong>Success!</strong> Your email <b><?php echo $_SESSION['email']; ?></b> has been verified.
+							</div>
 							<?php
 								include('accountinfo.php');
 							?>
@@ -100,7 +107,7 @@
 								include('myorders.php');
 							?>
 						</div>
-					</div>			
+					</div>
 				</div>
 			</div>
 		</div>
@@ -117,9 +124,9 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
-	
+
 	<script src="js/account.js"></script>
-	
+
 		<!-- Edit scrollspy nav switch -->
 	<script>
 	$(window).scroll(function() {
@@ -129,12 +136,15 @@
 		  $("#mainNav").removeClass("navbar-shrink");
 		}
 	});
+	$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+	});
 	</script>
-	
+
 	<script src="js/accountinfo.js"></script>
 	<script src="js/shippinginfo.js"></script>
 	<script src="js/mycart.js"></script>
 	<script src="js/myorders.js"></script>
-	
+
   </body>
 </html>

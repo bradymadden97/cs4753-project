@@ -1,18 +1,18 @@
 <?php
 
 	require_once("../config/config.php");
-	
-	
+
+
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
-		$actinfo = $conn->prepare("SELECT first_name, last_name, email FROM users WHERE user_id = :uid");
+
+		$actinfo = $conn->prepare("SELECT first_name, last_name, email, status FROM users WHERE user_id = :uid");
 		$actinfo->bindParam(":uid", $_SESSION['user_id']);
 		$actinfo->execute();
-		
+
 		$info = $actinfo->fetch();
-				
+
 	}
 	catch(PDOException $e){
 		echo "Database Error";
@@ -66,8 +66,8 @@
 		margin-top:60px;
 		margin-bottom:60px;
 	}
-	
-	
+
+
 	</style>
 
     <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Account Information</h4>
@@ -89,16 +89,27 @@
 		<div>
 			<label for="inputEmail" class="label">Email</label>
 			<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" value="<?php echo $info['email'] ?>" disabled>
+			<?php
+				if($info['status'] == 1){
+			?>
+			<i style="position:absolute;margin-top:10px;margin-left:10px;color:#83db83;" class="fa fa-check-circle fa-1x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Email is verified"></i>
+			<?php
+				}else{
+			?>
+			<i style="position:absolute;margin-top:10px;margin-left:10px;color:#e5c100;" class="fa fa-spinner fa-pulse fa-1x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Awaiting email verification"></i>
+			<?php
+				}
+			?>
 		</div>
-		
+
 		<button class="btn btn-brand-color" id="updatebtn">Update Account Info</button>
 			<div id="updatefeedback" class="invalid-feedback">
 				Update unsuccessful. Please try again.
 			</div>
 	</div>
-	
+
 	<hr id="sephr">
-	
+
 	<h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Change Password</h4>
 	<div style="padding-right:10%; padding-left:10%; margin-bottom: 30px; text-align: center">
 		<div>
@@ -122,10 +133,9 @@
 					Provide a valid new password.
 				</div>
 		</div>
-		
+
 		<button class="btn btn-brand-color" id="changebtn">Change Password</button>
 			<div id="changefeedback" class="invalid-feedback">
 				Password change unsuccessful. Please try again.
 			</div>
 	</div>
-	

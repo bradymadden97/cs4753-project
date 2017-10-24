@@ -1,19 +1,27 @@
 <?php
 	session_start();
-		
+
+	if(isset($_GET['verified'])){
+		if(isset($_GET['vemail'])){
+			if($_GET['verified']){
+				$_SESSION['next_show_verified_email'] = $_GET['vemail'];
+			}
+		}
+	}
+
 	if(isset($_GET['next'])){
 		$_SESSION['next'] = $_GET['next'];
 	}
-	
+
 	if(isset($_GET['id'])){
 		$_SESSION['next_id'] = $_GET['id'];
 	}
-	
-	$preset_email = "";	
+
+	$preset_email = "";
 	if(isset($_GET['email'])){
 		$preset_email = urldecode($_GET['email']);
 	}
-	
+
 	if(isset($_SESSION['temp-email'])){
 		$preset_email = $_SESSION['temp-email'];
 	}
@@ -27,13 +35,13 @@
     <meta name="author" content="">
 
     <title>Zephair - Log in</title>
-	
-	
+
+
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<!-- Custom fonts for this template -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -55,13 +63,13 @@
 		?>
 	</style>
 
-	
+
 	<!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
 
     <div id="bodycontainer" class="container">
 	<div id="wrapper">
-	
+
 		<form class="form-signin" id="loginform" novalidate action="login.php" method="POST" name="loginform">
         <h4 style="text-align:center;margin-top:30px;margin-bottom:30px" class="form-signin-heading">Log in to Zephair</h4>
 			<div>
@@ -79,7 +87,7 @@
 				  </div>
 			</div>
         <button class="btn btn-lg btn-brand-color btn-block" id="loginbtn" type="submit">Log in</button>
-      </form>	  
+      </form>
 	  <div id="tosignupdiv">
 	  Don't have an account? <a href="/register" id="tosignup">Create Account</a>
 	  </div>
@@ -106,7 +114,7 @@
 		$("#inputEmail").val("");
 		$("#inputEmail").val(temp_in);
 	</script>
-	
+
 	<!-- Edit scrollspy nav switch -->
 	<script>
 	$(window).scroll(function() {
@@ -117,7 +125,7 @@
 		}
 	});
 	</script>
-	
+
 	<script>
 		var a_elements = document.getElementsByTagName('a');
 		for(var i = a_elements.length - 1; i >= 0; i--){
@@ -127,6 +135,6 @@
 			});
 		}
 	</script>
-	
+
   </body>
 </html>

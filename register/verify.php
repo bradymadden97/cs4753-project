@@ -25,7 +25,7 @@ try {
     $check_status = getVerification($conn, $email, $code);
 
     if($check_status){
-      header("Location:/myaccount");
+      header("Location:/myaccount?verified=true&vemail=".$email);
     }
     else{
       header("Location:/myaccount?err=db");
