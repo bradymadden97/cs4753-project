@@ -27,7 +27,7 @@ function getUrlParams(){
 		if(kv[0] == 'verified' && kv[1] == 'true'){
 			showVerifiedEmail();
 			wasVerified = true;
-		}else{
+		}else if(kv[0] != "vemail"){
 			rejoin += kv[0] + "=" + kv[1] + "&";
 		}
 	}
