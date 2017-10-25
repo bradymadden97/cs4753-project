@@ -88,6 +88,12 @@
 							<div id="verifytrue" class="alert alert-success" style="display:none;text-align:center" role="alert">
 								<strong>Success!</strong> Your email <b><?php echo $_SESSION['email']; ?></b> has been verified.
 							</div>
+							<div id="emailresendsuccess" class="alert alert-success" style="display:none;text-align:center" role="alert">
+								<strong>Success!</strong> A verification email has been sent to <b><?php echo $_SESSION['email']; ?></b>
+							</div>
+							<div id="emailresendfail" class="alert alert-danger" style="display:none;text-align:center" role="alert">
+								<strong>Error:</strong> There was an error sending an email to <?php echo $_SESSION['email']; ?>.
+							</div>
 							<?php
 								include('accountinfo.php');
 							?>

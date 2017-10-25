@@ -11,12 +11,12 @@ function validateFirstName(fn){
 			$("#firstnamefeedback").text("First name cannot be empty");
 			$("#firstnamefeedback").show();
 		}
-			return false;	
+			return false;
 };
 function validateLastName(ln){
 	if(ln != ""){
 		if(validateName(ln)){
-			$("#lastnamefeedback").hide();	
+			$("#lastnamefeedback").hide();
 				return true;
 		}else{
 			$("#lastnamefeedback").text("Last name can only contain letters and hyphens");
@@ -138,13 +138,13 @@ $("#inputNewPasswordRetype").bind('keyup', function(e){
 		validatePasswordCheck(p);
 	}
 });
-	
+
 $("#updatebtn").mousedown(function(e){
 	e.stopImmediatePropagation();
 	e.preventDefault();
 });
-	
-	
+
+
 $("#updatebtn").click(function(){
 	$("#updatefeedback").hide();
 	if(checkupdatevalid()){
@@ -157,17 +157,17 @@ $("#updatebtn").click(function(){
 			if(d == 1){
 				$("#updatebtn").addClass('successupdate');
 				$("#updatebtn").html("Updated!");
-				
+
 				setTimeout(function(){
 					$("#updatebtn").removeClass('successupdate');
 					$("#updatebtn").html("Update Account Info");
 				}, 3000);
 			}else{
-				$("#updatefeedback").show();			
+				$("#updatefeedback").show();
 			}
-			
+
 		});
-	}		
+	}
 });
 
 $("#changebtn").click(function(){
@@ -183,11 +183,11 @@ $("#changebtn").click(function(){
 			if(d == 2){
 				$("#changebtn").addClass('successupdate');
 				$("#changebtn").html("Password Changed!");
-				
+
 				$("#inputCurrentPassword").val("");
 				$("#inputNewPassword").val("");
 				$("#inputNewPasswordRetype").val("");
-				
+
 				setTimeout(function(){
 					$("#changebtn").removeClass('successupdate');
 					$("#changebtn").html("Change Password");
@@ -195,21 +195,21 @@ $("#changebtn").click(function(){
 			}else if(d == 1){
 				$("#currentpasswordfeedback").text("Current password is incorrect");
 				$("#currentpasswordfeedback").show();
-				
+
 			}else{
-				$("#changefeedback").show();			
+				$("#changefeedback").show();
 			}
-			
+
 		});
-	}		
+	}
 });
-	
+
 
 function checkupdatevalid(){
 	var fn = $("#inputFirstName").val().trim();
 	var ln = $("#inputLastName").val().trim();
-		
-		
+
+
 	var fn_check = validateFirstName(fn);
 	var ln_check = validateLastName(ln);
 
@@ -220,8 +220,8 @@ function checkpasswordvalid(){
 	var cp = $("#inputCurrentPassword").val();
 	var np = $("#inputNewPassword").val();
 	var npr = $("#inputNewPasswordRetype").val();
-		
-		
+
+
 	var cp_check = validateCurrentPassword(cp);
 	var np_check = validateNewPassword(np);
 	var npr_check = validatePasswordCheck(npr);
@@ -232,3 +232,24 @@ function checkpasswordvalid(){
 function validateName(str){
 	return str.match(/^([A-z \-\.]+)$/i);
 };
+
+$("#resendemaildiv").click(function(){
+	$.post("utils/resendverificationemail.php",
+	{
+		email: $("#inputEmail").val(),
+	},
+	function(d, s){
+		if(d == 1){
+			$("#emailresendsuccess").css("display", "block");
+			setTimeout(function(){
+				$("#emailresendsuccess").css("display", "none");
+			}, 5000);
+		}else{
+			$("#emailresendfail").css("display", "block");
+			setTimeout(function(){
+				$("#emailresendfail").css("display", "none");
+			}, 5000);
+		}
+
+	});
+});

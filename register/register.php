@@ -197,8 +197,6 @@ try {
 	}
 }
 catch(PDOException $e){
-	echo $e;
-	die();
 	header("Location:index.php?err=db");
 	die();
 }

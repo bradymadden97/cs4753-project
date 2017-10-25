@@ -97,6 +97,7 @@
 				}else{
 			?>
 			<i style="position:absolute;margin-top:10px;margin-left:10px;color:#e5c100;" class="fa fa-spinner fa-pulse fa-1x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Awaiting email verification"></i>
+			<div id="resendemaildiv">Resend verification email</div>
 			<?php
 				}
 			?>
