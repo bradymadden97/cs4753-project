@@ -10,7 +10,7 @@ function getVerification($conn, $email,$code){
 	$query_check->bindParam(':email', $email);
 	$query_check->bindParam(":code", $code);
 	$query_check->execute();
-	return $query_check;
+	return $query_check->rowCount();
 }
 
 try {
@@ -24,11 +24,11 @@ try {
 
     $check_status = getVerification($conn, $email, $code);
 
-    if($check_status){
+    if($check_status > 0){
       header("Location:/myaccount?verified=true&vemail=".$email);
     }
     else{
-      header("Location:/myaccount?err=db");
+      header("Location:/myaccount?verified=false&vemail=".$email);
     }
 
   }
@@ -37,10 +37,5 @@ try {
 catch(PDOException $e){
 	header("Location:index.php?err=db");
 }
-
-
-
-
-
 
 ?>
