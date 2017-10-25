@@ -4,6 +4,7 @@
 	if(isset($_GET['verified'])){
 		if(isset($_GET['vemail'])){
 			if($_GET['verified']){
+				$_SESSION['next_show_verified_status'] = $_GET['verified'];
 				$_SESSION['next_show_verified_email'] = $_GET['vemail'];
 			}
 		}

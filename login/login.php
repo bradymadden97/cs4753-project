@@ -46,7 +46,7 @@
 				$verified_append = "";
 				if(isset($_SESSION['next_show_verified_email'])){
 					if($_SESSION['next_show_verified_email'] == $res[4]){
-						$verified_append = "?verified=true";
+						$verified_append = "?verified=".$_SESSION['next_show_verified_status'];
 					}
 				}
 
