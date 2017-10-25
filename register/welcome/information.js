@@ -11,7 +11,7 @@ function validateAddress(a){
 		$("#addressfeedback").text("Address cannot be empty");
 		$("#addressfeedback").show();
 	}
-	return false;	
+	return false;
 };
 
 function validateCity(c){
@@ -152,13 +152,17 @@ function checkFormValid(){
 	var c = $("#inputCity").val().trim();
 	var s = $("#inputState").val();
 	var z = $("#inputZip").val().trim();
-		
-	
+
+	$("#inputAddress").blur();
+	$("#inputCity").blur();
+	$("#inputState").blur();
+	$("#inputZip").blur();
+
 	var a_check = validateAddress(a);
 	var c_check = validateCity(c);
 	var s_check = validateState(s);
 	var z_check = validateZip(z);
-	
+
 	return a_check && c_check && s_check && z_check;
 }
 
@@ -175,4 +179,3 @@ function validateAddressString(str){
 function validateCityString(str){
 	return str.match(/[A-z \-&\.]+$/i);
 };
-
