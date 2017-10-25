@@ -28,6 +28,8 @@ try{
   $newvcode->bindParam(":vcode", $rand_num);
   $newvcode->execute();
 
+  $mail = new PHPMailer(true);
+
     try {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
