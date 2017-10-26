@@ -202,7 +202,7 @@ function checkFormValid(){
 
 //Regex for validations
 function validateName(str){
-    return str.match(/^([A-z \-\.]+)$/i);
+    return str.match(/^([A-Za-z \-\.]+)$/i);
 };
 function validateEmailString(str){
 	return str.match(/[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$/i);
