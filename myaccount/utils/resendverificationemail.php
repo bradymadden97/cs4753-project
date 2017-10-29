@@ -45,8 +45,15 @@ try{
         //Content
         $mail->isHTML(true);
 
-        $bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
-        $bodyContent .= '<p><a href="https://cs4753-project.herokuapp.com/register/verify.php?code='. $rand_num. '&email='. urlencode($_SESSION['email']). '">Click here to confirm your account</a></p>';
+        $first_name = $_SESSION['first_name'];
+        $last_name = $_SESSION['last_name'];
+        $email = $_SESSION['email'];
+
+        ob_start();
+          include('../../emails/welcome.php');
+          $emailBody = ob_get_contents() ;
+        ob_clean();
+        $bodyContent = $emailBody;
 
         $mail->Subject = 'Zephair Email Verification';
         $mail->Body    = $bodyContent;

@@ -163,12 +163,10 @@ try {
 			    $mail->isHTML(true);
 					                                  // Set email format to HTML
 					ob_start();
-						include('../emails/email.php');
+						include('../emails/welcome.php');
 						$emailBody = ob_get_contents() ;
-					ob_clean();  
+					ob_clean();
 					$bodyContent = $emailBody;
-				//	$bodyContent = 'Greetings from Zephair, <br><br> Please confirm your Zephair account:<br>';
-				//	$bodyContent .= '<p><a href="https://cs4753-project.herokuapp.com/register/verify.php?code='. $rand_num. '&email='. urlencode($email). '">Click here to confirm your account</a></p>';
 
 					$mail->Subject = 'Zephair Sign-Up Confirmation';
 					$mail->Body    = $bodyContent;
