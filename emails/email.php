@@ -4,16 +4,16 @@
     font-family: 'Roboto', sans-serif;
   }
   a{
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color:#f05f40;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
+    padding: 10px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    background-color:#f05f40 !important;
+    border: 1px solid lightgrey !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 18px !important;
+    color: white !important;
+    text-decoration: none !important;
   }
 </style>
 
@@ -27,7 +27,7 @@
     </div>
 
     <div>
-      <p style="font-size:20px; margin-bottom:20px;"> Please verify the email associated with your Zephair account: <span style="color:#f05f40"><?php echo $email; ?></span> </p>
+      <p style="font-size:20px; margin-bottom:20px;"> Please verify the email associated with your Zephair account: <span style="color:#f05f40; text-decoration:none"><?php echo $email; ?></span> </p>
     </div>
 
     <div style="margin-top:50px; margin-bottom:50px;">
