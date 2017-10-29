@@ -3,18 +3,6 @@
   div{
     font-family: 'Roboto', sans-serif;
   }
-  a{
-    padding: 10px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    background-color:#f05f40 !important;
-    border: 1px solid lightgrey !important;
-    border-radius: 5px !important;
-    cursor: pointer !important;
-    font-size: 18px !important;
-    color: white !important;
-    text-decoration: none !important;
-  }
 </style>
 
 
@@ -31,7 +19,16 @@
     </div>
 
     <div style="margin-top:50px; margin-bottom:50px;">
-      <a href='<?php echo "https://cs4753-project.herokuapp.com/register/verify.php?code=". $rand_num. "&email=". urlencode($email); ?>'>Verify Email</a>
+      <a style="padding: 10px;
+          padding-left: 15px;
+          padding-right: 15px;
+          background-color:#f05f40;
+          border: 1px solid lightgrey;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 18px;
+          color: white;
+          text-decoration: none;" href='<?php echo "https://cs4753-project.herokuapp.com/register/verify.php?code=". $rand_num. "&email=". urlencode($email); ?>'>Verify Email</a>
     </div>
 
     <div style="font-size:12px; color: grey">
