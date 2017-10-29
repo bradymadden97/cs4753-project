@@ -80,6 +80,10 @@
 						<a class="nav-link pills" data-frag="cart" id="pill-my-cart" data-toggle="pill" href="#cart" role="tab" aria-controls="cart" aria-expanded="true">My Cart</a>
 						<a class="nav-link pills" data-frag="orders" id="pill-my-orders" data-toggle="pill" href="#orders" role="tab" aria-controls="orders" aria-expanded="true">My Orders</a>
 					</div>
+
+					<div class="nav flex-column nav-pills" id="myaccount-pills2" role="tablist">
+						<a class="nav-link pills" id="pill-logout" href="/myaccount/logout.php"  aria-controls="logout" aria-expanded="true">Logout</a>
+					</div>
 				</div>
 
 				<div class="col-md-9 col-sm-12">

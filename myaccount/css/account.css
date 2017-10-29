@@ -22,6 +22,18 @@ body {
 	padding-bottom:10px;
 	border-radius:5px;
 }
+#myaccount-pills2{
+  margin-top: 20px;
+	background-color: white;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:5px;
+}
+
+#pill-logout:hover{
+  background-color: #f05f40;
+  color: white;
+}
 
 .invalid-feedback{
 	font-size:10px !important;
