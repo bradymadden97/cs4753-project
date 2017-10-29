@@ -173,9 +173,9 @@ function validateZipCode(str){
 };
 
 function validateAddressString(str){
-	return str.match(/[A-z \-0-9#&\(\)\.]+$/i);
+	return str.match(/[A-Za-z \-0-9#&\(\)\.]+$/i);
 };
 
 function validateCityString(str){
-	return str.match(/[A-z \-&\.]+$/i);
+	return str.match(/[A-Za-z \-&\.]+$/i);
 };
