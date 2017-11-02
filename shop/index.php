@@ -1,26 +1,26 @@
 <?php
 	session_start();
-	
+
 	require_once("../config/config.php");
-	
+
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
+
 		$stmt = $conn->prepare('SELECT item_name, item_id, bitcoin_price, image_url FROM items');
 		$stmt->execute();
-		
-		
-	
+
+
+
 	}
 	catch(PDOException $e){
-		echo "Database error";	
+		echo "Database error";
 	}
-	
-	
-	
-	
-?>	
+
+
+
+
+?>
 
 <html lang="en">
   <head>
@@ -30,13 +30,13 @@
     <meta name="author" content="">
 
     <title>Zephair - Shop</title>
-	
-	
+
+
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<!-- Custom fonts for this template -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -57,7 +57,7 @@
 		?>
 	</style>
 	<link rel="stylesheet" href="shop.css">
-	
+
 	<!-- Custom styles for this template -->
 
     <div class="container body-container">
@@ -80,11 +80,11 @@
 								</div>
 							</a>
 							<div style="text-align:center; margin-bottom: 10px; margin-top: 10px; z-index: 10">
-								<button data-id="<?php echo $resrow['item_id']?>" class="item-add-to-cart">Add to cart</button>						
+								<button data-id="<?php echo $resrow['item_id']?>" class="item-add-to-cart">Add to cart</button>
 							</div>
 						</div>
 				<?php
-					}	
+					}
 				?>
 			</div>
 		</div>
@@ -101,9 +101,9 @@
 
 	<!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
-	
+
 	<script src="shop.js"></script>
-	
+
 		<!-- Edit scrollspy nav switch -->
 	<script>
 	$(window).scroll(function() {
@@ -114,6 +114,6 @@
 		}
 	});
 	</script>
-	
+
   </body>
 </html>
