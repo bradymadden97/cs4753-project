@@ -20,7 +20,7 @@
 
   $uid = $_GET['uid'];
   $verify = 0;
-  if($_GET['verify']){
+  if($_GET['verify'] == true){
     $verify = 1;
   }
 
