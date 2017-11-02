@@ -20,9 +20,10 @@
 
   $uid = $_GET['uid'];
   $verify = 0;
-  if($_GET['verify'] == true){
+  if($_GET['verify'] == "true"){
     $verify = 1;
   }
+
 
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
