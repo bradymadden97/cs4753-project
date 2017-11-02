@@ -1,27 +1,27 @@
 <!-- Navigation -->
 <?php
-	
+
 	require_once(realpath(__DIR__ . '/..' . '/config/config.php'));
-	
+
 	$cartcount = 0;
 	try {
 		$navdb = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$navdb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
-		
+
+
 		if(isset($_SESSION['user_id'])){
 			$cartfind = $navdb->prepare('SELECT COUNT(*) FROM cart WHERE user_id = :uid');
 			$cartfind->bindParam(":uid", $_SESSION['user_id']);
 			$cartfind->execute();
-			
+
 			$cartcount = $cartfind->fetchColumn();
 		}
-		
+
 	}
 	catch(PDOException $e){
-		echo $e;	
+		echo $e;
 	}
-	
+
 
 
 
@@ -42,6 +42,17 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
+				<?php
+					if(isset($_SESSION['email'])){
+						if($_SESSION['email'] == 'zephair.merchant@gmail.com'){
+				?>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger nav-margin-10px" href="/admin"><span>Admin</span></a>
+					</li>
+				<?php
+						}
+					}
+				?>
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger nav-margin-10px" href="/about"><span>About</span></a>
 				</li>
@@ -50,7 +61,7 @@
 				</li>
 				<?php
 					if(!isset($_SESSION['user_id'])){
-				?>						
+				?>
 				<li class="nav-item">
 					<a class="btn-solid-color nav-link js-scroll-trigger" href="/register"><span class="nav-margin-10px btn-padding-20 btn-lookalike">Sign up</span></a>
 				</li>
@@ -66,16 +77,16 @@
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger cartnav nav-margin-10px" href="/myaccount#cart">
 						<span>
-							<i class="fa fa-shopping-cart mycart" aria-hidden="true"></i> 
+							<i class="fa fa-shopping-cart mycart" aria-hidden="true"></i>
 							Cart
 						</span>
-						
+
 						<span id="cart-item-count" data-count="<?php echo $cartcount; ?>" style="display:none" ><?php echo $cartcount; ?></span>
 					</a>
 				</li>
 				<?php
 					}
-				?>				
+				?>
 			</ul>
 		</div>
 	</div>
@@ -83,7 +94,7 @@
 
 <script>
 	if(document.getElementById("cart-item-count").getAttribute("data-count") > 0){
-		document.getElementById("cart-item-count").style.display = "inline";		
+		document.getElementById("cart-item-count").style.display = "inline";
 	}else{
 		document.getElementById("cart-item-count").style.display = "none";
 	}
