@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Zephair - Live Clean, Breathe Easy</title>
-	
+
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
 
     <!-- Bootstrap core CSS -->
@@ -27,10 +27,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
-	
+
 	<!--Our own css -->
 	<link href="css/homepage.css" rel="stylesheet">
-	
+
   </head>
 
   <body id="page-top">
@@ -50,11 +50,11 @@
 		<br>
 		<div id="dot-div" style="text-align:center">
 			<span class="dot dot-active" id="dot-0" data-slide="1"></span>
-			<span class="dot" id="dot-1" data-slide="2"></span> 
-			<span class="dot" id="dot-2" data-slide="3"></span> 
+			<span class="dot" id="dot-1" data-slide="2"></span>
+			<span class="dot" id="dot-2" data-slide="3"></span>
 			<span class="dot" id="dot-3" data-slide="4"></span>
 		</div>
-      </div>      
+      </div>
     </header>
 
     <section id="services">
@@ -102,9 +102,9 @@
 
     <section class="p-0" id="portfolio">
       <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
+        <div class="row no-gutter">
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-1" class="portfolio-box" href="img/alaska.jpg">
+            <a id="pf-1" class="portfolio-box" href="shop/item/?id=6">
               <img class="img-fluid" src="img/alaska.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -119,7 +119,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-2" class="portfolio-box" href="img/newz.jpg">
+            <a id="pf-2" class="portfolio-box" href="shop/item/?id=8">
               <img class="img-fluid" src="img/newz.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -134,7 +134,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-3" class="portfolio-box" href="img/chile.jpg">
+            <a id="pf-3" class="portfolio-box" href="shop/item/?id=4">
               <img class="img-fluid" src="img/chile.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -149,7 +149,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-4" class="portfolio-box" href="img/iceland.jpg">
+            <a id="pf-4" class="portfolio-box" href="shop/item/?id=7">
               <img class="img-fluid" src="img/iceland.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -164,7 +164,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-5" class="portfolio-box" href="img/spain.jpg">
+            <a id="pf-5" class="portfolio-box" href="shop/item/?id=2">
               <img class="img-fluid" src="img/spain.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -179,7 +179,7 @@
             </a>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <a id="pf-6" class="portfolio-box show-hover" href="img/antarctica.jpg">
+            <a id="pf-6" class="portfolio-box show-hover" href="shop/item/?id=3">
               <img class="img-fluid" src="img/antarctica.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -242,7 +242,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="./js/creative.min.js"></script>
-	
+
 	<!--Preload the background images -->
 	<script>
 		var h1 = new Image();
@@ -252,7 +252,7 @@
 		h2.src = "img/header2.jpg";
 		h3.src = "img/header3.jpg";
 	</script>
-	
+
 	<!--Our own js -->
 	<script src="js/homepage.js"></script>
 
