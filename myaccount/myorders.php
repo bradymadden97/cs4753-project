@@ -1,16 +1,16 @@
 <?php
 
 	require_once("../config/config.php");
-	
-	
+
+
 	try {
 		$conn = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME", $DB_USERNAME, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
+
 		$myorders = $conn->prepare("SELECT o.order_price, o.item_list, o.transaction_date, o.state, o.paid, o.invoice_id FROM orders as o WHERE user_id = :uid ORDER BY o.transaction_date DESC");
 		$myorders->bindParam(":uid", $_SESSION['user_id']);
 		$myorders->execute();
-						
+
 	}
 	catch(PDOException $e){
 		echo "Database Error";
@@ -36,32 +36,32 @@
 				<b>
 					<?php
 						$previous_loop_date = $current_loop_date;
-						echo $current_loop_date;				
+						echo $current_loop_date;
 					?>
 				</b>
 			</div>
 		<?php } ?>
 			<div class="orderitem row">
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<div class="row">
-					<?php 
+					<?php
 						$list_items = explode(",", $order['item_list']);
 						if(count($list_items) == 1){
 							echo count($list_items) . " item";
 						}else{
 							echo count($list_items) . " items";
 						}
-						
+
 						echo "<a href='#' role='button' class='orderdetail' data-open='false' data-item-list='" . $order['item_list']. "'>Details</a>";
 					?>
 					</div>
 					<div class="row orderdetaillist">
 						<ul>
-						
-						</ul>					
+
+						</ul>
 					</div>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-3">
 					<?php
 						echo "<span class='orderpricespan'>". floatval($order['order_price'])." BTC </span>";
 					?>
@@ -83,7 +83,7 @@
 							echo '<span class="orderdangerspan">Payment Error</span>';
 						}
 					?>
-				</div>			
+				</div>
 			</div>
 		<?php
 			}
