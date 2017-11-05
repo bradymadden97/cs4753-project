@@ -50,3 +50,49 @@ body {
 	padding-top: 7.5px;
 	padding-bottom: 7.5px;
 }
+.review_head{
+  color: grey;
+  margin-left: 10px;
+}
+.star-filled{
+  padding-top: 2px;
+  color: #f05f40;
+}
+.star-empty{
+  padding-top: 2px;
+  color: #f05f40;
+}
+.review_text{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.review_container{
+  padding:10px;
+  border-radius: 3px;
+}
+.review_container:nth-child(odd){
+  background-color: #FFF;
+}
+.write-review-star{
+  color: #f05f40;
+}
+.submit-review-btn{
+  padding: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #f05f40;
+  border-left: 0px;
+  cursor: pointer;
+  background-color: #fa845e;
+  color: #fff;
+}
+.input-group-addon-btn{
+  padding: 0px;
+
+}
+#submitreviewerror{
+  margin-left: 15px;
+  display: none;
+  font-size: 12px;
+}
