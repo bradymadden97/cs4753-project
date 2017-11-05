@@ -170,6 +170,10 @@
 
 			<?php
 				}
+
+				if($numreviews == 0){
+					echo "<div style='margin-top: 30px; text-align:center'> There are no reviews yet for this item.</div>";					
+				}
 			?>
 		</div>
 
