@@ -60,6 +60,7 @@
 				$_SESSION['first_name'] = $res[2];
 				$_SESSION['last_name'] = $res[3];
 				$_SESSION['email'] = $res[4];
+				$_SESSION['from_login'] = true;
 
 				if($next == "atc"){
 					unset($_SESSION['next']);

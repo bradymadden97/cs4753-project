@@ -19,15 +19,27 @@
 		$stmt = $conn->prepare('SELECT first_name, last_name, email FROM users WHERE user_id = :uid');
 		$stmt->bindParam(":uid", $_SESSION['user_id']);
 		$stmt->execute();
-
 		$res = $stmt->fetch();
+
+		$model_order_id = "";
+		if(isset($_SESSION['from_login'])){
+			$stmt1 = $conn->prepare('SELECT order_id FROM orders WHERE user_id = :uid AND asked = 0 ORDER BY transaction_date');
+			$stmt1->bindParam(":uid", $_SESSION['user_id']);
+			$stmt1->execute();
+			$modal_order_id = $stmt1->fetchColumn();
+
+			if($modal_order_id != ""){
+				$stmt2 = $conn->prepare("UPDATE orders SET asked=1 WHERE order_id = :ooid");
+				$stmt2->bindParam(":ooid", $modal_order_id);
+				$stmt2->execute();
+			}
+			unset($_SESSION['from_login']);
+		}
+
 	}
 	catch(PDOException $e){
 		echo "Database error";
 	}
-
-
-
 
 ?>
 
@@ -68,6 +80,12 @@
 	<link rel="stylesheet" href="css/account.css">
 
 	<!-- Custom styles for this template -->
+
+		<?php
+			if($modal_order_id != ""){
+				include('reviewmodal.php');
+			}
+		?>
 
     <div class="container body-container">
     	<hr style="max-width:80%">
@@ -158,6 +176,12 @@
 	<script src="js/shippinginfo.js"></script>
 	<script src="js/mycart.js"></script>
 	<script src="js/myorders.js"></script>
-
+	<?php
+		if($modal_order_id != ""){
+	?>
+			<script src="js/reviewmodal.js"></script>
+	<?php
+		}
+	?>
   </body>
 </html>
