@@ -65,7 +65,12 @@
 		<div class="items-container" style="width: 80%; margin: auto; margin-bottom: 30px">
 			<div class="row">
 				<?php
+				try {
+					$stmt2 = $conn->prepare('SELECT COUNT(*) AS total, SUM(stars) AS stars FROM reviews WHERE item_id = :iid');
 					foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $resrow){
+						$stmt2->bindParam(":iid", $resrow['item_id']);
+						$stmt2->execute();
+						$review = $stmt2->fetch();
 				?>
 						<div class="item col-md-4 col-sm-12 sr-button" id="item-<?php echo $resrow['item_id']; ?>" >
 							<a class="item-link" href="/shop/item/?id=<?php echo $resrow['item_id']; ?>">
@@ -75,6 +80,20 @@
 									</div>
 									<div style="margin-top: 10px; padding-right: 12px; padding-left: 12px; overflow:hidden">
 										<span class="item-name"><?php echo $resrow['item_name']; ?></span>
+										<span class="item-stars">
+											<?php
+												$i = 0;
+												$stars = round($review['stars'] / $review['total']);
+												while($i < 5){
+													if($i < $stars){
+														echo '<i data-val="1" class="fa fa-star" aria-hidden="true"></i>';
+													}else{
+														echo '<i data-val="1" class="fa fa-star-o" aria-hidden="true"></i>';
+													}
+													$i += 1;
+												}
+											?>
+										</span>
 										<span class="item-price"><?php echo (float)$resrow['bitcoin_price']; ?> BTC</span>
 									</div>
 								</div>
@@ -84,6 +103,10 @@
 							</div>
 						</div>
 				<?php
+					}
+					}
+					catch(PDOException $e){
+						echo $e;
 					}
 				?>
 			</div>

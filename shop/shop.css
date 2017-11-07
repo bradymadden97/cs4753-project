@@ -10,7 +10,7 @@ body {
 @media (min-width: 768px){
 	.col-md-4 {
 		max-width: calc(33.333333% - 10px);
-		
+
 	}
 }
 
@@ -32,13 +32,24 @@ body {
 	cursor: pointer;
 }
 .item-link:hover  .item-name{
-	text-decoration: underline;	
+	text-decoration: underline;
 }
 
 .item-price{
 	float: right;
 	font-size: 14px;
 	color: #5baf3a;
+}
+.item-stars{
+  margin-left: 10px;
+}
+.fa-star{
+  margin-top: 7px;
+  font-size: 12px;
+}
+.fa-star-o{
+  margin-top: 7px;
+  font-size: 12px;
 }
 
 .item-image{
@@ -47,7 +58,7 @@ body {
 	background-size: contain;
 	margin: auto;
 	border-radius: 2px;
-	
+
 }
 
 .item-add-to-cart{
@@ -60,6 +71,3 @@ body {
 	padding-top: 7.5px;
 	padding-bottom: 7.5px;
 }
-
-
-
