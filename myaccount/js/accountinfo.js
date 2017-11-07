@@ -230,7 +230,7 @@ function checkpasswordvalid(){
 }
 //Regex for validations
 function validateName(str){
-	return str.match(/^([A-z \-\.]+)$/i);
+	return str.match(/^([A-Za-z \-\.]+)$/i);
 };
 
 $("#resendemaildiv").click(function(){
